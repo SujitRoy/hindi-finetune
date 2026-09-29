@@ -276,15 +276,15 @@ and do not strip the BOS twice.
 
 ## 5. Kaggle setup from scratch
 
-### 5.1 Hugging Face account (do this first)
+### 5.1 Hugging Face account + token (do this first)
 
 1. Sign up at <https://huggingface.co>
-2. Avatar → **Settings → Access Tokens → Create new token** → grant **`write`**
+2. Avatar -> **Settings -> Access Tokens -> Create new token** -> grant **`write`**
 
-You need this because `push_to_hub` is the *only* thing that survives a Kaggle reset.
-Without a token every checkpoint push fails and the run is lost.
+`push_to_hub` is the *only* thing that survives a Kaggle reset. Without a token every
+checkpoint push fails and the run is lost.
 
-Three repos are created automatically on first push — you do not create them by hand:
+Three repos are created automatically on first push:
 
 ```
 https://huggingface.co/<you>/lfm25-1.2b-bilingual-s1
@@ -292,10 +292,33 @@ https://huggingface.co/<you>/lfm25-1.2b-bilingual-s2
 https://huggingface.co/<you>/lfm25-1.2b-bilingual-s3
 ```
 
-**Never paste a token into the REPO copy of the notebook** — it would be committed and
-published. The notebook's cell 4 reads `HF_TOKEN` from the environment first and only
-falls back to an `HF_TOKEN_INLINE` field, which you fill in *in your Kaggle copy only*.
-See §5.3 for both routes.
+#### The notebook is public, so there is no paste slot for a token
+
+Anything typed into a public notebook is published. The token has to arrive as an
+**environment variable**, which Kaggle injects at runtime and never writes into the
+notebook JSON.
+
+**Setup, once:**
+
+| step | where | what |
+|---|---|---|
+| 1 | right sidebar -> **Add-ons** tab | open the Secrets section |
+| 2 | **+ New Secret** | Label `HF_TOKEN`, Value your `hf_...` token |
+| 3 | same dialog | **tick "Notebook Access"** |
+| 4 | **Session** tab | **restart** - Kaggle injects secrets only at session start |
+
+If you cannot see an `Add-ons` tab, the same panel is under the **top menu bar ->
+Add-ons -> Secrets**. Kaggle moves this between UI revisions.
+
+Verify before a long run:
+
+```python
+import os
+print("set:", bool(os.environ.get("HF_TOKEN")), "| len:", len(os.environ.get("HF_TOKEN", "")))
+```
+
+`True` and ~37. If it prints `False`, the label is misspelled (it is case-sensitive) or
+Notebook Access was left unticked.
 
 ### 5.2 Upload the training data as a Kaggle Dataset
 
