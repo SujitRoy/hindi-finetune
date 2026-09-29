@@ -292,6 +292,11 @@ https://huggingface.co/<you>/lfm25-1.2b-bilingual-s2
 https://huggingface.co/<you>/lfm25-1.2b-bilingual-s3
 ```
 
+**Never paste a token into the REPO copy of the notebook** — it would be committed and
+published. The notebook's cell 4 reads `HF_TOKEN` from the environment first and only
+falls back to an `HF_TOKEN_INLINE` field, which you fill in *in your Kaggle copy only*.
+See §5.3 for both routes.
+
 ### 5.2 Upload the training data as a Kaggle Dataset
 
 The notebook reads from `/kaggle/input/...`, not from your laptop.
