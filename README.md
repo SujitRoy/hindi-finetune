@@ -309,7 +309,8 @@ The notebook reads from `/kaggle/input/...`, not from your laptop.
    model at runtime; without it cell 5 fails.
 4. Import `hinglish-sft-lfm25-1.2b.ipynb`, or paste the cells in order
 5. **Edit one thing:** cell 1, `HF_USER = "YOUR_HF_USERNAME"` → your actual username
-6. Set `SESSION = 1`, and paste your token in cell 4 (or add a Kaggle secret `HF_TOKEN`)
+6. Set `SESSION = 1`. The token comes from the `HF_TOKEN` Kaggle secret — cell 4
+   refuses to run without it, by design.
 
 Then run all cells top to bottom. Run **one session per Kaggle session** — the notebook
 is designed so a reset costs at most 5 minutes.
