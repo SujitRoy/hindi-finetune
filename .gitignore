@@ -20,3 +20,5 @@ hi_cache/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+indicalign_cache/
+*.parquet
