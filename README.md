@@ -336,11 +336,12 @@ is designed so a reset costs at most 5 minutes.
 | 6–7 | **`TimeCheckpoint`** | wall-clock checkpoint pusher | the crash-safety mechanism |
 | 8–9 | load data | finds the jsonl under `/kaggle/input` | raises a clear error if not uploaded |
 | 10 | lengths | `MAX_SEQ_LENGTH=1024`, **fp16** | T4 is sm_75 — **no bf16** |
-| 11–12 | model + LoRA | r=32, LFM modules | `embed_tokens`/`lm_head` deliberately excluded — see §2 |
+| 11–12 | model + LoRA | r=32, LFM modules, **verified** | `embed_tokens`/`lm_head` deliberately excluded — see §2 |
 | 13–14 | chat template | 2 turns, ends `<|im_end|>` | no manual EOS |
 | 15 | trainer | eff. batch 8, lr 2e-4, linear | `save_strategy="no"` — the callback owns saving |
 | 16 | train | the actual run | `MAX_STEPS` sized per session |
 | 17–18 | merge → GGUF → push | `save_pretrained_gguf("q4_k_m")` | **the long pole for the 30-min budget** |
+| 19–20 | **optional iMatrix GGUF** | `llama-imatrix` + `llama-quantize` | higher quality, same size; skip if short on time |
 | 19 | crash recovery | how to resume from a pushed checkpoint | |
 
 ### LoRA configuration
@@ -376,6 +377,35 @@ Adopted from it: `UNSLOTH_VLLM_STANDBY=1` (−30% VRAM, matters on T4) and passi
 `max_lora_rank` at load time. It pins `transformers 4.57.6` / `trl 0.24.0` where this
 notebook uses `4.57.3` / `0.22.2` — minor drift, and if you hit an API error, matching
 their versions is the first thing to try.
+
+### Cross-checked against the Ava @ Dyagnosys LFM2.5 notebook
+
+[`coachvitorcalvi/ava-lab-dyagnosys-finetune-v1`](https://www.kaggle.com/code/coachvitorcalvi/ava-lab-dyagnosys-finetune-v1)
+is a production-shaped SFT run on the same 1.2B base (tool-calling for lab sales, fully
+synthetic corpus). It is the better plumbing reference of the two. Adopted:
+
+| from Ava | what | why it matters here |
+|---|---|---|
+| **target-module guard** | verify each name exists in `named_modules()` by suffix match *before* attaching LoRA, and hard-fail on zero trainable params | `named_modules()` returns `model.layers.0.self_attn.q_proj`, so a bare `"q_proj"` is **never** an exact member. A wrong name attaches nothing and the run trains happily on 0 parameters. Silent, total, and looks fine in the logs. |
+| **iMatrix GGUF export** | f16 GGUF → `llama-imatrix` over a calibration corpus → `llama-quantize --imatrix … q4_k_m` | Same bit depth, same file size, less damage — plain `save_pretrained_gguf` picks outliers by tensor statistics alone. Directly relevant: the 1.2B scores 5/8, so we cannot afford to lose anything to quantization. Costs ~5–10 min; skip if near the 30-min mark. |
+| **template-leakage smoke test** | assert train/eval `template_id` sets are disjoint | we use `train_test_split`; the invariant is still worth asserting |
+| **OOD probes never in training** | hand-written, out-of-corpus | same idea as our `verify_format.py` + `/tmp/tune.py` |
+
+It also **independently confirms the LoRA target module list** — verbatim
+`["q_proj","k_proj","v_proj","out_proj","in_proj","w1","w2","w3"]`, and it uses effective
+batch 8 like we do (though via `batch=1, accum=8`, which is slower than our `batch=8`).
+
+One idea worth stealing later: it masks loss by **common-prefix diff** rather than by
+assistant-token markers:
+
+```python
+split_at = common_prefix_len(prompt_ids, full_ids)
+labels = [-100] * split_at + full_ids[split_at:]
+```
+
+Our `train_on_responses_only` path depends on the template's markers, which
+`verify_format.py` already checks match verbatim — so both are safe today, but the
+prefix-diff form is immune to a template change.
 
 ---
 
