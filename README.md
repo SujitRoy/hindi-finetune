@@ -357,86 +357,37 @@ is designed so a reset costs at most 5 minutes.
 
 ## 6. The notebook, cell by cell
 
-| # | cell | what it does | watch out for |
-|---|---|---|---|
-| 1 | **run config** | `SESSION`, `DATA_FILE`, `HF_USER`, `OUT_REPO`, `BASE_REPO`, `CHECKPOINT_EVERY_S`, `MAX_STEPS` | **the only cell you must edit** |
-| 2–3 | HF login + where-it-lives | `login(token=…)` | required before any push |
-| 4–5 | deps | `unsloth`, `transformers==4.57.3`, `trl==0.22.2` | needs internet |
-| 6–7 | **`TimeCheckpoint`** | wall-clock checkpoint pusher | the crash-safety mechanism |
-| 8–9 | load data | finds the jsonl under `/kaggle/input` | raises a clear error if not uploaded |
-| 10 | lengths | `MAX_SEQ_LENGTH=1024`, **fp16** | T4 is sm_75 — **no bf16** |
-| 11–12 | model + LoRA | r=32, LFM modules, **verified** | `embed_tokens`/`lm_head` deliberately excluded — see §2 |
-| 13–14 | chat template | 2 turns, ends `<|im_end|>` | no manual EOS |
-| 15 | trainer | eff. batch 8, lr 2e-4, linear | `save_strategy="no"` — the callback owns saving |
-| 16 | train | the actual run | `MAX_STEPS` sized per session |
-| 17–18 | merge → GGUF → push | `save_pretrained_gguf("q4_k_m")` | **the long pole for the 30-min budget** |
-| 19–20 | **optional iMatrix GGUF** | `llama-imatrix` + `llama-quantize` | higher quality, same size; skip if short on time |
-| 19 | crash recovery | how to resume from a pushed checkpoint | |
+24 cells, strictly ordered, audited for undefined names before every commit.
 
-### LoRA configuration
-
-```python
-r = 32, lora_alpha = 32, use_rslora = True, lora_dropout = 0
-target_modules = ["q_proj","k_proj","v_proj","out_proj","in_proj","w1","w2","w3"]
-```
-
-`in_proj` and `w1/w2/w3` are LFM's MLP; they are not the usual LLaMA names. `r=32` is
-double the cookbook's SFT default of 16 — a language shift needs more adapter capacity
-than a style tweak.
-
-Learning rate is `2e-4` for session 1, and **lower for sessions 2–3** (the notebook's
-comment flags this): chained merged fine-tuning drifts more than a single run, and
-deviating from the base is the main risk.
-
-### Cross-checked against the official Kaggle GRPO notebook
-
-[`iamleonie/fine-tuning-lfm2-5-1-2b-instruct-with-grpo`](https://www.kaggle.com/code/iamleonie/fine-tuning-lfm2-5-1-2b-instruct-with-grpo)
-finetunes this same base model on Kaggle. It is a **GRPO** run (RL with three reward
-functions) on invoice-OCR→JSON extraction — a different technique and a different task,
-so it is a *plumbing* reference, not a data one. What it confirms and what it does not:
-
-| | reference notebook | this repo | why |
-|---|---|---|---|
-| LoRA rank | 32 | 32 | ✅ matches — good confirmation of the capacity choice |
-| checkpoint safety | `save_pretrained` **once at the end** | `TimeCheckpoint` pushes to the Hub **every 5 min** | a single end-of-run save loses everything on a VM reset |
-| method | GRPO + vLLM | SFT | GRPO needs vLLM for fast generation and far more VRAM; it does not fit 2×T4 free tier in 30 min |
-| data | invoice OCR → JSON | Hindi + Hinglish chat | different task entirely |
-
-Adopted from it: `UNSLOTH_VLLM_STANDBY=1` (−30% VRAM, matters on T4) and passing
-`max_lora_rank` at load time. It pins `transformers 4.57.6` / `trl 0.24.0` where this
-notebook uses `4.57.3` / `0.22.2` — minor drift, and if you hit an API error, matching
-their versions is the first thing to try.
-
-### Cross-checked against the Ava @ Dyagnosys LFM2.5 notebook
-
-[`coachvitorcalvi/ava-lab-dyagnosys-finetune-v1`](https://www.kaggle.com/code/coachvitorcalvi/ava-lab-dyagnosys-finetune-v1)
-is a production-shaped SFT run on the same 1.2B base (tool-calling for lab sales, fully
-synthetic corpus). It is the better plumbing reference of the two. Adopted:
-
-| from Ava | what | why it matters here |
+| # | cell | what it does |
 |---|---|---|
-| **target-module guard** | verify each name exists in `named_modules()` by suffix match *before* attaching LoRA, and hard-fail on zero trainable params | `named_modules()` returns `model.layers.0.self_attn.q_proj`, so a bare `"q_proj"` is **never** an exact member. A wrong name attaches nothing and the run trains happily on 0 parameters. Silent, total, and looks fine in the logs. |
-| **iMatrix GGUF export** | f16 GGUF → `llama-imatrix` over a calibration corpus → `llama-quantize --imatrix … q4_k_m` | Same bit depth, same file size, less damage — plain `save_pretrained_gguf` picks outliers by tensor statistics alone. Directly relevant: the 1.2B scores 5/8, so we cannot afford to lose anything to quantization. Costs ~5–10 min; skip if near the 30-min mark. |
-| **template-leakage smoke test** | assert train/eval `template_id` sets are disjoint | we use `train_test_split`; the invariant is still worth asserting |
-| **OOD probes never in training** | hand-written, out-of-corpus | same idea as our `verify_format.py` + `/tmp/tune.py` |
+| 0-1 | **run config** | `SESSION`, `HF_USER` — the only thing you edit |
+| 2-3 | **HF login** | `kaggle_secrets` first, env var fallback. No paste slot: the notebook is public. |
+| 4 | **deps** | `unsloth` imported **before** `transformers`, or unsloth warns and skips its patches. Pins `transformers==4.57.3`. |
+| 5-6 | **`TimeCheckpoint`** | wall-clock Hub push every 5 min. Watch for the log lines. |
+| 7-8 | **build data** | 6 sources → 3 session files in `/kaggle/working`. Verified by execution. |
+| 9 | load data | built → attached Dataset → public repo fallback |
+| 10 | lengths | `MAX_SEQ_LENGTH=1024`, **fp16** (T4 is sm_75) |
+| 11-12 | **local tokenizer** | 4.x-compatible class, template embedded, real `model_max_length` |
+| 13-14 | model + LoRA | r=32, LFM modules, **verified present** before attaching |
+| 15-16 | chat template | 2 turns, ends `<|im_end|>`, no manual EOS |
+| 17-18 | trainer → train | eval-loss trend check, `generation_config` cleared pre-export |
+| 19-20 | **licence** | LFM-1.0 travels with the weights (16 redistribution clauses) |
+| 21-22 | merge → GGUF → push | the long pole for the session budget |
+| 23 | server instructions | per-session download dir, gate commands |
 
-It also **independently confirms the LoRA target module list** — verbatim
-`["q_proj","k_proj","v_proj","out_proj","in_proj","w1","w2","w3"]`, and it uses effective
-batch 8 like we do (though via `batch=1, accum=8`, which is slower than our `batch=8`).
+### The check that matters most
 
-One idea worth stealing later: it masks loss by **common-prefix diff** rather than by
-assistant-token markers:
-
-```python
-split_at = common_prefix_len(prompt_ids, full_ids)
-labels = [-100] * split_at + full_ids[split_at:]
+```
+  session        rows   median-reply-words  sources
+  s1_hinglish    8,500           26          {comi_rh:1500, sujalvc:4500, casual:1000, arena:1500}
 ```
 
-Our `train_on_responses_only` path depends on the template's markers, which
-`verify_format.py` already checks match verbatim — so both are safe today, but the
-prefix-diff form is immune to a template change.
-
----
+**Median reply words, not validation loss.** A model trained on short predictable
+output scores a *lower* loss and performs worse: one run reached 1.395 while
+answering `kya haal hai?` with `Kya har baahar hai`, and another reached 2.175 with
+a 47-word median that actually worked. Loss across different data distributions is
+not comparable, and it hid the regression entirely.
 
 ## 7. Chained sessions and crash-proof checkpointing
 
