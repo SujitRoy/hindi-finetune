@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Mac
+.DS_Store
+
+.ruff_cache
+*.csv
+*.mp3
+LFM2.5-Audio-1.5B-GGUF/
+*.wav
+*.env.local
+OpenEnv
+*.gguf
+LFM2.5-Audio-1.5B-transformers-js/
+
+# Node
+node_modules/
+package-lock.json

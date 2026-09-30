@@ -1,24 +1,5 @@
-# training data (regenerate with prepare_data.py; the per-session files ARE committed
-# because they must be uploaded to Kaggle, but the intermediates are not)
-hi_cache/
-ds_*.jsonl
-hi_corpus.txt
-train_smoke.jsonl
-
-# experimental tokenizer extension - off the training path (see README section 2)
-tokenizer-hi/
-
-# vendored third-party repo
-cookbook/
-
-# never commit these
-*.gguf
-*.safetensors
-hi_cache/
-.env
-*_cache.json
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-indicalign_cache/
+# 1.2 GB corpus - regenerate with build_cpt_1m.py, never commit it
+cpt_hindi_1m.jsonl
 *.parquet
+*.gguf
+data_cache/

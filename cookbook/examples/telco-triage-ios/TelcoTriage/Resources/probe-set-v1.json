@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "_note": "On-device probe set for TelcoChatDispatcher (ADR-021 §11.5 L3). Hand-picked queries covering every routable lane. Run from engineering mode (or unit tests) to score the live dispatcher against expected behaviour. Subset of the 89-query probe set from the H100 training pipeline — those probes need a live H100 to score Python-side; this set scores on-device end-to-end.",
+  "probes": [
+    {
+      "query": "How do I change my Wi-Fi password?",
+      "expected_lane": "rag_step_by_step",
+      "expected_page_prefix": "03.",
+      "_intent": "NETWORK / Wi-Fi management"
+    },
+    {
+      "query": "How do I restart my router",
+      "expected_lane": "rag_step_by_step",
+      "expected_page_prefix": "02.",
+      "_intent": "EQUIPMENT / restart"
+    },
+    {
+      "query": "How do I enable parental controls",
+      "expected_lane": "rag_step_by_step",
+      "expected_page_prefix": "03.",
+      "_intent": "NETWORK / parental controls"
+    },
+    {
+      "query": "Where can I see my connected devices",
+      "expected_lane": "rag_step_by_step",
+      "expected_page_prefix": "04.",
+      "_intent": "DEVICES"
+    },
+    {
+      "query": "Run a speed test",
+      "expected_lane": "rag_step_by_step",
+      "expected_page_prefix": "01.",
+      "_intent": "HOME_PAGE / speed test"
+    },
+    {
+      "query": "How do I turn off Digital Secure Home",
+      "expected_lane": "rag_step_by_step",
+      "expected_page_prefix": "05.",
+      "_intent": "DISCOVER / DSH"
+    },
+    {
+      "query": "I want to talk to a human",
+      "expected_lane": "live_agent_escalation",
+      "_intent": "explicit live-agent trigger"
+    },
+    {
+      "query": "There's an outage in my area",
+      "expected_lane": "live_agent_escalation",
+      "_intent": "outage = live-agent per ADR §3.1"
+    },
+    {
+      "query": "How do I pay my bill",
+      "expected_lane": "nav_only_deeplink",
+      "_intent": "account/billing → deep-link not generated answer"
+    },
+    {
+      "query": "what's the weather today",
+      "expected_lane": "oos_refusal",
+      "_intent": "off-topic, non-telco"
+    },
+    {
+      "query": "tell me a joke",
+      "expected_lane": "oos_refusal",
+      "_intent": "off-topic chitchat"
+    },
+    {
+      "query": "hi",
+      "expected_lane": "greeting",
+      "_intent": "greeting"
+    },
+    {
+      "query": "hello there",
+      "expected_lane": "greeting",
+      "_intent": "greeting"
+    }
+  ]
+}

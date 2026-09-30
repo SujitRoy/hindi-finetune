@@ -1,0 +1,1500 @@
+{"instruction": "kisne ye banaaya?", "response": "mere mom ne banaya.", "src": "casual"}
+{"instruction": "haan,aaj kaise kaam chal raha hai?", "response": "sab thik hai, bas thodi pressure hai.", "src": "casual"}
+{"instruction": "kal night party thi na?", "response": "haan thi, bohot maza aaya.", "src": "casual"}
+{"instruction": "film dekhne chala?", "response": "haan yaar, bahut accha film tha.", "src": "casual"}
+{"instruction": "aaj ka weather toh bahut mast hai na?", "response": "haan, bahut suhana hai.", "src": "casual"}
+{"instruction": "kya tumne yeh book padhi hai?", "response": "nahin yaar, padhne ka time hi nahi milta.", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "theek hoon, tum batao kaisa ja raha hai?", "src": "casual"}
+{"instruction": "kya tumne woh movie dekhi?", "response": "nahi, par review acche padhe hain.", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "theek hoon, aap bataye.", "src": "casual"}
+{"instruction": "kal party mein kya pehnu?", "response": "kuch casual hi pehen le, saadi alag se nahi chahie", "src": "casual"}
+{"instruction": "aapko kya pasand hai?", "response": "mujhe music aur movies pasand hai.", "src": "casual"}
+{"instruction": "aaj kya plans hain?", "response": "bas ghar pe hi rehna hai, kuch kaam hai.", "src": "casual"}
+{"instruction": "kya tumhe aaj workout karna hai?", "response": "haan, gym jaana hai.", "src": "casual"}
+{"instruction": "kya yeh book tumhare pass hai?", "response": "haan, aaj kal hi padhi thi.", "src": "casual"}
+{"instruction": "kya kar rahe ho?", "response": "bas, kuchh nahi, tv dekh raha hoon.", "src": "casual"}
+{"instruction": "aaj bahut garmi hai,kya?", "response": "haan yaar, bilkul tabah kar rahi hai.", "src": "casual"}
+{"instruction": "kabhi college se kuchh pata nahi chalta!", "response": "yaar, kabhi alag alag chalte hai.", "src": "casual"}
+{"instruction": "aree,itna garam kaise hain aaj?", "response": "haan yaar, yeh summer ka season hi aisa hota hai.", "src": "casual"}
+{"instruction": "kabhi goa gaya ho?", "response": "haan, do baar ja chuka hun, bahut maja aaya tha.", "src": "casual"}
+{"instruction": "aaj movie dekhne ka plan hai?", "response": "haan yaar, kabhi na kabhi toh dekhna hai na.", "src": "casual"}
+{"instruction": "abhi kaun sa show dekh rahe ho?", "response": "kuch funny wala dekh raha hu.", "src": "casual"}
+{"instruction": "kuchh khane ke liye mangoge?", "response": "nahi yaar, thoda khana khate hue aa gaya hoon.", "src": "casual"}
+{"instruction": "tumhare pass chai ka paisa hai kya?", "response": "haan, hai, chai kyu peeni hai?", "src": "casual"}
+{"instruction": "bhai,kya ho raha hai?", "response": "kuch nahi yaar, bas timepass kar raha hu.", "src": "casual"}
+{"instruction": "kya tu apna phone de sakta hai?", "response": "haan le, kya karna hai?", "src": "casual"}
+{"instruction": "phone charge kar lo yaar?", "response": "haan yaar, thanks yaar.", "src": "casual"}
+{"instruction": "shaadi kab hai?", "response": "abhi toh nahi yaar, padhai pe focus hai.", "src": "casual"}
+{"instruction": "shopping ke liye kya kya chahiye?", "response": "kuchh nahi yaar, bas essentials hi kharidoonga.", "src": "casual"}
+{"instruction": "kya tumne yeh book padhi hai?", "response": "nahi yaar, padhi nahi hai.", "src": "casual"}
+{"instruction": "tu kaise hai yaar?", "response": "haan yaar, bas khana khaya hai.", "src": "casual"}
+{"instruction": "kal movie dekhne chalenge?", "response": "haa yaar, bahut time ho gaya movie dekhne ko.", "src": "casual"}
+{"instruction": "kya plan hai weekend ke liye?", "response": "kuchh nahi yaar, bas relax karna hai ghar pe.", "src": "casual"}
+{"instruction": "kya hua tera exam?", "response": "abey kuchh pata nahi yaar, abhi result aana baaki hai.", "src": "casual"}
+{"instruction": "coffee peene jaate hai?", "response": "chalo yaar, time kya hai?", "src": "casual"}
+{"instruction": "mujhe ek book suggest karo na?", "response": "kuchh thriller dekhna hai toh the girl on the train padh lo", "src": "casual"}
+{"instruction": "kal ka exam kaisa gaya?", "response": "bas, normal gaya, aisa kuch nahi.", "src": "casual"}
+{"instruction": "kya aapko koi problem hai?", "response": "nahi yaar, sab theek hai.", "src": "casual"}
+{"instruction": "weekend ka plan kya hai?", "response": "kuchh nahi, ghar pe hi relax karunga.", "src": "casual"}
+{"instruction": "kya tumhe yeh movie pasand aayi?", "response": "haa, bahut accha movie tha.", "src": "casual"}
+{"instruction": "kal kya karne wala hai?", "response": "kuchh nahi yaar, bas chill karunga.',", "src": "casual"}
+{"instruction": "kabhi online shopping kiya hai?", "response": "haan yaar, bohot baar.", "src": "casual"}
+{"instruction": "yeh book kahan se li?", "response": "amazon se mangwayi thi.", "src": "casual"}
+{"instruction": "kaam khatam ho gaya kya?", "response": "abhi nahi yaar, thodi der aur lagne wali hai.", "src": "casual"}
+{"instruction": "aaj ka mood kaisa hai?", "response": "kuch zyada acha nahin yaar, thoda boring lag raha hai.", "src": "casual"}
+{"instruction": "bhook lagi hai,kya khana hai?", "response": "kuch light sa, samosa kha lete hai.", "src": "casual"}
+{"instruction": "train chhootega nahi na?", "response": "nahi, abhi toh time hai, aaram se chali jaayenge.", "src": "casual"}
+{"instruction": "kabhi party karoge kya?", "response": "haan, kabhi weekend pe ho jayegi, tu bhi aana.", "src": "casual"}
+{"instruction": "kya aap kal office ja rahe hain?", "response": "nahi yaar, kal toh off hai.", "src": "casual"}
+{"instruction": "yeh movie bohot funny hai!", "response": "haan yaar, meri bhi favourite hai.", "src": "casual"}
+{"instruction": "aaj ka mood toh bilkul off hai!", "response": "chinta mat kar, kal better ho jaayega.", "src": "casual"}
+{"instruction": "apne kitne ghanta kaam kiya aaj?", "response": "bahut yaar, aaj toh pura din office mein hi bitaya.", "src": "casual"}
+{"instruction": "kuchh chahiye kya?", "response": "nahi, thank you.", "src": "casual"}
+{"instruction": "mobile charge hai kya?", "response": "haan, 20% toh hai.", "src": "casual"}
+{"instruction": "aaj kaha jaana hai?", "response": "bas ghar pe hi reh raha hoon.", "src": "casual"}
+{"instruction": "kya khaana banaa rahi ho?", "response": "aaj paneer tikka masala banaya hai.", "src": "casual"}
+{"instruction": "kya plan hai aaj ke liye?", "response": "aaj toh kuch nahi, just relax.", "src": "casual"}
+{"instruction": "bus kab ayegi?", "response": "bhai, traffic mein aate hain, thodi der lag jaayegi.", "src": "casual"}
+{"instruction": "phone kar,kya?", "response": "haan, kar de yaar, zara urgent hai.", "src": "casual"}
+{"instruction": "kaha ja raha hai?", "response": "bas, office ja raha hoon.", "src": "casual"}
+{"instruction": "woh naya song suna?", "response": "haan, bahut mast hai.", "src": "casual"}
+{"instruction": "ye kya padh rahe ho?", "response": "koi nahin yaar, bas newspaper padh raha hoon.", "src": "casual"}
+{"instruction": "traffic toh aaj bhi bhayankar hai na?", "response": "haan yaar, ab toh daily routine ho gaya.", "src": "casual"}
+{"instruction": "aaj toh traffic bahut bada hai.", "response": "haan yaar, roz hi aisa hota hai.", "src": "casual"}
+{"instruction": "kya tu aaj party aayega?", "response": "haan, yaar, late aaunga.", "src": "casual"}
+{"instruction": "kya,aaj khelne ja rahe ho?", "response": "nahi yaar, aaj toh bahut thka hua hoon.", "src": "casual"}
+{"instruction": "kya tumhe ghana pasand hai?", "response": "haan, mujhe ghana bohot pasand hai.", "src": "casual"}
+{"instruction": "phone nahi chal raha hai.", "response": "recharge karwa le.", "src": "casual"}
+{"instruction": "kitne dost hai tere?", "response": "bahut yaar, 5-6 close friends hai.", "src": "casual"}
+{"instruction": "kabhi kabhi khud par bhi focus karna chahiye!", "response": "haan yaar, saara time to dosron pe hi jaata hai.", "src": "casual"}
+{"instruction": "kahan jaa rahe ho?", "response": "office jaa raha hoon.", "src": "casual"}
+{"instruction": "koi problem hai kya?", "response": "bas thoda stress hai yaar, work ka.", "src": "casual"}
+{"instruction": "kya tumne yeh movie dekh li?", "response": "nahi, abhi tak time nahi mila dekhne ka.", "src": "casual"}
+{"instruction": "kal exam hai,kya?", "response": "haan yaar, kuch padha nahi abhi.", "src": "casual"}
+{"instruction": "movie dekhne jaana hai?", "response": "kya idea hai, kaun si?", "src": "casual"}
+{"instruction": "weekend kaise gaya?", "response": "yaar, kuchh nahi, just lazing around.", "src": "casual"}
+{"instruction": "apne office ke paas ka coffee shop bada acha hai", "response": "haan, ek baar try karna", "src": "casual"}
+{"instruction": "lunch ka time ho gaya hai", "response": "chalo, khana khane jaate hain.", "src": "casual"}
+{"instruction": "kya tumhe party aana hai?", "response": "haan, jaroor aaoonga.", "src": "casual"}
+{"instruction": "ab kya kar rahe ho?", "response": "ab tv dekh raha hu.", "src": "casual"}
+{"instruction": "bhai,aaj shopping karne jaana hai?", "response": "chalo yaar, kya leke jaana hai?", "src": "casual"}
+{"instruction": "kya khana banaya aaj?", "response": "aaj toh simple khana bana hai, dal chawal.", "src": "casual"}
+{"instruction": "bhai,tumhara phone charger hai?", "response": "haan yaar, le le.", "src": "casual"}
+{"instruction": "college ka syllabus bahut heavy hai!", "response": "haan yaar, padhne ka time hi nahi mil raha hai", "src": "casual"}
+{"instruction": "kaise hai aap?", "response": "theek hun, aap kaise ho?", "src": "casual"}
+{"instruction": "kya ho gaya?", "response": "kuchh nahin yaar, thoda sad ho gaya.", "src": "casual"}
+{"instruction": "movie dekhne chalenge?", "response": "kaunsi film chal rahi hai?", "src": "casual"}
+{"instruction": "aaj toh khana bahut bada mast tha!", "response": "haan yaar, itna tasty kabhi nahi khaaya!", "src": "casual"}
+{"instruction": "mujhe ek aisa app chaiye,jisme..", "response": "abhi internet pe search karte hai, khud search karo.", "src": "casual"}
+{"instruction": "kya aaj khelne jaa rahe ho?", "response": "haan yaar, park mein volleyball khelna hai.", "src": "casual"}
+{"instruction": "kabhi coffee peena chahiye na?", "response": "sure, kal aajao mere office ke paas.", "src": "casual"}
+{"instruction": "kaise hai yeh naya phone?", "response": "yaar, superfast hai, bahut pasand aaya", "src": "casual"}
+{"instruction": "yaar,kaise ho?", "response": "bas yaar, busy hu thodi.", "src": "casual"}
+{"instruction": "bhai,cricket match dekha kya?", "response": "nahin yaar, busy tha.", "src": "casual"}
+{"instruction": "aaj ki party mein kya pehen ke jaaun?", "response": "koi bhi casual dress pehen le, overthink mat kar.", "src": "casual"}
+{"instruction": "aaj bahar ghoomne jaana hai?", "response": "nahin, bas aaram karne ka mood hai.", "src": "casual"}
+{"instruction": "kya new phone le raha hai?", "response": "haan, maybe next month.", "src": "casual"}
+{"instruction": "lunch kar liya?", "response": "haan yaar, abhi toh bas chala tha.", "src": "casual"}
+{"instruction": "aaj shopping karna hai,chale aao?", "response": "haan yaar, chalo chalo.", "src": "casual"}
+{"instruction": "tumhara exam kaisa gaya?", "response": "theek tha yaar, abhi result ka wait kar raha hoon.", "src": "casual"}
+{"instruction": "kal ka kya plan hai?", "response": "kuch nahi, bus kaam karna hai.", "src": "casual"}
+{"instruction": "cafe mein chai pee lein?", "response": "chalo yaar, time kya hai?", "src": "casual"}
+{"instruction": "bhai,yeh kaise use karta hai?", "response": "aree, simple hai, ye button press kar do.',", "src": "casual"}
+{"instruction": "kal party karne ja rahe hain?", "response": "haa, aap bhi aao.", "src": "casual"}
+{"instruction": "aaj kaafi garmi hai,na?", "response": "haan yaar, itni garmi mein kaun bahar nikle?", "src": "casual"}
+{"instruction": "kya time ho gaya?", "response": "bhai, already 8 baj gaye.", "src": "casual"}
+{"instruction": "kya hua,itna gussa kyu?", "response": "yaar, traffic mein stuck ho gaya, bahut late ho raha hoon.", "src": "casual"}
+{"instruction": "kya kar rahe ho yaar?", "response": "bas, yeh app pe comments padh raha hoon.", "src": "casual"}
+{"instruction": "bhai,aap kya kar rahe the?", "response": "bas yaar, yeh saara kaam pura kar raha tha.", "src": "casual"}
+{"instruction": "kya haal chal? kya kar raha tha?", "response": "kuchh nahi yaar, phone mein scroll kar raha tha.", "src": "casual"}
+{"instruction": "office ka kaam khatam ho gaya?", "response": "abhi toh kaafi hai, thoda aur karke jaana hai.", "src": "casual"}
+{"instruction": "phone charge kiya?", "response": "haan yaar, abhi kiya hai.", "src": "casual"}
+{"instruction": "konsi movie dekhni chahte ho?", "response": "kuchh romantic dekhte hai.", "src": "casual"}
+{"instruction": "kya tumhe yaad hai?", "response": "nahi yaar, kya baat hai?", "src": "casual"}
+{"instruction": "kal kya karna hai?", "response": "kal toh aaram se ghar pe hi rahna hai!", "src": "casual"}
+{"instruction": "cricket match dekha kya?", "response": "haan dekha, kya match tha yaar, last ball pe win ho gaya!", "src": "casual"}
+{"instruction": "aaj ka weather bahut ganda hai na?", "response": "haan yaar, suraj bhi nahi dikh raha.", "src": "casual"}
+{"instruction": "babuji kaise hain?", "response": "acche hain, bas thodi tabiyat kharab hai.", "src": "casual"}
+{"instruction": "tumne kabhi mumbai ki chai pi hai?", "response": "nahi yaar, aapne piya hai?", "src": "casual"}
+{"instruction": "kitna kharcha ho gaya yeh sab pe?", "response": "arre bas chhoti si shopping ki thi.", "src": "casual"}
+{"instruction": "aaj ka match dekha?", "response": "nahin, time nahin mila.", "src": "casual"}
+{"instruction": "bhai,aaj party mein dance karna hai kya?", "response": "bhai, mere paas dance karne ka talent nahi hai.", "src": "casual"}
+{"instruction": "kya tune yeh recipe try ki?", "response": "haan yaar, bahut tasty banai thi!", "src": "casual"}
+{"instruction": "kal office ka holiday hai?", "response": "haan, independence day hai.", "src": "casual"}
+{"instruction": "kya tumne movie dekh li?", "response": "nahi yaar, kaam ke chalte dekhne ka time hi nahi mila.", "src": "casual"}
+{"instruction": "kaise ho yaar?", "response": "theek hoon, tu bata.", "src": "casual"}
+{"instruction": "aaj kaafi boring hai na?", "response": "haan yaar, kya karein.", "src": "casual"}
+{"instruction": "phone ka battery toh bilkul low hai!", "response": "haan yaar, charger toh find karna padega.", "src": "casual"}
+{"instruction": "kya tumne exam ki preparation kar li hai?", "response": "abhi to nahi, aaj se hi shuru karunga.", "src": "casual"}
+{"instruction": "chalo,kuchh khaane chalo?", "response": "abhi nahin yaar, thodi der mein khaana khaana hai.", "src": "casual"}
+{"instruction": "shopping kiya kya?", "response": "haan yaar, kuchh kapde liye.", "src": "casual"}
+{"instruction": "kaam kya kar rahe ho?", "response": "bas yaar, internet surfing kar raha hoon.", "src": "casual"}
+{"instruction": "kya kar rahe ho?", "response": "bas, internet pe browsing kar raha hoon.", "src": "casual"}
+{"instruction": "kitna time laga kisi ko find karne mein?", "response": "bas do minute, ek minute mein ho jaata hai.", "src": "casual"}
+{"instruction": "kya aaj khana bahar se mangaoon?", "response": "nahin yaar, aaj ghar pe hi kuch bana lete hain.", "src": "casual"}
+{"instruction": "khana kha liya?", "response": "haan, abhi abhi khaaya.", "src": "casual"}
+{"instruction": "aaj kya bana hai lunch mein?", "response": "chicken curry aur chawal, aaja jaldi.", "src": "casual"}
+{"instruction": "konse train se jana hai?", "response": "next one, 10 min mein hai.", "src": "casual"}
+{"instruction": "kya tumhe ye gaana pasand hai?", "response": "haan yaar, bohot mast hai.", "src": "casual"}
+{"instruction": "aaj kya plan hai?", "response": "bas ghar pe relax, aur movie dekho.", "src": "casual"}
+{"instruction": "aaj kaise the classes?", "response": "theek the, bore thoda ho gaya.", "src": "casual"}
+{"instruction": "yeh cake kaise bana?", "response": "mom ne banaya hai, bahut tasty hai.", "src": "casual"}
+{"instruction": "kya tu kal party aane wala hai?", "response": "haan, zaroor aaunga yaar, tu toh invite karna hi tha.", "src": "casual"}
+{"instruction": "koi new phone liya kya?", "response": "haan yaar, iphone 14 pro max.", "src": "casual"}
+{"instruction": "chai pee lo yaar?", "response": "theek hai, aata hoon.", "src": "casual"}
+{"instruction": "kal shopping karne jaane hain,tum bhi aa jao na?", "response": "yaar, budget nahi hai, next time.", "src": "casual"}
+{"instruction": "kaise ja raha hai?", "response": "accha ja raha hai, kaam to bahut hai.", "src": "casual"}
+{"instruction": "shopping karne jaa rahe ho?", "response": "haan, kuchh essentials lene jaa raha hoon.", "src": "casual"}
+{"instruction": "kabhi tumne goa gaya hai?", "response": "nahi yaar, kabhi nahi gaya.", "src": "casual"}
+{"instruction": "kya ho gaya tumhe?", "response": "koi baat nahi yaar, sirf thoda headache hai.", "src": "casual"}
+{"instruction": "arey yaar,kal kya banaya tha khane mein?", "response": "kuch special nahi, bas aaloo ka sabzi banaya tha.", "src": "casual"}
+{"instruction": "kaam ka pressure bahut hai na?", "response": "haan yaar, khud pe bhi control nahi ho raha.", "src": "casual"}
+{"instruction": "phone ka battery low ho gaya hai!", "response": "charger leke aaya tha na?", "src": "casual"}
+{"instruction": "aapke bacche kaise hain?", "response": "sab thik hai, school me busy.", "src": "casual"}
+{"instruction": "kaise ho tum?", "response": "theek hu, bas thoda bore ho raha hoon.", "src": "casual"}
+{"instruction": "kabhi goa jaane ka mann hai?", "response": "haan, beach par relax karna chahta hoon.", "src": "casual"}
+{"instruction": "coffee peene jaayega?", "response": "haan yaar, let's go.", "src": "casual"}
+{"instruction": "kya tumhe ghoomne jaana hai?", "response": "haan, kisi hill station pe, kab jaayein?", "src": "casual"}
+{"instruction": "kya sab thik hai?", "response": "haan yaar, bilkul thik hai.", "src": "casual"}
+{"instruction": "aaj bahar ka mahaul to bahut mast hai", "response": "haa yaar, lekin kaam bhi bahut hai", "src": "casual"}
+{"instruction": "aaj ka traffic to bhayaanak tha!", "response": "haan yaar, ab toh pata nahi kya hoga.", "src": "casual"}
+{"instruction": "kya,kabhi kabhi phone pe baat karne ki zarurat hai!", "response": "haan yaar, baat karna toh banta hai.", "src": "casual"}
+{"instruction": "tum kya kar rahe ho?", "response": "bas yaar, laptop pe kaam kar raha hoon.", "src": "casual"}
+{"instruction": "bhai,ye movie dekhna jaruri hai!", "response": "haa yaar, bahut mast hai na?", "src": "casual"}
+{"instruction": "yeh dress kaise lag raha hai?", "response": "bohat acha lag raha hai, aise hi pehno!", "src": "casual"}
+{"instruction": "kya tumhare pass kuch cash hai?", "response": "haan yaar, thoda sa hai.", "src": "casual"}
+{"instruction": "aaj ka lunch kya hai?", "response": "aaj toh khana khud banaya hai, tu kya khayega?", "src": "casual"}
+{"instruction": "kahan ja rahe ho?", "response": "haan yaar, gym jaa raha hu.',", "src": "casual"}
+{"instruction": "movie dekhne ka plan hai kya?", "response": "haan yaar, netflix pe kuchh naya dekhte hain.", "src": "casual"}
+{"instruction": "office mein kitna kaam hai aaj?", "response": "yaar, kaam toh aaj bahut overload hai.", "src": "casual"}
+{"instruction": "kaha ja rahe ho aap?", "response": "bahar thoda walk karne.", "src": "casual"}
+{"instruction": "kya tumhara ghar dur hai?", "response": "nahi yaar, paas hi hai.", "src": "casual"}
+{"instruction": "kal exam hai yaar,kaise hoga?", "response": "chill, sab kuchh theek ho jaayega.", "src": "casual"}
+{"instruction": "ye phone ka battery itna jaldi kyun khatam hota hai?", "response": "yaar, ye phone thoda outdated ho gaya hai.", "src": "casual"}
+{"instruction": "kaise ho tum?", "response": "theek hoon, tum kaise ho?", "src": "casual"}
+{"instruction": "bhai,kaun sa phone lete ho?", "response": "iphone nahi, aise koi sa budget mein.',", "src": "casual"}
+{"instruction": "mujhe khush ho kar kya karna hai?", "response": "chill maar, kya tension le raha hai.", "src": "casual"}
+{"instruction": "aap kaise hai?", "response": "main bhi thik hu, aap kaisa hai?", "src": "casual"}
+{"instruction": "traffic bahut hai aaj", "response": "haan yaar, kabhi to nahi hota.',", "src": "casual"}
+{"instruction": "kya aaj ka plan hai?", "response": "kuch nahi yaar, bas ghar pe chill karna hai.", "src": "casual"}
+{"instruction": "kal party mein kya pehenke jaunga?", "response": "koi formal outfit pehen le, shayad best option hai.", "src": "casual"}
+{"instruction": "aaj kya khana banayega?", "response": "kuch special nahi, aaj to bas roti sabzi banaungi.", "src": "casual"}
+{"instruction": "aaj kya banaya tumne?", "response": "paneer butter masala banaya, aao khaao.", "src": "casual"}
+{"instruction": "sab theek toh hai na?", "response": "haan, bas thoda boring hai yaar.", "src": "casual"}
+{"instruction": "kab milenge hum?", "response": "kal evening me, chai pe?.", "src": "casual"}
+{"instruction": "kya karne ka plan hai aaj?", "response": "kuchh nahi, aise hi ghumna hai.", "src": "casual"}
+{"instruction": "kya kar raha hai yaar,itna gussa?", "response": "nahi yaar, aaj boss ne gussa dila diya.", "src": "casual"}
+{"instruction": "bhai,kaha jaa raha hai?", "response": "college jaa raha hoon, kaam hai.'.", "src": "casual"}
+{"instruction": "traffic toh aaj bahut bada hai!", "response": "haan yaar, kaafi stuck hoon.", "src": "casual"}
+{"instruction": "kya aapko yeh movie pasand aayi?", "response": "haan yaar, movie to bahut mast thi, par thoda emotional thi.", "src": "casual"}
+{"instruction": "kab milte hain?", "response": "kal sham ko milte hain.", "src": "casual"}
+{"instruction": "kitna traffic hai aaj?", "response": "bahut yaar, abhi office pahunchne mein 1 hour lagega.", "src": "casual"}
+{"instruction": "kaisa hai yaar?", "response": "acha, tu kaise hai?", "src": "casual"}
+{"instruction": "coffee piyoge kya?", "response": "haan yaar, chai bhi banalo.", "src": "casual"}
+{"instruction": "apna aadhaar card dikha?", "response": "haan, le le.", "src": "casual"}
+{"instruction": "kahaan ja rahe ho?", "response": "bus stand, ghar jaana hai.", "src": "casual"}
+{"instruction": "kya tumne woh naya restaurant try kiya?", "response": "nahi yaar, kabhi try karna chahta hoon.", "src": "casual"}
+{"instruction": "kaise hai tu?", "response": "bas, chal raha hu, tu bata", "src": "casual"}
+{"instruction": "bhook lagi hai,kuchh khaate hai?", "response": "chalo, kuchh order kar lete hai.", "src": "casual"}
+{"instruction": "aaj bahut garmi hai na?", "response": "haan yaar, lag raha hai ac hi chalana padega.", "src": "casual"}
+{"instruction": "aaj kaise tha din?", "response": "achcha tha yaar, kuchh special toh nahin tha.", "src": "casual"}
+{"instruction": "bhai,kya tumhe chai pasand hai?", "response": "haan, chai to meri jaan hai.", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "theek hu, aap batao.", "src": "casual"}
+{"instruction": "ye bag new hai?", "response": "haan, kal hi liya hai.", "src": "casual"}
+{"instruction": "koi new song suna?", "response": "haan, bahut mast song hai.", "src": "casual"}
+{"instruction": "exam ke liye ready ho?", "response": "haan, abhi last minute revision kar rahi hun.", "src": "casual"}
+{"instruction": "kya aap kal ka dinner mere ghar pe khaana chahte ho?", "response": "haan yaar, bahut achha laga.", "src": "casual"}
+{"instruction": "kitna time lagega?", "response": "20 minute mein pahunch jaunga.',", "src": "casual"}
+{"instruction": "tere parents aaye hai kya?", "response": "haan yaar, aaj se aa gaye hain.", "src": "casual"}
+{"instruction": "kya tumhara phone charge hai?", "response": "haa, thoda sa bach gaya hai.", "src": "casual"}
+{"instruction": "aaj ka mood kaisa hai?", "response": "aaj to bahut chilled mood hai yaar.", "src": "casual"}
+{"instruction": "aaj ka weather toh bahut ganda hai!", "response": "haan yaar, paani bhi gir raha hai.", "src": "casual"}
+{"instruction": "music kaisa lagta hai?", "response": "bahut mast yaar, beats mazedaar hain", "src": "casual"}
+{"instruction": "kya aaj movie dekhne jaate hai?", "response": "haan, abhi toh abhi!", "src": "casual"}
+{"instruction": "kal ka kya schedule hai?", "response": "kal to office jaana hai aur kaam karna hai.", "src": "casual"}
+{"instruction": "train ka ticket mil gaya?", "response": "nahi yaar, online pe sab booked hai.", "src": "casual"}
+{"instruction": "kitna time lagega?", "response": "adhe ghante mein pahunch jaunga.", "src": "casual"}
+{"instruction": "koi naya phone le raha hai kya?", "response": "haan yaar, new iphone 14 le raha hoon.", "src": "casual"}
+{"instruction": "aaj office mein kya drama hua?", "response": "kuch nahin, bas usual boring day.", "src": "casual"}
+{"instruction": "aaj kaunsi match hai?", "response": "india vs australia, jaane wala hoon stadium.", "src": "casual"}
+{"instruction": "ye naya phone kaisa hai?", "response": "bhut acha hai, camera superb hai.", "src": "casual"}
+{"instruction": "aaj kaise aaya?", "response": "bus se aaya, traffic bahut tha.", "src": "casual"}
+{"instruction": "kya padhai kar rahe ho?", "response": "bhai, abhi toh bas timepass kar raha hu.',", "src": "casual"}
+{"instruction": "aaj toh bahut bore ho raha hu", "response": "movie dekhte hain ya phir kuchh game khelte hain.", "src": "casual"}
+{"instruction": "kya tumhara phone chala jaayega?", "response": "nahin, meri power bank hai.", "src": "casual"}
+{"instruction": "aaj kya cooking ki?", "response": "kuchh simple sa, dal chawal.", "src": "casual"}
+{"instruction": "aaj toh bahut gussa aa raha hai!", "response": "chill maar yaar, sab thik ho jaayega.", "src": "casual"}
+{"instruction": "kya kar rahe ho?", "response": "bas, kuchh nahi, ghar pe chill kar raha hu.", "src": "casual"}
+{"instruction": "kya hua?", "response": "kuchh nahi, bas soch raha tha.", "src": "casual"}
+{"instruction": "kya tumne wo new song suna?", "response": "nahi yaar, batao kaisa hai?", "src": "casual"}
+{"instruction": "bus ka wait kar rahe ho?", "response": "haan, kab aayegi yeh pata nahi.", "src": "casual"}
+{"instruction": "kya tumhe kisi ki help chahiye?", "response": "nahi yaar, mein khud manage kar lunga.", "src": "casual"}
+{"instruction": "aaj kya karenge?", "response": "aaj toh sirf ghar pe hi relax karunga.", "src": "casual"}
+{"instruction": "aaj kya mood hai?", "response": "bahut boring, kuchh interesting karne ka man hai.", "src": "casual"}
+{"instruction": "koi baat nahi,chal, chill karte hai?", "response": "haaan yaar, movie dekhte hai.", "src": "casual"}
+{"instruction": "aaj kya banaya hai?", "response": "aloo matar, aap kya khaana chahte ho?", "src": "casual"}
+{"instruction": "kya tumne vo book padhi?", "response": "haan, bahut accha book hai.", "src": "casual"}
+{"instruction": "dinner ke liye kya khaana chahiye?", "response": "aaj khane ka mood nahi hai, kuch light lete hai.", "src": "casual"}
+{"instruction": "yaar,phone charge ho gaya kya?", "response": "haa, charge toh ho gaya hai, abhi lagane deta hu.", "src": "casual"}
+{"instruction": "kaisa gaya interview?", "response": "theek tha yaar, hope for the best.", "src": "casual"}
+{"instruction": "chalo,chai peete hai?", "response": "haan yaar, mujhe bhi chai ki chaah hai.", "src": "casual"}
+{"instruction": "abhi aaya hu,thodi der mein chalta hu", "response": "chalo, chalte hue aana.", "src": "casual"}
+{"instruction": "coffee toh karni chahiye yaar,right?", "response": "haan, kal se kaam bahut heavy hai.", "src": "casual"}
+{"instruction": "bhai,ye film kaise thi?", "response": "aree, timepass thi yaar.", "src": "casual"}
+{"instruction": "kaunsa train leke jaaoon?", "response": "rajdhani le lo, wahi fast hai.", "src": "casual"}
+{"instruction": "aaj kya plan hai?", "response": "kya plan hai? bas ghar pe hi rehunga.", "src": "casual"}
+{"instruction": "aaj kya scene hai?", "response": "aaj shaam ko movie dekhne ja rahe hai, chalo saath me.", "src": "casual"}
+{"instruction": "aaj weather bahut hot hai na?", "response": "haan, itna garmi hai ki pata nahi chalta.", "src": "casual"}
+{"instruction": "woh movie toh dekhni hi chahiye thi", "response": "haan yaar, bahut acha hai.", "src": "casual"}
+{"instruction": "sun,wo shop thi, kya naam tha?", "response": "bhai, yaad nahi aa raha.", "src": "casual"}
+{"instruction": "kahan ja raha hai?", "response": "office ja raha hoon, aur tum?", "src": "casual"}
+{"instruction": "aaj kya khaana banaya hai?", "response": "sabji aur roti banayi hai.", "src": "casual"}
+{"instruction": "kya aaj cricket match hai?", "response": "haan yaar, india vs pakistan.", "src": "casual"}
+{"instruction": "kya tumne wo film dekh li?", "response": "nahi yaar, abhi nahi dekha.", "src": "casual"}
+{"instruction": "kuchh chai pee lo?", "response": "nahin yaar, abhi full pet hai.", "src": "casual"}
+{"instruction": "aaj ka traffic toh mazaak bana hua hai!", "response": "haan yaar, kahi pahunchne mein kaafi time lag raha hai.", "src": "casual"}
+{"instruction": "kaise ho yaar?", "response": "haan thik hoon, tu bata?", "src": "casual"}
+{"instruction": "kya tumne lunch kiya?", "response": "haan, ghar pe hi kiya.", "src": "casual"}
+{"instruction": "aaj kya ho raha hai?", "response": "aaj toh kuchh special nahi hai yaar.", "src": "casual"}
+{"instruction": "kya tumne coffee pi?", "response": "nahin yaar, aaj tea pi", "src": "casual"}
+{"instruction": "kya,tumhara kaam khatam ho gaya?", "response": "haan yaar, ab aap bolo, kya karna hai?", "src": "casual"}
+{"instruction": "bhai,ye kaam kab tak karega?", "response": "abhi thodi der mein ho jaayega.", "src": "casual"}
+{"instruction": "kya tumne yeh movie dekhi?", "response": "nahin yaar, abhi tak time nahi mila.", "src": "casual"}
+{"instruction": "kaisa ja raha hai exam ka preparation?", "response": "achcha ja raha hai, par pressure toh hai thoda.", "src": "casual"}
+{"instruction": "mujhe aaj kaafi sleep aarahi hai", "response": "chalo, aaram kar lo thodi der.", "src": "casual"}
+{"instruction": "kya khaane ka mood hai?", "response": "kuch light sa.", "src": "casual"}
+{"instruction": "movie dekhne ja rahe ho kya?", "response": "nahi yaar, abhi kuch plans nahi hai.", "src": "casual"}
+{"instruction": "lunch khaya?", "response": "haan yaar, office canteen mein khana khaaya.", "src": "casual"}
+{"instruction": "yeh project to bahut tough hai!", "response": "haan, but hum toh manage kar lenge.", "src": "casual"}
+{"instruction": "kya exam ka result aa gaya?", "response": "haan yaar, pass ho gaya! finally!", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "theek hoon, aap bataiye.", "src": "casual"}
+{"instruction": "apna phone number dedo?", "response": "yaar, abhi nahi, please.", "src": "casual"}
+{"instruction": "aaj ka weather toh bahut ganda hai na?", "response": "haan yaar, lag raha hai barish hone wali hai.", "src": "casual"}
+{"instruction": "aaj bahut garmi hai na?", "response": "haan yaar, pant khol ke hi rakhna pad raha hai.", "src": "casual"}
+{"instruction": "bhai,coffee peena hai?", "response": "haan yaar, chai bhi le lo na.", "src": "casual"}
+{"instruction": "bhook lagi hai?", "response": "haa, bahut.", "src": "casual"}
+{"instruction": "aaj kaise ho?", "response": "bhai, aaj toh pakka time waste ho gaya.", "src": "casual"}
+{"instruction": "kab tak pahuch jaaoge?", "response": "aise toh 10 minutes mein pahunch jaaunga.", "src": "casual"}
+{"instruction": "kal ka exam kaisa gaya?", "response": "abhi tak toh result nahi aaya hai.", "src": "casual"}
+{"instruction": "yeh movie dekh li kya?", "response": "nahin yaar, kaha se time nikalta hai, kaam toh chalta rehta hai!", "src": "casual"}
+{"instruction": "kaisa hai aaj ka din?", "response": "achcha ja raha hai, tumhara kaisa?", "src": "casual"}
+{"instruction": "kya tumne woh book padhi jo maine recommend ki thi?", "response": "haan yaar, bahut mazedar book thi!", "src": "casual"}
+{"instruction": "haan yaar,kabhi chai peena?", "response": "haan, definitely, jaldi se bata dena.", "src": "casual"}
+{"instruction": "kal kya karna hai?", "response": "kal office jaana hai.", "src": "casual"}
+{"instruction": "bhaiya,aapko kabhi dubai jana hai?", "response": "arey, jana hai yaar, kabhi opportunity mile to jaroor.", "src": "casual"}
+{"instruction": "kya tumhare phone mein battery hai?", "response": "haan, abhi 70% hai.", "src": "casual"}
+{"instruction": "koi party plan hai?", "response": "nahin yaar, aaj toh kuchh nahi hai.", "src": "casual"}
+{"instruction": "kya dekh raha hai?", "response": "movie dekh raha hoon.", "src": "casual"}
+{"instruction": "kya bolti ho?", "response": "haan, woh sahi kah rahe hain.", "src": "casual"}
+{"instruction": "chai banayi hai,aao pee lo?", "response": "aa raha hoon, bas thoda time de.", "src": "casual"}
+{"instruction": "aaj toh bhook lagi hai yaar,kuch bana?", "response": "haan, khana ban gaya hai, aaja.", "src": "casual"}
+{"instruction": "kal exam hai,abhi tak padhai nahin hui", "response": "koi baat nahin, aaj rat jaag kar kar lena.", "src": "casual"}
+{"instruction": "aaj weather kitna acha hai?", "response": "haan, bahut khula hai, garmi bhi kam hai.", "src": "casual"}
+{"instruction": "mobile recharge karwaana hai?", "response": "haan yaar, mera balance low hai", "src": "casual"}
+{"instruction": "ye movie ka trailer dekh liya kya?", "response": "haan dekha, badi majaa aa rahi hai, movie dekhne jaayenge zaroor.", "src": "casual"}
+{"instruction": "chalo,chai peete hain?", "response": "haa, mujhe toh chai ki khwahish ho rahi thi.", "src": "casual"}
+{"instruction": "kya khana banaya hai aaj?", "response": "bas simple sa khana banaaya hai, dal chawal.", "src": "casual"}
+{"instruction": "kya tumhe koi game khelna pasand hai?", "response": "haan yaar, kabhi kabhi pubg khelta hoon.", "src": "casual"}
+{"instruction": "kya ghumne jaaoge?", "response": "nahi yaar, ghar par hi rahenge.", "src": "casual"}
+{"instruction": "kya tumhare pass phone charger hai?", "response": "haa, le lo, mere pass extra hai.", "src": "casual"}
+{"instruction": "bhai,kya kar raha hai?", "response": "kuch nahin yaar, bas aise hi", "src": "casual"}
+{"instruction": "kya khaana banaya aaj?", "response": "kuch simple sa banaya hai, roti sabzi.", "src": "casual"}
+{"instruction": "kya tumne work submit kar diya?", "response": "haan yaar, submit kar diya.", "src": "casual"}
+{"instruction": "ab toh bahar jaane ka mann nahi kar raha hai,na?", "response": "haa yaar, samay kharab hai.", "src": "casual"}
+{"instruction": "kal ka paper toh gaya?", "response": "haan yaar, abhi se tension hone lagi hai.", "src": "casual"}
+{"instruction": "chalo,chai peete hain?", "response": "haan yaar, chalte hain.", "src": "casual"}
+{"instruction": "kitna bill aaya?", "response": "250 rupees, lekin split kar dete hain.", "src": "casual"}
+{"instruction": "kya aaj party kar rahe ho?", "response": "haan yaar, ek movie dekhne jaa rahe hain.", "src": "casual"}
+{"instruction": "kya tumhare pass phone charger hai?", "response": "haan, le lo, aap use karlo.", "src": "casual"}
+{"instruction": "aaj toh bahut tez barish hai?", "response": "haan yaar, ghar se nahin nikal pa raha hu.", "src": "casual"}
+{"instruction": "bhai,aapke office mein kya chal raha hai?", "response": "aise hi, kaam to chalta hi rehta hai.", "src": "casual"}
+{"instruction": "mobile ka charger laaye ho?", "response": "haan yaar, wallet mein hai.", "src": "casual"}
+{"instruction": "kya chai piyenge?", "response": "haan yaar, chai to banani padegi.", "src": "casual"}
+{"instruction": "kaam bahut zada hai?", "response": "haan yaar, thoda thoda, lekin chalta hai.", "src": "casual"}
+{"instruction": "kya aaj kuchh khane ke liye order karte hai?", "response": "haan, pizza mangao yaar!", "src": "casual"}
+{"instruction": "aaj khana kya bana?", "response": "masala dosa bana rahi hoon.", "src": "casual"}
+{"instruction": "chai lete ho?", "response": "haan, ek cup bana do.", "src": "casual"}
+{"instruction": "aaj bahut tired hu yaar", "response": "kuch relax karlo, coffee pi lo", "src": "casual"}
+{"instruction": "bhai,kaun si cafe pe gaye the tum?", "response": "wo nahin yaar, ek naya restaurant try kiya tha.", "src": "casual"}
+{"instruction": "chai peegi?", "response": "haan, garam garam chai aur biscuit dedo.", "src": "casual"}
+{"instruction": "aapki naya phone kaise hai?", "response": "accha hai, par battery life thodi kam hai.", "src": "casual"}
+{"instruction": "aaj ka party kaisa raha?", "response": "bahut majaa aaya, sabhi log milke bahut hasi.", "src": "casual"}
+{"instruction": "aaj party hai,aana?", "response": "bhai, paisa nahi hai.", "src": "casual"}
+{"instruction": "aaj to bahut thanda hai!", "response": "haan yaar, jaake garm chai peena chahiye.", "src": "casual"}
+{"instruction": "kya aapko yeh tshirt pasand aaya?", "response": "haan, achcha hai, but size thoda bada hai.", "src": "casual"}
+{"instruction": "kya aaj gym jaana hai?", "response": "nahi yaar, aaj toh aaram karna hai.", "src": "casual"}
+{"instruction": "yeh naya coffee shop bahut achcha hai na?", "response": "haan yaar, coffee bhi thik thi, aur ambience bhi achcha tha.", "src": "casual"}
+{"instruction": "aaj kaam kaisa raha?", "response": "thik-thak, thoda busy raha.", "src": "casual"}
+{"instruction": "yaar,train miss ho gayi!", "response": "arey, next wali catch kar lo, koi baat nahi.", "src": "casual"}
+{"instruction": "aaj bahut garam hai?", "response": "haan, bahut zyada.", "src": "casual"}
+{"instruction": "kya kar rahe ho?", "response": "bas phone pe baat kar raha hoon, kaam toh baad me karunga.", "src": "casual"}
+{"instruction": "apna new book padh li?", "response": "nahi yaar, time hi nahi mil raha hai.", "src": "casual"}
+{"instruction": "chalo,picture dekhne chalte hai?", "response": "chalo yaar, kaun si picture dekhni hai?", "src": "casual"}
+{"instruction": "kya plan hai?", "response": "nahi yaar, koi plan nahi, bas aaram karunga.", "src": "casual"}
+{"instruction": "kya khana banaya hai?", "response": "aaj toh simple khana hai, sabzi aur roti.", "src": "casual"}
+{"instruction": "kya baat hai?", "response": "bas, aaj mood acha hai.", "src": "casual"}
+{"instruction": "aaj toh bahut garam hai,na?", "response": "haan yaar, ac on karlo jaldi se.", "src": "casual"}
+{"instruction": "didi,kya tumhe aaj office jaana hai?", "response": "nahi yaar, aaj to weekend hai.", "src": "casual"}
+{"instruction": "tumhari favourite colour kya hai?", "response": "mere favourite colour blue hai.", "src": "casual"}
+{"instruction": "kya kar raha hai?", "response": "bas, phone pe game khel raha hoon.", "src": "casual"}
+{"instruction": "kya kar rahi thi,darling?", "response": "bas yaar, kuchh online shopping kar rahi thi.", "src": "casual"}
+{"instruction": "kya pakaya aaj?", "response": "aaj toh bas khana banaya nahi, order kiya tha.", "src": "casual"}
+{"instruction": "kya tumhe online shopping karna pasand hai?", "response": "haan, bilkul, aaj kal sab kuch online hi milta hai.", "src": "casual"}
+{"instruction": "kya mazaak bana rahe ho?", "response": "bas majaak kar raha tha yaar.", "src": "casual"}
+{"instruction": "oye,kya kar raha hai?", "response": "kuch nahi yaar, bas phone pe baat kar raha hoon.", "src": "casual"}
+{"instruction": "kabhi milenge?", "response": "zaroor yaar, aage ka plan banao.", "src": "casual"}
+{"instruction": "aaj kya plan hai?", "response": "kuchh nahi yaar, ghar pe relax karunga.", "src": "casual"}
+{"instruction": "aaj kya bana rahe ho khane mein?", "response": "aaj paneer butter masala bana rahi hoon.", "src": "casual"}
+{"instruction": "woh ladki aapki girlfriend hai?", "response": "aree, woh meri dost hai bas.", "src": "casual"}
+{"instruction": "workout karne gaya?", "response": "haan, aaj gym gaya tha.',", "src": "casual"}
+{"instruction": "movie dekhne jaa rahe ho kya aaj?", "response": "nahin yaar, aaj thoda padhai karna hai.", "src": "casual"}
+{"instruction": "bhai,movie dekhne chalo?", "response": "yaar, kal chalta hoon, aaj toh bahut padhai hai.", "src": "casual"}
+{"instruction": "phone charge karlo yaar!", "response": "haan, abhi lagata hoon.", "src": "casual"}
+{"instruction": "office se jaldi aa gaya?", "response": "haan, aaj kaam kam tha.", "src": "casual"}
+{"instruction": "kya tumhe yeh game pasand hai?", "response": "haa, ye bahut majaa aati hai.", "src": "casual"}
+{"instruction": "kya padhaai mein chal raha hai?", "response": "ekdum smooth, abhi final exams ke liye padh raha hoon.", "src": "casual"}
+{"instruction": "bhai,office ka kaam kabhi khatam hoga?", "response": "abey, kabhi nahin khatam hoga yeh to.", "src": "casual"}
+{"instruction": "kal ka plan kya hai?", "response": "kal toh kuch nahi, just relaxing.", "src": "casual"}
+{"instruction": "kya khaane mein hai?", "response": "aaj baingan bharta banaya hai.", "src": "casual"}
+{"instruction": "kaam bahut zyada ho gaya aaj?", "response": "haan yaar, dil bekar hai.", "src": "casual"}
+{"instruction": "kal office ka kya plan hai?", "response": "kal meeting hai, toh late aana padega.", "src": "casual"}
+{"instruction": "kitne time pe exam hai?", "response": "kal, 10 baje.", "src": "casual"}
+{"instruction": "bhai,aaj party toh nahi hai na?", "response": "abey, kya bol raha hai! weekend pe toh banta hai.", "src": "casual"}
+{"instruction": "kaise ho tum?", "response": "bas chal raha hai, tum batao.", "src": "casual"}
+{"instruction": "kabhi online shopping karte ho kya?", "response": "haan yaar, kaafi aasan hai.", "src": "casual"}
+{"instruction": "oye,party karne ka mood hai?", "response": "nahin yaar, aaj toh thka hua hoon.", "src": "casual"}
+{"instruction": "kuch khaane ko mango?", "response": "nahi yaar, abhi pet bhara hai", "src": "casual"}
+{"instruction": "kaise ho bhai?", "response": "chalo, bas, tu kya kar raha hai?", "src": "casual"}
+{"instruction": "aaj concert ja raha hai?", "response": "haan yaar, kya maza aane wala hai!", "src": "casual"}
+{"instruction": "aaj dinner ke liye kya banaaoge?", "response": "aaj khana bahar se order kar lete hai.", "src": "casual"}
+{"instruction": "kisne yeh cake banaya?", "response": "mere mummy ne yaar, bahut tasty hai.", "src": "casual"}
+{"instruction": "kya khaana banaya hai?", "response": "aaj simple khana hai, daal chawal.", "src": "casual"}
+{"instruction": "kaam bahut zyada hai kya?", "response": "haan yaar, kaafi zyada hai.", "src": "casual"}
+{"instruction": "mobile charger kaha hai?", "response": "wahi table pe hai jaha tum phone rakhte ho.", "src": "casual"}
+{"instruction": "aaj toh traffic bahut badhiya hai?", "response": "haan yaar, aise hi rehtha hai har roz.", "src": "casual"}
+{"instruction": "aaj dinner mein kya bana hai?", "response": "kuch special nahi, bas simple daal chawal hi bana hai.", "src": "casual"}
+{"instruction": "ab toh apne parents se shaadi ke baare mein baat karni padegi.", "response": "haan yaar, jaldi hi karni padegi.", "src": "casual"}
+{"instruction": "kaun sa dish order karenge?", "response": "mujhe chicken tikka masala chahiye, aap kya chahte ho?", "src": "casual"}
+{"instruction": "mujhe ye app pasand aaya hai,tumne use use kiya hai?", "response": "nahin, abhi tak nahi.", "src": "casual"}
+{"instruction": "kaunsa bus leke jaana hai?", "response": "koi bhi, aapke aane se pehle aa gaya toh le jaenge.", "src": "casual"}
+{"instruction": "aaj kaafi thanda hai na?", "response": "haan yaar, lagta hai jaane wala hai winter.", "src": "casual"}
+{"instruction": "kaunsa song suna raha tha?", "response": "bas, ye alag type ka song try kar raha hoon, acchi hai?", "src": "casual"}
+{"instruction": "shopping ke liye kitne paise laye ho?", "response": "bahut saare, kuchh bhi kharid lo.", "src": "casual"}
+{"instruction": "aaj kya special hai?", "response": "aaj toh bas normal day hai, kya special chahiye?", "src": "casual"}
+{"instruction": "kabhi kabhi aisa lagta hai ki life bohot boring hai", "response": "haan, yaar but kya karein, life goes on.", "src": "casual"}
+{"instruction": "kuchh khana hai kya?", "response": "haan yaar, kuchh light sa.", "src": "casual"}
+{"instruction": "kal exam hai?", "response": "haa yaar, kya pata, aaega toh aaega.", "src": "casual"}
+{"instruction": "coffee toh ban gayi,aaja", "response": "aaraha hoon, jaldi se!", "src": "casual"}
+{"instruction": "movie ka ticket book kar diya?", "response": "haan yaar, kal morning show mein hai.", "src": "casual"}
+{"instruction": "kab tak aayega?", "response": "10 minute mein toh aa jaaoonga.", "src": "casual"}
+{"instruction": "kabhi coffee peena chaiye", "response": "haan yaar, time nikalo toh zarur.", "src": "casual"}
+{"instruction": "aaj toh bahut traffic hai,na?", "response": "haan yaar, kuchh work finish karne ja raha hoon, jaldi jaana hai.", "src": "casual"}
+{"instruction": "tumhare ghar kaam kaise hai?", "response": "sab thik hai, koi dikkat nahi.", "src": "casual"}
+{"instruction": "shopping karne ja rahe ho kya?", "response": "haan yaar, kuchh clothes kharidne hain.", "src": "casual"}
+{"instruction": "aaj ka khana kya banaya hai?", "response": "aloo matar sabzi banaa hai, khana hai?", "src": "casual"}
+{"instruction": "kya aaj movie dekhne jaenge?", "response": "haan, chalte hai.", "src": "casual"}
+{"instruction": "kal ki party aana hai kya?", "response": "haan, jarur aaoonga.", "src": "casual"}
+{"instruction": "aaj kya banaya khane mein?", "response": "aaj to bahut simple sa khaana bana hai.", "src": "casual"}
+{"instruction": "kya yaar,traffic itna badhiya hai!", "response": "haan, yaar, ekdum paagalpan hai.", "src": "casual"}
+{"instruction": "bhai,mere phone ka battery chala gaya!", "response": "charger toh mere bag mein hai, le ja.", "src": "casual"}
+{"instruction": "kitna kharcha hua?", "response": "zyaada nahi, manageable hai.", "src": "casual"}
+{"instruction": "aaj ki meeting kaisa gaya?", "response": "boring tha, kuch special nahi tha.", "src": "casual"}
+{"instruction": "kya,college me kya chal raha hai?", "response": "kuchh nahi yaar, same old, same old.", "src": "casual"}
+{"instruction": "kya plan hai weekend ke liye?", "response": "kuch nahi yaar, bas ghar pe hi relax karunga.", "src": "casual"}
+{"instruction": "kya tumhe dance karna pasand hai?", "response": "haan yaar, but mujhe aata nahi hai.", "src": "casual"}
+{"instruction": "kal party thi na?", "response": "haan, bahut maza aaya.", "src": "casual"}
+{"instruction": "aaj movie dekhne ka mood hai?", "response": "haan yaar, kya dekhte hai?", "src": "casual"}
+{"instruction": "kitna traffic hai aaj!", "response": "haan yaar, kahi nikalna toh mushkil hai.", "src": "casual"}
+{"instruction": "kya aap ko pets pasand hai?", "response": "haan, mujhe cats pasand hain, bohot pyare lagte hain.", "src": "casual"}
+{"instruction": "kya tumhe gardening pasand hai?", "response": "haa, but time nahin milta.", "src": "casual"}
+{"instruction": "aaj ka dinner kaisa laga?", "response": "bohot accha laga, khaas kar khichdi.", "src": "casual"}
+{"instruction": "kya tumhe ye dress pasand aayi?", "response": "haan, bahut pretty hai.", "src": "casual"}
+{"instruction": "kya tumhare ghar pe koi party hai?", "response": "haan, mere birthday party hai.", "src": "casual"}
+{"instruction": "bhai,aaj ka mood kaisa hai?", "response": "bhai, thoda chill mood mein hu, aaj kaam bahut tha.", "src": "casual"}
+{"instruction": "tumne kya pakaya?", "response": "aaj toh pizza order kiya hai.", "src": "casual"}
+{"instruction": "kaun sa song sun raha hai?", "response": "ye 'dil bechara' ka hai, aajkal yeh bohot pasand aaya hai.", "src": "casual"}
+{"instruction": "tumhara kaam kaisa chal raha hai?", "response": "accha chal raha hai, thank you.", "src": "casual"}
+{"instruction": "didi,kya tumhe coffee pasand hai?", "response": "haan, mujhe cappuccino bohot pasand hai.", "src": "casual"}
+{"instruction": "kya tumne woh song suna?", "response": "haan yaar, bahut mast song hai.", "src": "casual"}
+{"instruction": "kaunsa game khel rahe ho?", "response": "bas, pubg khel raha hoon, tu bhi aaja.", "src": "casual"}
+{"instruction": "kya tumne aaj exercise kiya?", "response": "haan yaar, gym gaya tha.", "src": "casual"}
+{"instruction": "kya problem hai?", "response": "koi problem nahi, bas tension hai.", "src": "casual"}
+{"instruction": "bhai,tumne yeh naya car kahan se li?", "response": "maruti showroom se li hai, bahut badhiya car hai.", "src": "casual"}
+{"instruction": "kitna kamal ka weather hai aaj!", "response": "haan yaar, bohot maza aa raha hai.", "src": "casual"}
+{"instruction": "weekend plans kya hai?", "response": "kya pata yaar, abhi to socha nahi hai.", "src": "casual"}
+{"instruction": "padhai mein kaisa chal raha hai?", "response": "theek thaak ja raha hai.", "src": "casual"}
+{"instruction": "tumne aaj yeh hairstyle kahan se karaya?", "response": "salon mein hi karaya, acha toh lag raha hai na?", "src": "casual"}
+{"instruction": "aap kahaan jaa rahe ho?", "response": "bas, market jaane wala hoon.", "src": "casual"}
+{"instruction": "mobile ka battery bahut jaldi khatam ho ja raha hai", "response": "charge karlo yaar, battery saver on karlo.", "src": "casual"}
+{"instruction": "ye kaam kab tak hoga?", "response": "kal tak to complete ho jayega, tension na lo.", "src": "casual"}
+{"instruction": "chai pee lo?", "response": "haan, please!',", "src": "casual"}
+{"instruction": "kon sa song play karo?", "response": "koi bhi favourite laga lo.", "src": "casual"}
+{"instruction": "office se kab aa rahe ho?", "response": "late ho jaayega, meeting hai.", "src": "casual"}
+{"instruction": "kya karega?", "response": "bas yaar, time pass kar raha hoon.", "src": "casual"}
+{"instruction": "kaam ka pressure toh bahut hai na?", "response": "haan yaar, kaam pe kaam hota rehta hai.", "src": "casual"}
+{"instruction": "chalo,lunch karte hai!", "response": "chal, chai peene ke liye.", "src": "casual"}
+{"instruction": "kya tumhe chai pasand hai?", "response": "haan, mujhe bahut pasand hai.", "src": "casual"}
+{"instruction": "kya kar rahe ho?", "response": "bas, phone pe scroll kar rahi hoon.", "src": "casual"}
+{"instruction": "kal kya karna hai?", "response": "kuch nahi yaar, kal toh holiday hai.", "src": "casual"}
+{"instruction": "kon sa ghana khana pasand hai?", "response": "mujhe to biryani bahut pasand hai.',", "src": "casual"}
+{"instruction": "kya tumne vo new restaurant try kiya?", "response": "nahi, kaise hota hai?", "src": "casual"}
+{"instruction": "weekend plans kya hai?", "response": "bas ghar pe relax karna hai, thoda work bhi pending hai.", "src": "casual"}
+{"instruction": "kya tumhe pata hai woh restaurant kaha hai?", "response": "haan, maine waha pe pehle bhi khaana khaaya hai.", "src": "casual"}
+{"instruction": "kya,ek question poochhu?", "response": "haan, batao kya hai?", "src": "casual"}
+{"instruction": "aaj bahut boring din hai,kya karu?", "response": "koi interesting book padho yaar, time pass ho jaayega.", "src": "casual"}
+{"instruction": "kuch padhai karni hai?", "response": "haa yaar, exams bhi aane wale hai.", "src": "casual"}
+{"instruction": "aaj toh garmi bhi bahut hai!", "response": "haa yaar, saans lena bhi mushkil hai.", "src": "casual"}
+{"instruction": "chai piyega?", "response": "haan yaar, abhi khali hone de.", "src": "casual"}
+{"instruction": "kya tumhe music pasand hai?", "response": "haan, bollywood music sunna bahut pasand hai.", "src": "casual"}
+{"instruction": "kya padh rahe ho?", "response": "kuchh nahi, bas online scrolling kar raha hoon.", "src": "casual"}
+{"instruction": "bhai,kya tumhari scooter aaj chal rahi hai?", "response": "haan yaar, chahiye toh le jao.", "src": "casual"}
+{"instruction": "yaar,mere paas paise kam pad gaye hai.", "response": "relax, main tumhe de deta hoon.", "src": "casual"}
+{"instruction": "weekend plans kya hai?", "response": "kya plan, bas ghar pe chill maarne ka mood hai.", "src": "casual"}
+{"instruction": "kya bolti ho aaj?", "response": "kuch nahin, bas ghar pe boring lag raha hai.", "src": "casual"}
+{"instruction": "mummy ne chai banaai hai?", "response": "haa, abhi tak garma garam hai!", "src": "casual"}
+{"instruction": "kabhi chalo ek coffee peete hai?", "response": "zaroor yaar, kabhi time nikalo.',", "src": "casual"}
+{"instruction": "kaise ho yaar,aap ki tabiyat?", "response": "bas, thoda thanda lag raha hai.", "src": "casual"}
+{"instruction": "kya aaj gym jaane ka mood hai?", "response": "nahin yaar, aaj toh bass ghar hi rehna hai!", "src": "casual"}
+{"instruction": "kya aaj tumhara favourite movie aayi?", "response": "haan yaar, abhi ticket book karni hai.", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "thik hoon, aap batayein.", "src": "casual"}
+{"instruction": "kitna garam hai aaj!", "response": "haan, pichhle din se aur bhi zyada garam ho raha hai.", "src": "casual"}
+{"instruction": "kya kar rahi thi tu?", "response": "kuch nahi, bas netflix dekh rahi thi.", "src": "casual"}
+{"instruction": "aap kab tak waapas aayenge?", "response": "main shaam tak waapas aa jaunga.", "src": "casual"}
+{"instruction": "bhai,kya khaana chahiye?", "response": "kuch bhi yaar, bas jaldi se khana ban jaaye.", "src": "casual"}
+{"instruction": "kya chal raha hai,aaj ka plan?", "response": "aaj toh bas ghar pe hi relax karna hai yaar.", "src": "casual"}
+{"instruction": "ab kya kar rahe ho?", "response": "kuch nahi, tv dekh raha hoon.',", "src": "casual"}
+{"instruction": "kya khaana banaya aaj?", "response": "aaj toh simple sa, daal chawal banaya.", "src": "casual"}
+{"instruction": "kya tumhe cricket pasand hai?", "response": "haan yaar, india ka match dekhna hai.", "src": "casual"}
+{"instruction": "aaj movie dekhne ka mood hai kya?", "response": "haan, koi comedy movie dekhte hain.", "src": "casual"}
+{"instruction": "traffic toh aaj bhar diya hai?", "response": "haan yaar, kya kar sakte hain.", "src": "casual"}
+{"instruction": "tu aaj kaise hai?", "response": "bohot thak gaya hoon, kaam bahut tha aaj.", "src": "casual"}
+{"instruction": "coffee mein kuchh daaloon?", "response": "nahi yaar, simple chai peena hai.", "src": "casual"}
+{"instruction": "kya tumhe pata hai,aaj sabhi party mein jaane wale hain?", "response": "haan, mujhe pata hai, par main thoda ghar pe relax karna chahta hu.", "src": "casual"}
+{"instruction": "kya aaj movie dekhne chalenge?", "response": "aaj toh nahi, kal dekhte hain.", "src": "casual"}
+{"instruction": "shaadi kab hai?", "response": "abhi toh nahi yaar, pehle career banaunga.',", "src": "casual"}
+{"instruction": "yaar,kitni thand hai!", "response": "haan yaar, garam kapde peheno.", "src": "casual"}
+{"instruction": "weekend ke plan kya hai?", "response": "kuch nahi, bas ghar pe aaram karna hai.", "src": "casual"}
+{"instruction": "ab kya plan hai?", "response": "kuchh nahi yaar, ghar pe relax karunga.", "src": "casual"}
+{"instruction": "kaise jaane ka plan hai?", "response": "bus se hi jaana padega.", "src": "casual"}
+{"instruction": "kya aaj kaafi bharwa hua?", "response": "haan yaar, traffic mein aise stuck tha, ghar pe aa hi nahin paa raha tha.", "src": "casual"}
+{"instruction": "oye,tera phone battery low hai?", "response": "haan yaar, abhi charge pe laga diya.", "src": "casual"}
+{"instruction": "kya tumne khana kha liya?", "response": "haan, abhi abhi khaaya hai.", "src": "casual"}
+{"instruction": "kya tum ghar pe khana khate ho?", "response": "haan, meri mom banaati hai.", "src": "casual"}
+{"instruction": "kaise ho tum?", "response": "bas aise hi, thoda tired hoon.", "src": "casual"}
+{"instruction": "aaj party hai,aap aaoge?", "response": "haan, zarur aaunga.", "src": "casual"}
+{"instruction": "bhai,kal party hai, aana yaar?", "response": "haan yaar, pakka aaunga.", "src": "casual"}
+{"instruction": "bhai,kaha ja raha hai?", "response": "office ja raha hoon yaar, meeting hai.", "src": "casual"}
+{"instruction": "mobile chargin pe hai kya?", "response": "haan, abhi 10 minutes mein ho jaayega.", "src": "casual"}
+{"instruction": "kuchh interesting movie toh nahi aayi?", "response": "haan, ek horror movie aayi hai.", "src": "casual"}
+{"instruction": "kya tumne homework kiya?", "response": "nahi yaar, kal karta hoon.", "src": "casual"}
+{"instruction": "ye movie dekhne gaya tha,bahut zabardast thi!", "response": "kya? mujhe bhi dekhni hai", "src": "casual"}
+{"instruction": "kya kya karna hai aaj?", "response": "aaj toh bas ghar ke kaam karne hai.", "src": "casual"}
+{"instruction": "coffee piyega?", "response": "haan, ek cup chai le aao.", "src": "casual"}
+{"instruction": "kaise ho tum?", "response": "bas, chalta hu, tum kaise ho?", "src": "casual"}
+{"instruction": "aaj kaam zyada hai?", "response": "haan, deadlines ki wajah se busy hoon.", "src": "casual"}
+{"instruction": "kya aap music sunte ho?", "response": "haan, mujhe bahut pasand hai.", "src": "casual"}
+{"instruction": "kya tune exams ki preparation kar li?", "response": "haan yaar, pura syllabus revise kar liya hai.", "src": "casual"}
+{"instruction": "kaunsa movie dekhne jaa rahe ho?", "response": "bas, kuchh random hi dekhte hain.", "src": "casual"}
+{"instruction": "kya hua,khush nahin lag raha?", "response": "kuch nahin yaar, thoda mood off hai, bus.", "src": "casual"}
+{"instruction": "office se jaldi nikal gaya aaj?", "response": "haan yaar, kaam bahut jaldi khatam ho gaya.", "src": "casual"}
+{"instruction": "aaj ki party kaisi thi?", "response": "mazaa aa gaya yaar, bahut fun tha.", "src": "casual"}
+{"instruction": "kaam kaisa chal raha hai?", "response": "theek hai, busy toh rehta hoon.", "src": "casual"}
+{"instruction": "aaj kya banaya hai dinner mein?", "response": "aaj toh khana order kiya hai, mood nahin tha banane ka.", "src": "casual"}
+{"instruction": "kya kar rahe ho yaar?", "response": "kuchh nahi, bas phone pe scroll kar raha hoon.", "src": "casual"}
+{"instruction": "kya tune woh news dekhi?", "response": "haan, bahut badhiya news hai!", "src": "casual"}
+{"instruction": "weekend mein kya plan hai?", "response": "kuchh nahi yaar, bas ghar pe hi rehna hai.", "src": "casual"}
+{"instruction": "phone ka battery toh khali ho gaya", "response": "charger toh leke aaya nahi tha, kya karein ab?',", "src": "casual"}
+{"instruction": "kya haal chal?", "response": "sab thik hai, tu bata.", "src": "casual"}
+{"instruction": "yeh assignment kaise karna hai?", "response": "koi idea nahi hai, online search kar le.", "src": "casual"}
+{"instruction": "chalo,chai peete hain?", "response": "haan yaar, bahut time ho gaya.", "src": "casual"}
+{"instruction": "movie dekhne chalega aaj?", "response": "nahi yaar, aaj toh kaam hai.", "src": "casual"}
+{"instruction": "kya tumhe movie dekhne jaana hai?", "response": "yaar, aaj toh bahut bore hoon.", "src": "casual"}
+{"instruction": "kitne ka mila?", "response": "₹500 mein mil gaya.", "src": "casual"}
+{"instruction": "bhai,tere ghar ka internet chala gaya kya?", "response": "haan yaar, chal gaya, kal technicians ko bulaana padega.", "src": "casual"}
+{"instruction": "kahaan jaa rahe ho aise jaldi?", "response": "kaam hai yaar, bahut urgent.", "src": "casual"}
+{"instruction": "kya padhai kar rahe ho?", "response": "physics padh raha hoon.", "src": "casual"}
+{"instruction": "tum logon ka kya plan hai?", "response": "hum toh party karne jaa rahe hain.", "src": "casual"}
+{"instruction": "kaun sa movie dekhna hai?", "response": "koi comedy movie dekhte hai, accha feel hoga.',", "src": "casual"}
+{"instruction": "shopping karne ja rahe ho?", "response": "haan, diwali aane wali hai, kuchh saman lena hai.", "src": "casual"}
+{"instruction": "koi naya movie dekhne gaya?", "response": "haan, abhi toh bahut mast film release hui hai.", "src": "casual"}
+{"instruction": "workout karne gaya tha?", "response": "haan, gym gaya tha.", "src": "casual"}
+{"instruction": "kya tumne woh book padhi?", "response": "haan yaar, bahut accha book hai.", "src": "casual"}
+{"instruction": "bus aane wali hai?", "response": "haan, bas, aane hi wali hai.", "src": "casual"}
+{"instruction": "shopping karne jana hai?", "response": "haan, kuchh clothes lene hai.", "src": "casual"}
+{"instruction": "apna password bhool gaya?", "response": "aisa toh hota hai yaar, ab kya karenge.", "src": "casual"}
+{"instruction": "kab tak pahunchoge?", "response": "bas, 10 minute me pahunch jaaunga", "src": "casual"}
+{"instruction": "movie dekhne jaate hai?", "response": "accha idea hai, kaunsi movie dekhenge?", "src": "casual"}
+{"instruction": "kal exam hai,nervous ho rahe ho?", "response": "haan yaar, thoda pressure hai, but chill.", "src": "casual"}
+{"instruction": "kya aaj movie dekhne jaate hain?", "response": "haa yaar, kaunsi movie dekhni hai?", "src": "casual"}
+{"instruction": "kitne paise lagenge?", "response": "zyada nahin, 1000 hi lagenge'.", "src": "casual"}
+{"instruction": "bhook lagi kya?", "response": "haan yaar, kuch khaane ko do.", "src": "casual"}
+{"instruction": "aaj gym jaane ka mood hai?", "response": "nahi yaar, aaj toh lazy mood hai.", "src": "casual"}
+{"instruction": "abhi tak kaam nahi hua kya?", "response": "bas thoda aur hai, jaldi finish kar deta hu!", "src": "casual"}
+{"instruction": "kuch khaana chahiye?", "response": "haan, kuch light sa kha lo.", "src": "casual"}
+{"instruction": "kaise the party?", "response": "bahut mast thi, maza aaya.", "src": "casual"}
+{"instruction": "good night yaar!", "response": "good night.", "src": "casual"}
+{"instruction": "ye kaam aaj complete karna hai,kya kar payenge?", "response": "chinta mat karo, manage ho jaayega.", "src": "casual"}
+{"instruction": "sab thik toh hai na?", "response": "haan yaar, koi problem nahi hai.", "src": "casual"}
+{"instruction": "cricket kaise raha?", "response": "haan yaar, india jeet gaya.", "src": "casual"}
+{"instruction": "kya aaj match dekha?", "response": "haan yaar, india jeet gaya!", "src": "casual"}
+{"instruction": "kya bolte ho?", "response": "kya matlab, abhi toh khush hoon.", "src": "casual"}
+{"instruction": "shopping karne jaana hai?", "response": "haan yaar, kuchh clothes dekhne jaana hai.", "src": "casual"}
+{"instruction": "kab aaoge?", "response": "aaj raat, thoda late aa jaunga.", "src": "casual"}
+{"instruction": "kya tumhari party mein jaa sakta hoon?", "response": "of course yaar, tum to aaoge hi.", "src": "casual"}
+{"instruction": "salary kab aayegi?", "response": "aaj hi toh aayegi, chill kar.", "src": "casual"}
+{"instruction": "yeh coffee kahan se li?", "response": "starbucks se, wahi chai se acha hai.", "src": "casual"}
+{"instruction": "kya tumne woh series dekh li?", "response": "haan, bahut maza aaya, aapne dekha kya?", "src": "casual"}
+{"instruction": "bhai,tumhara phone kya hai?", "response": "ye samsung ka hai, acha phone hai.", "src": "casual"}
+{"instruction": "tujhe khelna pasand hai?", "response": "haan, cricket bohot pasand hai.", "src": "casual"}
+{"instruction": "kya tumne khana kha liya?", "response": "haan yaar, bas khana khata hoon", "src": "casual"}
+{"instruction": "kya khana banaya hai?", "response": "aaj khichdi banayi hai.", "src": "casual"}
+{"instruction": "kaisi feeling hai?", "response": "accha lag raha hai, bas.", "src": "casual"}
+{"instruction": "tumhara naya kapda bahut sunder hai", "response": "aap bhi praise kar rahe ho, thanks.", "src": "casual"}
+{"instruction": "kya yeh book padhni chahiye?", "response": "haan, yeh bahut interesting hai.", "src": "casual"}
+{"instruction": "kaisi thi party?", "response": "mazaa aagaya, bahut enjoy kiya.", "src": "casual"}
+{"instruction": "tu kab aayega?", "response": "shaam ko aa jaunga.", "src": "casual"}
+{"instruction": "kuch khane ke liye laaye ho?", "response": "haan yaar, samosa le aaya hu.", "src": "casual"}
+{"instruction": "kya kar raha hai yaar?", "response": "bas, office ka kaam kar raha hoon.", "src": "casual"}
+{"instruction": "phone chala raha hai?", "response": "haan, battery low hai.", "src": "casual"}
+{"instruction": "aaj kya special bana hai dinner mein?", "response": "aaj khana bahut tasty hai, aa jao.", "src": "casual"}
+{"instruction": "aaj ka movie dekha?", "response": "haan yaar, bahut maja aaya.", "src": "casual"}
+{"instruction": "koi party plan kar rahe ho kya?", "response": "haan yaar, week end pe, aana tum bhi.", "src": "casual"}
+{"instruction": "party me aaoge kya?", "response": "dehkta hoon, time hoga toh jaroor.", "src": "casual"}
+{"instruction": "kal party mein aana?", "response": "aana hai, lekin kaam hai na.',", "src": "casual"}
+{"instruction": "aaj kharidi hai?", "response": "haan, ye new phone hai.", "src": "casual"}
+{"instruction": "kabhi goa gaya hai?", "response": "nahi yaar, aap kaise gaya the?", "src": "casual"}
+{"instruction": "kitna bharti hai yaar?", "response": "haan yaar, khana pad raha hai.", "src": "casual"}
+{"instruction": "kya khaana banaya hai?", "response": "aaj to aalu paratha banaya hai, tu kya kha raha hai?", "src": "casual"}
+{"instruction": "koi new series dekh rahe ho?", "response": "haan yaar, stranger things dekh raha hoon.", "src": "casual"}
+{"instruction": "tumhara favourite colour kya hai?", "response": "mujhe blue colour bahut pasand hai.", "src": "casual"}
+{"instruction": "mujhe khichdi banaani aati nahi", "response": "koi baat nahi, mai banake deta hoon.", "src": "casual"}
+{"instruction": "aaj movie dekhne jaayenge?", "response": "haan yaar, kaun si movie dekhni hai?", "src": "casual"}
+{"instruction": "haan yaar,kal office mein presentation dena hai, kya pehnu?", "response": "koi formal suit pehen le, perfect lagta hai.", "src": "casual"}
+{"instruction": "aap kya khaana chahte hain?", "response": "aap kya banaye hain, vahi khane ko dil kar raha hai.", "src": "casual"}
+{"instruction": "lunch khaya kya?", "response": "nahi, abhi kaam kar raha hoon, baad me khaunga.", "src": "casual"}
+{"instruction": "kya aapne ye game khela hai?", "response": "haan yaar, bohot addictive hai!", "src": "casual"}
+{"instruction": "kuch new series dekhni hai?", "response": "haan, kuch suspense wala suggest karo.", "src": "casual"}
+{"instruction": "kya tumhe ye song pasand hai?", "response": "haan yaar, bohot mast hai!", "src": "casual"}
+{"instruction": "kaise ho yaar?", "response": "haan, bas chal raha hoon, tu bata?", "src": "casual"}
+{"instruction": "aaj bahut boring din hai,yaar.", "response": "haan yaar, kuchh karne ko bhi nahi hai.", "src": "casual"}
+{"instruction": "mobile toh charge kar liya?", "response": "haan yaar, charger laga hua hai.", "src": "casual"}
+{"instruction": "traffic bahut jam tha na?", "response": "haan yaar, bilkul pakao tha!',", "src": "casual"}
+{"instruction": "kaise ho? weekend kaisa gaya?", "response": "okay tha, kuch nahi, bas ghar pe hi raha.", "src": "casual"}
+{"instruction": "aaj kaise ho?", "response": "thanda lag raha hai yaar.", "src": "casual"}
+{"instruction": "yeh book kaisi lagi?", "response": "bohot bore ho gaya yaar.", "src": "casual"}
+{"instruction": "bhai,kal kya karne ka plan hai?", "response": "bas, office jaana hai, aur evening mein gym jana hai.", "src": "casual"}
+{"instruction": "kal party hai yaad hai?", "response": "haa yaar, bhoolna kaise.", "src": "casual"}
+{"instruction": "kya aapke pass time hai?", "response": "haan, 5 minutes toh hain.", "src": "casual"}
+{"instruction": "kya baat hai,aaj to bahut late aa rahe ho!", "response": "haan yaar, traffic jam mein fas gaya.", "src": "casual"}
+{"instruction": "kya news hai?", "response": "aaj kuch nahi, bas usual office stuff.", "src": "casual"}
+{"instruction": "yeh new phone kaise hai?", "response": "bahut achcha hai yaar, camera to badiya hai.", "src": "casual"}
+{"instruction": "parking kaha milega?", "response": "yaar parking ki toh bahut problem hai, parking lot check kar lo.", "src": "casual"}
+{"instruction": "ab kya plan hai?", "response": "bhai, aaj toh mood nahi hai, kal dekhte hain.',", "src": "casual"}
+{"instruction": "aaj khana bahar se mangaoge?", "response": "nahi yaar, ghar pe hi bana lunga!", "src": "casual"}
+{"instruction": "kitne paise lagi na?", "response": "bahut yaar, saare savings nikal gaye.", "src": "casual"}
+{"instruction": "kab nikalte ho?", "response": "bas, abhi ek ghanta mein nikalte hain.", "src": "casual"}
+{"instruction": "kya tumhe kuchh chahiye?", "response": "nahi yaar, abhi kuchh nahi.", "src": "casual"}
+{"instruction": "kya tumhare pass change hai?", "response": "haan yaar, thoda to hai.", "src": "casual"}
+{"instruction": "kitne din se rain nahi aayi hai,kya?", "response": "haan yaar, bahut garmi hai, jaldi barish aani chahiye.", "src": "casual"}
+{"instruction": "kya khaana banaya aaj?", "response": "sabzi wali daal aur roti, bas simple sa.", "src": "casual"}
+{"instruction": "kya aaj kisi ka birthday hai?", "response": "haan yaar, mere dost ka.", "src": "casual"}
+{"instruction": "aaj ka traffic toh bhaut zyada tha yaar!", "response": "haan yaar, khud bhi fas gaya.", "src": "casual"}
+{"instruction": "kab nikloge aaj?", "response": "kuch der mein, khane ke baad.", "src": "casual"}
+{"instruction": "kya tu movie dekhne jaa raha hai?", "response": "nah, aaj toh bas ghar pe hi rehna hai yaar.", "src": "casual"}
+{"instruction": "kaisi feeling aayi?", "response": "bas normal, ekdum jhatka sa laga.", "src": "casual"}
+{"instruction": "kaise ho tum?", "response": "accha hu, bas thodi thka hua hu.", "src": "casual"}
+{"instruction": "tumhare ghar pe kya khana banta hai?", "response": "aaj toh chawal aur sabzi banta hai.", "src": "casual"}
+{"instruction": "kya,picture dekha? super hit hai!", "response": "haan yaar, mazaa aaya!'.", "src": "casual"}
+{"instruction": "coffee pee lo na?", "response": "thank you, chai peena hai mujhe.", "src": "casual"}
+{"instruction": "kya aaj party karne jaa rahe ho?", "response": "nahin yaar, paise khatam ho gaye.", "src": "casual"}
+{"instruction": "aaj kaise hain?", "response": "bas yaar, khush hoon! kaise hain aap?", "src": "casual"}
+{"instruction": "kya tumhe uss movie ke bare mein pata hai?", "response": "haan yaar, bohot mast hai.", "src": "casual"}
+{"instruction": "kitna time lagta hai office jaane mein?", "response": "45 minutes, traffic na ho toh.", "src": "casual"}
+{"instruction": "yeh traffic toh aaj bahut jam hai!", "response": "haan yaar, kaam se waqt pe pahunchne ki fikr ho rahi hai.", "src": "casual"}
+{"instruction": "kitne paise diye the?", "response": "yaar, ek se ek yaad nahin hai.", "src": "casual"}
+{"instruction": "kya kar rahe ho?", "response": "bas, yaar, phone pe baat kar raha hoon.", "src": "casual"}
+{"instruction": "kaam kaisa chal raha hai?", "response": "kaafi busy hoon yaar, lekin manage kar raha hu.',", "src": "casual"}
+{"instruction": "yeh kaise ho gaya?", "response": "samajh nahi aaya yaar, aise hi.", "src": "casual"}
+{"instruction": "exam kaisa gaya?", "response": "sabse badhiya, i'm hoping for a good result!", "src": "casual"}
+{"instruction": "coffee chai kya piyega?", "response": "chai de do yaar, coffee nahi chaiye.", "src": "casual"}
+{"instruction": "kya tumne ye movie dekh li?", "response": "haan yaar, bahut mast movie hai.", "src": "casual"}
+{"instruction": "ye sabji bahut tasty hai,na?", "response": "haan yaar, bahut acche se bani hai.", "src": "casual"}
+{"instruction": "kya aapko yaad hai?", "response": "haan, aaj toh meri anniversary hai!", "src": "casual"}
+{"instruction": "aapko aise kya laga?", "response": "mujhe laga ye bahut bakwas hai yaar.", "src": "casual"}
+{"instruction": "kya aaj khana banaya?", "response": "nahi yaar, aaj toh order kiya.", "src": "casual"}
+{"instruction": "kya aaj cricket match hai?", "response": "haan yaar, india vs australia.", "src": "casual"}
+{"instruction": "bhai,kya bol rahe ho?", "response": "kuchh nahi yaar, bas khud se baat kar raha tha.',", "src": "casual"}
+{"instruction": "aaj kaise tha tera din?", "response": "accha tha yaar, kuchh interesting to nahi hua.", "src": "casual"}
+{"instruction": "kya hua?", "response": "kuchh nahi yaar, bas thodi si problem aa gayi hai.", "src": "casual"}
+{"instruction": "maine wo naya book padha hai!", "response": "kya naam hai? mujhe bhi bata.", "src": "casual"}
+{"instruction": "movie dekhne jaana hai?", "response": "haa yaar, kal.", "src": "casual"}
+{"instruction": "aapke naye shoes kaise hain?", "response": "bahut comfortable hai, aur style bhi!", "src": "casual"}
+{"instruction": "bhai,kaisi chal rahi hai life?", "response": "bhai, upar wala dekh raha hai, chal rahi hai.", "src": "casual"}
+{"instruction": "kya tumhara phone chala jaa raha hai?", "response": "haan, battery low hai.", "src": "casual"}
+{"instruction": "aaj kaam bahut tha,itni jaldi kyu aaya?", "response": "kuchh urgent kaam tha, abhi to aur bhi karna hai.", "src": "casual"}
+{"instruction": "aaj bahut tired hoon yaar.", "response": "rehem kar, thodi der aaram kar le.", "src": "casual"}
+{"instruction": "weekend kya plan hai?", "response": "kuchh nahi yaar, ghar pe hi relax karunga.", "src": "casual"}
+{"instruction": "kaun sa song sunaao?", "response": "aapki favourite suna du?", "src": "casual"}
+{"instruction": "koi new phone lana hai kya?", "response": "haan, le raha hoon, koi suggestion hai?", "src": "casual"}
+{"instruction": "kya tune ye song suna?", "response": "haan yaar, bahut acha hai.", "src": "casual"}
+{"instruction": "padhai kar raha hai?", "response": "haan, exam aa raha hai.", "src": "casual"}
+{"instruction": "kitni acchi baat hai,you got a promotion?", "response": "haan yaar, hard work ki kamyabi.", "src": "casual"}
+{"instruction": "kitna bore ho rahe ho?", "response": "aise hi, kuchh karna chahiye lekin nahi kar raha.", "src": "casual"}
+{"instruction": "aaj ki party mein kya pehenu?", "response": "kuchh simple sa, casual!", "src": "casual"}
+{"instruction": "kya kar rahe ho yaar?", "response": "bas, aaj kuchh shopping karne gaya tha.", "src": "casual"}
+{"instruction": "aapki shaadi kab hai?", "response": "abhi toh kuch nahi socha, shaadi ke liye toh bahut time hai.", "src": "casual"}
+{"instruction": "chalo na,chai peete hain!", "response": "yaar, kaam bahut hai, baad mein.", "src": "casual"}
+{"instruction": "exam ke liye kaisa prepare kar rahe ho?", "response": "bas, thoda thoda revise kar raha hoon.", "src": "casual"}
+{"instruction": "kya aaj cricket dekhne jaaoge?", "response": "nahi yaar, aaj toh padhaayi karni hai.", "src": "casual"}
+{"instruction": "kal exam tha na?", "response": "haan yaar, abhi to results ka intezaar hai.", "src": "casual"}
+{"instruction": "bhai,aaj ka match kaise raha?", "response": "haa, india win kar gaya! ab toh mazaa aagaya!", "src": "casual"}
+{"instruction": "movie kaisa laga?", "response": "accha tha yaar, lekin thoda boring bhi tha.", "src": "casual"}
+{"instruction": "aaj khana khane jaayenge?", "response": "haan yaar, chale jao.", "src": "casual"}
+{"instruction": "kya padh raha hai?", "response": "kuch nahin, bas videos dekh raha hoon.", "src": "casual"}
+{"instruction": "ye movie dekh li? bohot mast hai!", "response": "haan dekh li, bohot sahi hai.", "src": "casual"}
+{"instruction": "phone chali gayi kya?", "response": "haan yaar, abhi charge mein lagayi hai.", "src": "casual"}
+{"instruction": "mujhe kuchh shopping karni hai,chalte ho?", "response": "chalo, mujhe bhi kuchh chahiye tha.", "src": "casual"}
+{"instruction": "kal kya plan hai?", "response": "kal toh bas chill karna hai, kuchh nahi karna hai.", "src": "casual"}
+{"instruction": "chalo,picture dekhne chalte hai?", "response": "haan, yaar, mujhe bhi bahut dekhna hai.", "src": "casual"}
+{"instruction": "kya,tu bhi delhi ja raha hai?", "response": "haan, family trip hai, 2 hafte ke liye.", "src": "casual"}
+{"instruction": "phone kharab ho gaya,kaise thik karu?", "response": "repare shop pe le jao yaar, jaldi thik ho jaayega.", "src": "casual"}
+{"instruction": "ye kahaan se liya?", "response": "online shopping kiya tha.", "src": "casual"}
+{"instruction": "bhai,kahi ghumne ka plan hai kya?", "response": "aare, abhi to time nahi hai, later.", "src": "casual"}
+{"instruction": "kya khana banaya hai tu?", "response": "bas simple sa daal chawal bana hai.", "src": "casual"}
+{"instruction": "kya,koi discount offer mila?", "response": "haan yaar, online shopping pe.", "src": "casual"}
+{"instruction": "kya padhai kar raha hai?", "response": "kuch nahi yaar, bas exam ke liye padhai kar raha hoon.", "src": "casual"}
+{"instruction": "kya tumhe coffee pasand hai?", "response": "bilkul! kya tumhe bhi?", "src": "casual"}
+{"instruction": "shopping karna hai,aaoge?", "response": "haan yaar, kahaan jaana hai?", "src": "casual"}
+{"instruction": "aaj ka khana kya banaya?", "response": "biryani! aa jao jaldi!", "src": "casual"}
+{"instruction": "traffic bahut zada hai aaj", "response": "haan yaar, kya karein, yeh toh delhi ki baat hai.", "src": "casual"}
+{"instruction": "yeh movie kab dekhoge?", "response": "kal shaam ko, tum bhi aana!", "src": "casual"}
+{"instruction": "aaj party chal rahi hai,aana?", "response": "haan yaar, sure! aata hoon.',", "src": "casual"}
+{"instruction": "chal,khana khaate hai?", "response": "haan yaar, pet bhi khaali hai.", "src": "casual"}
+{"instruction": "khana khaya?", "response": "nahin, abhi jaa raha hoon khane.", "src": "casual"}
+{"instruction": "aaj shopping karne jaana hai?", "response": "haan yaar, kuchh clothes lete hai.", "src": "casual"}
+{"instruction": "aaj kya banaya hai?", "response": "kuch khaas nahi yaar, just daal chawal.", "src": "casual"}
+{"instruction": "kya tumhe chai pee jaana hai?", "response": "haan yaar, chai toh pee hi jaana hai, abhi jaake pee lenge.", "src": "casual"}
+{"instruction": "kya haal chaal hai?", "response": "bas yaar, tum batao.", "src": "casual"}
+{"instruction": "aaj kya special plan hai?", "response": "kuch nahi yaar, bas ghar pe hi chill karunga.", "src": "casual"}
+{"instruction": "kya tu movie dekhne ja raha hai?", "response": "haan yaar, kal ek naya movie release hua hai.", "src": "casual"}
+{"instruction": "kal shaadi mein jaana hai kya?", "response": "haan yaar, meri behen ki shaadi hai.", "src": "casual"}
+{"instruction": "bhai,kal kya karna hai?", "response": "bas, kal to sunday hai, aaram se sooya jaayega.", "src": "casual"}
+{"instruction": "coffee pee li?", "response": "haaan, peeli hai, ab aap bhi lo.", "src": "casual"}
+{"instruction": "kya tumko english movies pasand hai?", "response": "haan yaar, bollywood se zyada.", "src": "casual"}
+{"instruction": "office se jaldi aaya?", "response": "haan, traffic bahut tha aaj.", "src": "casual"}
+{"instruction": "college kaisa chal raha hai?", "response": "theek hai, abhi exams aane waale hain.", "src": "casual"}
+{"instruction": "chalo,chai peete hain?", "response": "haan, chalo.", "src": "casual"}
+{"instruction": "kya tumne woh movie dekhi?", "response": "haan dekh li, mast thi na?", "src": "casual"}
+{"instruction": "bus ka wait kar rahe hain!", "response": "kya pata kab aayegi.", "src": "casual"}
+{"instruction": "koi problem hai?", "response": "nahin, kuchh nahin.", "src": "casual"}
+{"instruction": "shopping karne jaana hai?", "response": "haan, kuch kapde aur accessories leni hai.", "src": "casual"}
+{"instruction": "party mein aaoge na?", "response": "zaroor, main aaunga.", "src": "casual"}
+{"instruction": "chalo coffee peete hain?", "response": "haa, chal, office ke baad aaj ka mood fresh karni hai.", "src": "casual"}
+{"instruction": "phone charge hai kya?", "response": "haan, abhi toh 80% hai.", "src": "casual"}
+{"instruction": "yeh kaam aaj khatam karna padega", "response": "haan yaar, abhi toh koi aur option nahin hai.", "src": "casual"}
+{"instruction": "yaar,khana banana aata hai tumhe?", "response": "haan, aata hai, kuchh toh banati hu.", "src": "casual"}
+{"instruction": "kya tumhe bhi boring lag raha hai?", "response": "haan yaar, itna kuchh karne ka nahi hai.", "src": "casual"}
+{"instruction": "kya kar raha hai?", "response": "bas yaar, tv dekh raha hoon.", "src": "casual"}
+{"instruction": "kya tumhe aaj raat ki party mein aana hai?", "response": "haan yaar, definitely aaunga.", "src": "casual"}
+{"instruction": "bhai,ye kaun hai?", "response": "are yeh mere dost hain.", "src": "casual"}
+{"instruction": "kya kar rahe ho yaar?", "response": "bas, chilling kar raha hoon, tu?',", "src": "casual"}
+{"instruction": "internet ka speed aaj bahut slow hai,kya?", "response": "haan yaar, lagta hai server down hai.", "src": "casual"}
+{"instruction": "kya plan hai aaj ke liye?", "response": "kuch nahi yaar, bas ghar pe relax karna hai.", "src": "casual"}
+{"instruction": "mobile charge karna padega yaar.", "response": "haan, mere mobile mein bhi battery kam reh gayi hai.", "src": "casual"}
+{"instruction": "coffee pi li?", "response": "nahin yaar, aaj toh chai peena hai.", "src": "casual"}
+{"instruction": "yeh sab kaise ho gaya?", "response": "pata nahi yaar, suddenly ho gaya.", "src": "casual"}
+{"instruction": "kya tumko chai pee ke chaiye?", "response": "haan yaar, thodi si.", "src": "casual"}
+{"instruction": "kabhi kabhi chai peena chaiye yaar!", "response": "haan, aaj kal thoda time nahi mil raha.", "src": "casual"}
+{"instruction": "gym jaa rahe ho aaj?", "response": "haan yaar, exercise karna jaruri hai.", "src": "casual"}
+{"instruction": "weekend kya karne wala hai?", "response": "kuchh nahi yaar, ghar pe rehna hai.", "src": "casual"}
+{"instruction": "kya ho raha hai?", "response": "bas yaar, khane ki planning kar raha hoon.", "src": "casual"}
+{"instruction": "kya tumne exam de diya?", "response": "haan, kal hi de diya.", "src": "casual"}
+{"instruction": "kya baat hai,kya hua?", "response": "kuch nahi yaar, bas aise hi.", "src": "casual"}
+{"instruction": "kya tumhe koi problem hai?", "response": "nahin yaar, just thinking.", "src": "casual"}
+{"instruction": "tumhare parents kaise hai?", "response": "sab thik hai, apne bhi?", "src": "casual"}
+{"instruction": "aaj kya karna hai tumhe?", "response": "kuch nahi yaar, bas ghar pe relax karne ka man hai.", "src": "casual"}
+{"instruction": "aaj ka workout kaisa raha?", "response": "bhai, thoda thak gaya hoon.", "src": "casual"}
+{"instruction": "aaj khana kya banaya hai?", "response": "aaj dal chawal banaya hai, simple sa.", "src": "casual"}
+{"instruction": "kya tumko coffee pasand hai?", "response": "haan yaar, bilkul pasand hai, ek cup banate ho?", "src": "casual"}
+{"instruction": "apna mobile phone kaise hai?", "response": "bahut slow chal raha hai yaar.", "src": "casual"}
+{"instruction": "kabhi kabhi bahar jaate ho kya?", "response": "haan, but weekend pe zyada.", "src": "casual"}
+{"instruction": "mobile kharab ho gaya yaar!", "response": "o re baba, charger toh lagake dekh.", "src": "casual"}
+{"instruction": "kya tu yeh work kar sakta hai?", "response": "haan, definitely.", "src": "casual"}
+{"instruction": "kya hua,dikhaa?", "response": "nahi yaar, aaj ka mood nahi hai'.", "src": "casual"}
+{"instruction": "phone charger de de?", "response": "haan, le le, khali padha hai.", "src": "casual"}
+{"instruction": "aaj kaafi hot hai na?", "response": "haan yaar, garam chai peene ka man kar raha hai.", "src": "casual"}
+{"instruction": "kitna traffic hai aaj!", "response": "haan yaar, bilkul jam hai.", "src": "casual"}
+{"instruction": "aapko yeh book kaisi lagi?", "response": "bahut accha book tha, maine enjoy kiya.", "src": "casual"}
+{"instruction": "bhai,meri car ka puncture ho gaya hai, kuch help karo?", "response": "haan bhai, kya kar sakta hoon, bataye!", "src": "casual"}
+{"instruction": "koi problem hai kya?", "response": "nahi yaar, bas thoda gussa aaya.", "src": "casual"}
+{"instruction": "market jaana hai,aapke saath?", "response": "haa, aaj chai chai peene ja rahe hai, chalo.", "src": "casual"}
+{"instruction": "kaise hain aap? accha chal raha hai?", "response": "bilkul theek hai, aap kaisa hain?", "src": "casual"}
+{"instruction": "kya tumhe cricket pasand hai?", "response": "haan, but only when india is winning.", "src": "casual"}
+{"instruction": "mobile charge khatam ho gaya?", "response": "haan yaar, plug lagati hu!", "src": "casual"}
+{"instruction": "kal ki meeting ka kya hua?", "response": "haan yaar, successful rahi.", "src": "casual"}
+{"instruction": "kab tak pahuch jaoge?", "response": "dekho, 10 minutes mein.", "src": "casual"}
+{"instruction": "traffic mein phanse ho kya?", "response": "haaan yaar, yeh traffic toh kabhi nahi kam hoga!", "src": "casual"}
+{"instruction": "kya tumne cricket match dekha?", "response": "haan dekha, india ne jeet liya.", "src": "casual"}
+{"instruction": "kya tumne wo new cafe try kiya hai?", "response": "haan yaar, aapne bhi jaana chahiye, bohot tasty hai!", "src": "casual"}
+{"instruction": "kya tu aaj late aayega?", "response": "haan, kuch kaam tha.", "src": "casual"}
+{"instruction": "aaj kuch special plan hai?", "response": "nahi yaar, bas ghar pe relax karunga.", "src": "casual"}
+{"instruction": "kitna time laga office jaane mein?", "response": "aaaj toh traffic bahut tha, ek ghante lag gaye.", "src": "casual"}
+{"instruction": "kal kya plan hai?", "response": "kal toh exams hain, bas padhai karna hai.", "src": "casual"}
+{"instruction": "kal ek movie dekhne jaa raha hoon,chaloge?", "response": "chalta hoon yaar, kon si movie?", "src": "casual"}
+{"instruction": "kya khaane mein hai?", "response": "bas, chai aur pakode hai.", "src": "casual"}
+{"instruction": "aap kya kar rahe ho?", "response": "bus, padhai kar rahi hun, exam aane wala hai.", "src": "casual"}
+{"instruction": "bhai,kya plan hai aaj ke liye?", "response": "kuch nahi yaar, bas chill karne ka mood hai.", "src": "casual"}
+{"instruction": "kaunsi movie dekhni hai?", "response": "koi romantic movie dekhte hain.", "src": "casual"}
+{"instruction": "kya tumne wo song suna hai?", "response": "haan yaar, bohot acha hai.", "src": "casual"}
+{"instruction": "kya aaj party hai?", "response": "haan yaar, birthday hai uski.", "src": "casual"}
+{"instruction": "bhai,teri car ka insurance kab renew karna hai?", "response": "bhai, ye toh next month renew karna hai.", "src": "casual"}
+{"instruction": "aaj office mein kaam bahut zada tha,kya?", "response": "haan, saare deadlines aa gaye the, busy ho gaye the.", "src": "casual"}
+{"instruction": "kya tumne kabhi delhi visit kiya hai?", "response": "haan yaar, bahut baar, bohot acha hai.", "src": "casual"}
+{"instruction": "ye mobile aacha hai kya?", "response": "haan yaar, bahut good value for money.',", "src": "casual"}
+{"instruction": "aaj ka khana kaisa laga?", "response": "bahut swadisht tha yaar, thank you.", "src": "casual"}
+{"instruction": "kitni khushi hai,exam clear ho gaya!", "response": "haan yaar, abhi toh relax karne ka mann hai.", "src": "casual"}
+{"instruction": "kabhi shopping karne chalenge?", "response": "haan yaar, jaldi chalte hai!", "src": "casual"}
+{"instruction": "kya tu phone kar payega?", "response": "haa, thodi der mein kar loonga.", "src": "casual"}
+{"instruction": "lunch mein kya banaya?", "response": "aaj toh bas simple, dal chawal.", "src": "casual"}
+{"instruction": "movie dekhne ja rahe ho?", "response": "nahin yaar, abhi thodi padhai karni hai", "src": "casual"}
+{"instruction": "mujhe kal office mein presentation dena hai,kya tum help kar sakte ho?", "response": "haan, bilkul, batao kya karne hai.", "src": "casual"}
+{"instruction": "kya kar rahe ho aaj?", "response": "kuchh nahi yaar, bas ghar pe relax kar raha hoon.", "src": "casual"}
+{"instruction": "bhai,kya tumhare paas thodi chai hai?", "response": "haan yaar, ek cup le le.", "src": "casual"}
+{"instruction": "kya tumne yeh book padhi hai?", "response": "haan, bahut acchi book hai.", "src": "casual"}
+{"instruction": "kisne kiya ye?", "response": "pata nahi yaar, koi aur hi hoga.", "src": "casual"}
+{"instruction": "tumhare phone ka battery low hai?", "response": "haa, charger toh hai, charge kar leta hoon.", "src": "casual"}
+{"instruction": "kya tune woh video dekha?", "response": "haan, dekha, bahut funny thi.", "src": "casual"}
+{"instruction": "bhai,aaj football match dekhne jaana hai?", "response": "bhai, mera toh koi interest nahi hai football mein.", "src": "casual"}
+{"instruction": "tu kaisa hai?", "response": "thik hun, tum kaise ho?", "src": "casual"}
+{"instruction": "aaj bahut garmi hai na?", "response": "haan yaar, pyaar se ac chala raha hoon.", "src": "casual"}
+{"instruction": "aaj party hai kya?", "response": "haan yaar, birthday hai, aana zarur.", "src": "casual"}
+{"instruction": "kya tumhe music pasand hai?", "response": "haan, mujhe bohot pasand hai.", "src": "casual"}
+{"instruction": "kaun si movie dekhni hai?", "response": "koi bhi fun movie dekh lete hain.", "src": "casual"}
+{"instruction": "chai banai thi,peena hai?", "response": "haan yaar, chai ke bina din hi nahin hota.", "src": "casual"}
+{"instruction": "kya tumne movie dekha?", "response": "nahi yaar, abhi time nahi mila.", "src": "casual"}
+{"instruction": "aaj ka weather bahut majaa hai na?", "response": "haan yaar, bahut khuli dhoop hai.", "src": "casual"}
+{"instruction": "traffic bahut badhiya hai yaar!", "response": "haan yaar, office kaise pahunchunga ab?", "src": "casual"}
+{"instruction": "ye kya pehen ke aa gaya?", "response": "yaar, ye naya shirt hai, kya laga?", "src": "casual"}
+{"instruction": "ab kya kar rahe ho?", "response": "movie dekh raha hoon, aap?", "src": "casual"}
+{"instruction": "aaj khelna hai kya?", "response": "nahi yaar, aaj thoda thoka kaam hai", "src": "casual"}
+{"instruction": "kal ka exam kaise gaya?", "response": "bhai, thik tha, hope for the best.", "src": "casual"}
+{"instruction": "tera gym ka subscription renew ho gaya kya?", "response": "haan, renew kar liya, abhi jaake workout karna hai.", "src": "casual"}
+{"instruction": "kaise ho didi?", "response": "theek hun, tu?',", "src": "casual"}
+{"instruction": "yeh book kaise hai?", "response": "bohat boring hai yaar.", "src": "casual"}
+{"instruction": "kya tum phone recharge karwa liye?", "response": "haan, kar liya abhi.", "src": "casual"}
+{"instruction": "bhai,party mein aana?", "response": "haa yaar, jaroor aaunga.", "src": "casual"}
+{"instruction": "cricket match dekha kya?", "response": "haan, dekha, india jeet gaya!", "src": "casual"}
+{"instruction": "aaj ka match kaisa raha?", "response": "yaar, bahut exciting tha!", "src": "casual"}
+{"instruction": "kal party thi kya,tujhe dekha nahi?", "response": "haan yaar, but jaldi chala gaya, kaam tha!", "src": "casual"}
+{"instruction": "ye pakoda bahut tasty hai,ek aur kha?", "response": "nahi yaar, pet bhar gaya hai.", "src": "casual"}
+{"instruction": "movie dekhne ja rahe ho kya?", "response": "nahi yaar, bas ghar pe relax karne ka mood hai.", "src": "casual"}
+{"instruction": "kya aap mujhe kuchh madad kar sakte ho?", "response": "haa, kya baat hai?", "src": "casual"}
+{"instruction": "weekend ka plan kya hai?", "response": "kuchh nahi yaar, bas ghar pe relax karunga.", "src": "casual"}
+{"instruction": "aaj to bahut zor ki barish ho rahi hai?", "response": "haan yaar, isme to nikal hi nahi sakte.", "src": "casual"}
+{"instruction": "koi problem hai kya?", "response": "nahin yaar, sab theek hai.", "src": "casual"}
+{"instruction": "aaj khane ke liye kya banaya?", "response": "kuchh khaas nahi, bas aloo paratha banaya hai.", "src": "casual"}
+{"instruction": "aaj toh bahut garmi hai!", "response": "haan yaar, bahar nikalke toh fatt jaayenge.", "src": "casual"}
+{"instruction": "kya tumhe yeh movie pasand aayi?", "response": "haan, bahut mazedar thi.", "src": "casual"}
+{"instruction": "kuchh plan hai aaj ke liye?", "response": "nahi yaar, aaj to kuchh nahin, bas ghar pe relax karunga.", "src": "casual"}
+{"instruction": "kya tu school jayega?", "response": "haan, chalo, late ho jaayenge!", "src": "casual"}
+{"instruction": "aaj toh weather mast hai!", "response": "haan yaar, aaj toh picnic jaana chahiye.", "src": "casual"}
+{"instruction": "kal movie dekhne ja rahe ho?", "response": "haan yaar, abhi ticket book karna hai.", "src": "casual"}
+{"instruction": "kya tumhe cricket pasand hai?", "response": "haan, bada maza aata hai dekhne mein.", "src": "casual"}
+{"instruction": "kya plan hai weekend ka?", "response": "kuchh pata nahi, chill karna hai.", "src": "casual"}
+{"instruction": "shopping karne ja rahe ho?", "response": "haan yaar, kuchh kapde leke aaungi.", "src": "casual"}
+{"instruction": "yaar,mood off hai", "response": "kya hua yaar, batao", "src": "casual"}
+{"instruction": "kya khana banana chahiye aaj?", "response": "kuch light sa, samosa pakode bhi ho jaate hain", "src": "casual"}
+{"instruction": "kaam ka pressure bohot hai na?", "response": "haan yaar, ek minute bhi aaram nahi milta.", "src": "casual"}
+{"instruction": "chalo,office chalte hai", "response": "haan, bus thodi der mein chalta hu.", "src": "casual"}
+{"instruction": "kal movie dekhne jaana hai kya?", "response": "haa yaar, kaun si movie?", "src": "casual"}
+{"instruction": "train time se chali?", "response": "haan, bas station pe pahunch gaya.", "src": "casual"}
+{"instruction": "movie dekhne ja raha hai?", "response": "haan yaar, new marvel movie aayi hai.", "src": "casual"}
+{"instruction": "kal shopping karna hai?", "response": "haan, jeans ki kuchh new arrivals aayi hain.", "src": "casual"}
+{"instruction": "new year plans kya hai?", "response": "abhi kuch decide nahi kiya, tumhara kya?", "src": "casual"}
+{"instruction": "college kaise chal raha hai?", "response": "theek hai, bas thoda busy schedule hai.", "src": "casual"}
+{"instruction": "aaj bahut hot hai na?", "response": "haan, ac chala kar rakha hai.", "src": "casual"}
+{"instruction": "yeh movie bahut boring hai!", "response": "haan, kaafi timepass hai, lekin.", "src": "casual"}
+{"instruction": "movie dekhne chale?", "response": "haan yaar, aaj toh dekhna hi hai.", "src": "casual"}
+{"instruction": "aaj to weather bahut accha hai!", "response": "haan yaar, jaise jaane ki baat ban gayi hai", "src": "casual"}
+{"instruction": "kya plan hai aaj?", "response": "aaj toh movie dekhne ka mood hai.", "src": "casual"}
+{"instruction": "kya tumhe cold hai?", "response": "haan, thodi si, khud ko garam pani peeke relax kar rahi hoon.", "src": "casual"}
+{"instruction": "mujhe kal doctor ke paas jana hai,koi appointment de diyo na?", "response": "haan, kal evening mein time mil jaega.", "src": "casual"}
+{"instruction": "kitne baje nikalne wala hai?", "response": "5 baje se nikal jaaonga.", "src": "casual"}
+{"instruction": "train miss kar di!", "response": "arey, ab toh taxi hi book karni padegi.", "src": "casual"}
+{"instruction": "aaj kahan ghumne jaayein?", "response": "kya pata, aap decide kar lo.", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "achchha hoon, aap kaise ho?", "src": "casual"}
+{"instruction": "kya aaj party mein aaoge?", "response": "aavunga yaar, time se aa jaana.", "src": "casual"}
+{"instruction": "kal ka exam kaise gaya?", "response": "achcha gaya, lagta hai pass ho jaunga.", "src": "casual"}
+{"instruction": "kya aaj rain aayegi?", "response": "aaj to nahin aayegi, lekin kal aane ki sambhavna hai.", "src": "casual"}
+{"instruction": "aaj ka weather bada suhana hai,kya?", "response": "haan yaar, bahut fresh feel aa raha hai.", "src": "casual"}
+{"instruction": "traffic kaisa hai?", "response": "bhai, bhari bhari, lagta hai saara city nikla hai.", "src": "casual"}
+{"instruction": "kal kaunsi movie release ho rahi hai?", "response": "haan, dekhenge.", "src": "casual"}
+{"instruction": "coffee banayi kya?", "response": "haan, bas abhi ready ho gayi hai.", "src": "casual"}
+{"instruction": "chalo,burger khaate hai?", "response": "haa, jaise toh jaise!", "src": "casual"}
+{"instruction": "kis film ke liye mood hai?", "response": "koi comedy movie chalao.", "src": "casual"}
+{"instruction": "shopping karne gaya tha kya?", "response": "haan yaar, kuchh clothes kharide.", "src": "casual"}
+{"instruction": "kaun hai?", "response": "mere friend hai, ek minute mein aa jaata hoon!", "src": "casual"}
+{"instruction": "weekend plans kya hai?", "response": "bas ghar pe relax karunga, bahut kaam tha is hafte", "src": "casual"}
+{"instruction": "aaj ka kya plan hai?", "response": "aaj bas ghar pe relax karna hai.", "src": "casual"}
+{"instruction": "aaj kaam ki bahut load hai yaar,ghar jaake so jaana hai!", "response": "haan yaar, aaj to bahut tight schedule hai.", "src": "casual"}
+{"instruction": "kal ka exam kaisa gaya?", "response": "bahut tough tha yaar, hopefully acha ho jayega.", "src": "casual"}
+{"instruction": "kaisi thi party?", "response": "mazaa aa gaya, friends se mulaqat ho gayi.", "src": "casual"}
+{"instruction": "kal kya karna hai?", "response": "kal office jana hai, tumhara?',", "src": "casual"}
+{"instruction": "koi interesting book padh raha hai kya?", "response": "haan, ek mystery novel padh raha hoon.", "src": "casual"}
+{"instruction": "kya tumhe coffee pasand hai?", "response": "haan, bahut zyada.", "src": "casual"}
+{"instruction": "kuchh khaana hai?", "response": "haan yaar, khaana toh banaya nahi!',", "src": "casual"}
+{"instruction": "kal ki party mein aana yaar?", "response": "aaunga, pakka aaunga.", "src": "casual"}
+{"instruction": "kitne baje uthte ho?", "response": "7 baje, jaldi uthna padta hai.", "src": "casual"}
+{"instruction": "aaj kya khaane mein?", "response": "aaj toh pasta banane wala hoon.", "src": "casual"}
+{"instruction": "woh kya ho raha hai?", "response": "aare, kuchh nahin, drama chal raha hai'.", "src": "casual"}
+{"instruction": "koi interesting movie aayi hai?", "response": "haan yaar, ek horror movie aayi hai.", "src": "casual"}
+{"instruction": "movie dekhne jaate hain?", "response": "haan yaar, koi romantic movie.", "src": "casual"}
+{"instruction": "kitne din ho gaye hai mumbai gaye hue?", "response": "abey 2-3 din toh ho gaye na.", "src": "casual"}
+{"instruction": "kya aapko kal office jaana hai?", "response": "nahin yaar, kal to chutti hai.", "src": "casual"}
+{"instruction": "kya tune lunch kiya?", "response": "haan yaar, abhi abhi khana khaya.", "src": "casual"}
+{"instruction": "kya tu ye kar sakta hai?", "response": "haa, kar leta hoon.", "src": "casual"}
+{"instruction": "kal ki meeting kaisa raha?", "response": "bohot accha, aage badh gaya kaam.", "src": "casual"}
+{"instruction": "ye movie toh hit ho jaayegi!", "response": "sahi hai yaar, bahut funny hai.", "src": "casual"}
+{"instruction": "kitna traffic hai yaar!", "response": "haan yaar, office se aaane mein ek ghante lag gaya.", "src": "casual"}
+{"instruction": "khana kha liya?", "response": "abhi nahi, jaldi hi karunga.", "src": "casual"}
+{"instruction": "koi movie dekhne jaaoge?", "response": "kya movie? kuch bhi chal raha hai to.", "src": "casual"}
+{"instruction": "aaj party karni hai", "response": "thik hai, plan banaate hain", "src": "casual"}
+{"instruction": "shopping karne chalo?", "response": "chalo yaar, mujhe kuchh clothes leni hai.", "src": "casual"}
+{"instruction": "kaunsa movie dekhne jaa rahe ho?", "response": "dekhenge, abhi decide nahi kiya hai.", "src": "casual"}
+{"instruction": "yaar,kitna boring hai aaj ka din!", "response": "haan yaar, aise hi lag raha hai.", "src": "casual"}
+{"instruction": "phone charge kar liya?", "response": "haan, abhi charge pe laga hua hai.", "src": "casual"}
+{"instruction": "kya aapne wo document dekha?", "response": "haan, maine dekha aur reply bhi kar diya hai.", "src": "casual"}
+{"instruction": "kya plan hai aaj?", "response": "bas, ghar pe chill kar raha hoon.", "src": "casual"}
+{"instruction": "kya tujhe woh movie dekhna hai?", "response": "haan yaar, bohot acha movie hai.", "src": "casual"}
+{"instruction": "lunch break ho gaya?", "response": "haan, aao khaana khaate hai.", "src": "casual"}
+{"instruction": "bahut thand lag rahi hai", "response": "haan yaar, sweater peheno.", "src": "casual"}
+{"instruction": "kya tumhe yeh dress pasand aaya?", "response": "haan yaar, bahut cute hai!", "src": "casual"}
+{"instruction": "ek minute,kaun hai ye?", "response": "kya kaun hai? mere best friend ka bhai.", "src": "casual"}
+{"instruction": "kya aaj koi meeting hai?", "response": "haan yaar, important meeting hai.", "src": "casual"}
+{"instruction": "aaj bahut garmi hai na?", "response": "haan yaar, pata nahi kab yeh jayegi.", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "bas theek hun, aap batao.", "src": "casual"}
+{"instruction": "aaj ka khaana kya banaya hai?", "response": "aaj toh simple sa dal chawal hi banaya hai.", "src": "casual"}
+{"instruction": "ye kya hai?", "response": "ye ek naya phone hai yaar.", "src": "casual"}
+{"instruction": "kahan jaana hai?", "response": "woh new restaurant, try karne ja rahe hain.", "src": "casual"}
+{"instruction": "kaisa ja raha hai life?", "response": "life toh aise hi hai, ups and downs, chal raha hai.", "src": "casual"}
+{"instruction": "kaha jaa rahe ho?", "response": "bas doston se milne jaa raha hu.", "src": "casual"}
+{"instruction": "didi,kya aapko dance karna aata hai?", "response": "haan, thoda thoda aata hai.", "src": "casual"}
+{"instruction": "oye,kya kar raha tha?", "response": "bas, ek movie dekh raha tha.", "src": "casual"}
+{"instruction": "aaj shopping karne jaana hai?", "response": "haan yaar, kuchh clothes lene hain.", "src": "casual"}
+{"instruction": "aaj toh bhookh lagi hai!", "response": "haan yaar, chal kuchh khaate hai.", "src": "casual"}
+{"instruction": "kabhi kabhi kya life boring ho jaati hai na?", "response": "haa yaar, par abhi thodi maza bhi aa raha hai.", "src": "casual"}
+{"instruction": "kabhi kabhi toh tension rehti hai!", "response": "chill maar yaar, sab theek ho jaayega.", "src": "casual"}
+{"instruction": "kya tum coffee piyoge?", "response": "haan, ek cup banado please.", "src": "casual"}
+{"instruction": "shaam ko khelne chale jaoge?", "response": "haa yaar, chaloge na.", "src": "casual"}
+{"instruction": "kal ka match dekhne jaoge?", "response": "haan yaar, india ka match toh dekhna hi hai.", "src": "casual"}
+{"instruction": "kya aaj aapke saath khelna chahiye?", "response": "chalo yaar, kisi park mein chalta hu.", "src": "casual"}
+{"instruction": "kya khaana hai aaj?", "response": "aaj khane ke mood mein nahi hoon, bas chai peelo.", "src": "casual"}
+{"instruction": "traffic bahut hai yaar,kitna time lagega?", "response": "pata nahi yaar, lagta hai der lagega.", "src": "casual"}
+{"instruction": "chalo,coffee peete hain?", "response": "chalo yaar, kyun nahin.", "src": "casual"}
+{"instruction": "woh ladki bahut cute hai!", "response": "haan, main bhi dekh raha tha", "src": "casual"}
+{"instruction": "chalo kuch shopping karte hai.", "response": "haan yaar, khane ki shopping karna hai.", "src": "casual"}
+{"instruction": "abhi kya kar rahe ho?", "response": "abhi toh bas laptop pe kaam kar raha hoon.", "src": "casual"}
+{"instruction": "woh movie dekhi kya?", "response": "nahi yaar, time nahi mila.", "src": "casual"}
+{"instruction": "kaun sa song sun rahe ho?", "response": "aaj kuchh old hindi songs sun raha hoon.", "src": "casual"}
+{"instruction": "lunch khaya kya?", "response": "nahi yaar, aaj thodi late hogaya, abhi khaunga.", "src": "casual"}
+{"instruction": "mobile kharab ho gaya hai?", "response": "haan, service centre jaana padega.", "src": "casual"}
+{"instruction": "kya,movie dekhne ka plan hai?", "response": "haan, kal ek new movie aayi hai.", "src": "casual"}
+{"instruction": "aaj ka lunch kya bana hai?", "response": "bas simple aloo paratha, aur tum kya khaaoge?", "src": "casual"}
+{"instruction": "cricket ka match dekha?", "response": "nahi yaar, time hi nahi mila.", "src": "casual"}
+{"instruction": "chai peeloge kya?", "response": "haan, please ek cup bana do.", "src": "casual"}
+{"instruction": "chalo,kal milte hai?", "response": "haan yaar, kal milenge, bye.", "src": "casual"}
+{"instruction": "kaam khatam ho gaya?", "response": "haan yaar, ab relax kar sakta hu.", "src": "casual"}
+{"instruction": "kabhi movie dekhne chalenge?", "response": "haan yaar, weekend pe chalte hai.", "src": "casual"}
+{"instruction": "yeh new song suna hai kya?", "response": "haan yaar, beat to mast hai.", "src": "casual"}
+{"instruction": "kaun si team support karte ho?", "response": "india ka toh support hi karna hai na.", "src": "casual"}
+{"instruction": "kitna bill aaya?", "response": "ek thousand se thoda zyada.", "src": "casual"}
+{"instruction": "yaar,tera mobile number chahiye tha", "response": "bhai, meri whatsapp pe message kar de na.", "src": "casual"}
+{"instruction": "kitna paisa laga?", "response": "bohot yaar, saara paisa waste ho gaya.", "src": "casual"}
+{"instruction": "yaar,mera phone kharab ho gaya", "response": "abey, to theek hai, mera phone use karle.", "src": "casual"}
+{"instruction": "chai pee lo?", "response": "haan, ek cup please.", "src": "casual"}
+{"instruction": "kya samajh nahin aa raha?", "response": "nahi, bas kuchh poochh raha tha.", "src": "casual"}
+{"instruction": "kya tumhe yaad hai,aaj humara birthday hai?", "response": "haan yaar, celebrate karenge?", "src": "casual"}
+{"instruction": "kuch funny joke suna?", "response": "haan yaar, ek baar ek aadmi...", "src": "casual"}
+{"instruction": "kya aaj ka lunch plan hai?", "response": "abhi toh nahi socha, tum kya khaana chahte ho?", "src": "casual"}
+{"instruction": "aaj bahut garam hai na?", "response": "haan yaar, pighal jaayenge.", "src": "casual"}
+{"instruction": "kal exam hai,kya tum prepare ho gaye?", "response": "nahi yaar, abhi padhayi shuru karunga.", "src": "casual"}
+{"instruction": "mujhe thodi help chahiye,kya tum kar sakte ho?", "response": "haan yaar, kya help chahiye?", "src": "casual"}
+{"instruction": "kaunsa song sun raha hai?", "response": "aare, yeh new one hai'.", "src": "casual"}
+{"instruction": "kuchh khaane ko milega kya?", "response": "haan yaar, fridge mein pizza hai.", "src": "casual"}
+{"instruction": "kaun si book padh rahe ho?", "response": "kuchh motivational books padh raha hoon.", "src": "casual"}
+{"instruction": "kya tumhe pata hai?", "response": "nahin, mujhe nahi pata.", "src": "casual"}
+{"instruction": "kya padhai mein problem aa rahi hai?", "response": "haa yaar, thoda confusion hai.", "src": "casual"}
+{"instruction": "kya,coffee peena hai kya?", "response": "haan yaar, ek cup chai bana do.", "src": "casual"}
+{"instruction": "kab tak hota hai yeh meeting?", "response": "2 hours aur'.", "src": "casual"}
+{"instruction": "aaj bahut garmi hai", "response": "haan yaar, aur paani peene ke liye khade raho.", "src": "casual"}
+{"instruction": "school kaise gaya aaj?", "response": "bahut maja aaya, teacher ne humse game khelwaya.", "src": "casual"}
+{"instruction": "kya aaj kuchh interesting ho raha hai?", "response": "nahi yaar, ekdum boring day hai.", "src": "casual"}
+{"instruction": "kal ka exam kaise gaya?", "response": "bhai, aisa toh chalta hai.", "src": "casual"}
+{"instruction": "aaj bahut garmi hai na?", "response": "haa yaar, jaise aag laggi ho.", "src": "casual"}
+{"instruction": "weekend mein kya karne ka plan hai?", "response": "kuch nahi yaar, bas ghar pe relax karunga.", "src": "casual"}
+{"instruction": "office mein kya chal raha hai?", "response": "kaam ka dher hai yaar, busy hu.", "src": "casual"}
+{"instruction": "kya tu exam ke liye padhai kar raha hai?", "response": "haan yaar, kal test hai.", "src": "casual"}
+{"instruction": "aaj kaun sa festival hai?", "response": "aaj raksha bandhan hai, apni bahan ko rakhi bandhni hai.", "src": "casual"}
+{"instruction": "kya problem hai?", "response": "bas thodi si tension hai.", "src": "casual"}
+{"instruction": "aaj movie dekhne ja rahe ho kya?", "response": "nahi yaar, time nahi hai.", "src": "casual"}
+{"instruction": "aaj shaam kya plans hain?", "response": "kuchh nahi yaar, bas ghar pe relax karunga.", "src": "casual"}
+{"instruction": "kabhi aao,chai piyo", "response": "zarur aaunga, kabhi toh aana hi hai.", "src": "casual"}
+{"instruction": "office mein kya drama hai aaj?", "response": "kuch nahi yaar, just another day.", "src": "casual"}
+{"instruction": "kal ka plan kya hai?", "response": "kal shopping jaana hai, ek naya dress leke aana hai.", "src": "casual"}
+{"instruction": "aaj ka weather kaisa hai?", "response": "baarish aane wali hai, lag raha hai.", "src": "casual"}
+{"instruction": "kaha ja rahe ho?", "response": "office ja raha hoon yaar.", "src": "casual"}
+{"instruction": "kitne mein aaya yeh?", "response": "yeh toh bilkul cheap hai!',", "src": "casual"}
+{"instruction": "aaj toh bahut khushi hai?", "response": "haan, aaj mere birthday hai yaar!", "src": "casual"}
+{"instruction": "kya tumhare pass pen hai?", "response": "haan, le lo!", "src": "casual"}
+{"instruction": "bhai,mujhe thodi help chahiye", "response": "aare, batta kya chahiye, mera toh time hi hai aaj.", "src": "casual"}
+{"instruction": "coffee pilaoge?", "response": "nahi yaar, abhi chai pee li hai", "src": "casual"}
+{"instruction": "office ka kaam kabhi khatam hi nahin hota hai,huh?", "response": "sahi bola, mere peeche bhi bhaag raha hai.", "src": "casual"}
+{"instruction": "aaj train late hai kya?", "response": "nahi, time pe aane wali hai.", "src": "casual"}
+{"instruction": "yeh wala dress kaisa lagta hai?", "response": "are awesome hai, bahut pasand aaya.", "src": "casual"}
+{"instruction": "kab tak aayenge?", "response": "aadhe ghanta mein aajaaunga.", "src": "casual"}
+{"instruction": "office mein kaafi kaam hai aaj!", "response": "chill kar, aaram se karenge.", "src": "casual"}
+{"instruction": "kya plan hai aaj?", "response": "kuch nahi yaar, bas ghar pe hi relax karna hai.", "src": "casual"}
+{"instruction": "aaj kahaan jaane wala hai?", "response": "kya pata yaar, mood dekh kar decide karunga.", "src": "casual"}
+{"instruction": "tere phone mein koi game install karna hai?", "response": "haan yaar, mujhe new game try karna hai.", "src": "casual"}
+{"instruction": "chai banai hai?", "response": "haan, chai garam garam hai, pee le.',", "src": "casual"}
+{"instruction": "bhai,kaisa laga concert?", "response": "bohot maja aaya, band ne superb performance di.", "src": "casual"}
+{"instruction": "kya kar rahe ho?", "response": "bas ghar pe aaram kar rahi hu, aap?", "src": "casual"}
+{"instruction": "bhai,kal kya pakayenge dinner mein?", "response": "aaj market jaake dekhta hu, kuch special banayenge.", "src": "casual"}
+{"instruction": "coffee pite ho kya?", "response": "haan yaar, main toh coffee ka diwana hoon.", "src": "casual"}
+{"instruction": "mobile charge kar liya?", "response": "haan, abhi kiya.", "src": "casual"}
+{"instruction": "kya tumhe yeh movie pasand aayi?", "response": "haan, bilkul! super hit!", "src": "casual"}
+{"instruction": "kal ka exam kaisa gaya?", "response": "thik gaya yaar, acha lag raha hai.", "src": "casual"}
+{"instruction": "traffic bahut badhiya hai na?", "response": "haan yar, jaam ho gaya hai.", "src": "casual"}
+{"instruction": "ye movie dekhna chahti ho?", "response": "haa, mujhe horror movies pasand hai.", "src": "casual"}
+{"instruction": "bhai,phone toh de de!", "response": "ek minute, abhi game khatam hone do.", "src": "casual"}
+{"instruction": "kya padh rahi thi tu?", "response": "kuch nahi yaar, bas facebook dekh rahi thi.", "src": "casual"}
+{"instruction": "chal,lunch karne chale?", "response": "haa, aaj toh khaana khana banta hai.", "src": "casual"}
+{"instruction": "chalo,chai peete hai?", "response": "haan yaar, aaj kaldi piyoon.", "src": "casual"}
+{"instruction": "kaunsa book padh raha hai?", "response": "bas, ek motivational book padh raha hoon, kuch motivate hona chahiye.", "src": "casual"}
+{"instruction": "kya aaj movie dekhne jaana hai?", "response": "nahi yaar, mujhe kaam karna hai.", "src": "casual"}
+{"instruction": "aaj ka weather bahut bada maza aa raha hai,na?", "response": "haan yaar, suraj bhi nikla hai, aur havaa bhi cool hai.", "src": "casual"}
+{"instruction": "kal tu office aa raha hai?", "response": "haan yaar, kal to aana hi padega.", "src": "casual"}
+{"instruction": "chalo coffee peete hai.", "response": "haan yaar, mujhe chai chahiye.", "src": "casual"}
+{"instruction": "bhai,kaam kab complete hoga?", "response": "bas thodi der mein ho jaayega, chill maar.", "src": "casual"}
+{"instruction": "kal kya plan hai?", "response": "kal toh bus ghar pe rehna hai.", "src": "casual"}
+{"instruction": "kitna time laga ghar pahunchne mein?", "response": "do ghanta lag gaya.", "src": "casual"}
+{"instruction": "kya karega yaar,movie dekhne ka mann kar raha hai", "response": "haan yaar, kal chaloge?", "src": "casual"}
+{"instruction": "kal office aana hai kya?", "response": "haan yaar, meeting hai.", "src": "casual"}
+{"instruction": "kya,ye naya phone le liya?", "response": "haan yaar, acha hai na?", "src": "casual"}
+{"instruction": "kya tumne woh movie dekh li?", "response": "haan yaar, bohot maja aaya.", "src": "casual"}
+{"instruction": "apne kiski madad karni hai?", "response": "koi nahi yaar, bass apna kaam kar raha hoon.", "src": "casual"}
+{"instruction": "kya tumhe ye shirt pasand aayi?", "response": "haa, ye bahut acchi hai.", "src": "casual"}
+{"instruction": "bhai,chai ka mood hai, kya tum chai piyoge?", "response": "haan yaar, lekin ek cup hi.", "src": "casual"}
+{"instruction": "bhai,yeh movie kaafi boring hai!", "response": "haan yaar, bas coffee pee rahe hain.", "src": "casual"}
+{"instruction": "kaffe peene jaana hai?", "response": "haan, chale jaate hai.", "src": "casual"}
+{"instruction": "aaj kya banaya hai?", "response": "sabzi aur roti banayi hai.", "src": "casual"}
+{"instruction": "konsi book padh rahe ho?", "response": "aise koi book toh nahi padh raha hoon.", "src": "casual"}
+{"instruction": "chalo,coffee peete hain?", "response": "haan yaar, aaj to mood hai.", "src": "casual"}
+{"instruction": "aaj ka mood kaisa hai?", "response": "aaj to kuch bhi nahi karne ka mood hai.", "src": "casual"}
+{"instruction": "cricket match dekhne jaa rahe ho?", "response": "haan yaar, india ki jeet pakki hai.", "src": "casual"}
+{"instruction": "chalo,chai peete hain?", "response": "haan yaar, pakka! kuch khaane ke liye bhi le aana.", "src": "casual"}
+{"instruction": "kya timepass kar rahe ho?", "response": "bas, phone pe scrolling kar rahi hoon.", "src": "casual"}
+{"instruction": "kaisa laga movie?", "response": "achcha tha, lekin thoda boring bhi tha.", "src": "casual"}
+{"instruction": "kitna kharcha hua?", "response": "thoda zyada hi ho gaya.", "src": "casual"}
+{"instruction": "phone kyun band tha?", "response": "battery dead ho gayi thi.", "src": "casual"}
+{"instruction": "yeh bag naya hai kya?", "response": "haan yaar, new year pe khud ko gift diya hai.", "src": "casual"}
+{"instruction": "kuchh khane ka man kar raha hai,kya?", "response": "haan yaar, pizza order karenge.", "src": "casual"}
+{"instruction": "kab aa raha hai tera birthday?", "response": "mera toh birthday kal hai.", "src": "casual"}
+{"instruction": "weekend mein kya plans hai?", "response": "kuch nahi yaar, bas ghar pe hi relax karna hai.", "src": "casual"}
+{"instruction": "mujhe ye song bahut pasand hai!", "response": "haan yaar, iski beats bahut acha hai.", "src": "casual"}
+{"instruction": "yaar,kuchh khane ko dijiye.", "response": "acha, chai bana kar deta hoon.", "src": "casual"}
+{"instruction": "kya,aapne yeh book padhi hai?", "response": "nahi, abhi tak nahi padhi.", "src": "casual"}
+{"instruction": "tumhari favourite book kaun si hai?", "response": "acha question hai, mujhe to bohot books pasand hai.", "src": "casual"}
+{"instruction": "kab exam hai tera?", "response": "abi toh bahut time hai, chill kar raha hoon.", "src": "casual"}
+{"instruction": "kya tumhara name kya hai?", "response": "mera name xyz hai.", "src": "casual"}
+{"instruction": "kya aaj ka traffic toh jaam hai!", "response": "sahi hai, aur kya.", "src": "casual"}
+{"instruction": "bus mein kya ho raha hai?", "response": "yaar, khali jagah nahi mil rahi hai.", "src": "casual"}
+{"instruction": "kaise hai aaj ka mood?", "response": "aaj toh kuchh nahi, bas khaana peena chahiye.", "src": "casual"}
+{"instruction": "kya tum kal mere saath market chal sakte ho?", "response": "haa yaar, chalunga.", "src": "casual"}
+{"instruction": "kuch help chahiye?", "response": "haa, please thodi help kar do!", "src": "casual"}
+{"instruction": "aaj weather bahut badal gaya hai na?", "response": "haan, pehle dhoop thi ab barish ho rahi hai.", "src": "casual"}
+{"instruction": "aaj ki class kaise rahi?", "response": "boring thi, kuchh samajh nahi aaya.", "src": "casual"}
+{"instruction": "chalo,chai peete hai?", "response": "chalo yaar, aaj mujhe kuch sweet khaane ka mann hai.", "src": "casual"}
+{"instruction": "koi acchi restaurant pata hai?", "response": "haan yaar, ek new waala open hua hai.',", "src": "casual"}
+{"instruction": "cricket match kaise ja raha hai?", "response": "acha ja raha hai, hope our team jeet jaaye.", "src": "casual"}
+{"instruction": "kya tune woh movie dekh li?", "response": "haan yaar, bahut mast thi!", "src": "casual"}
+{"instruction": "aap kaise ho?", "response": "maine toh bahut aram kar liya aaj.", "src": "casual"}
+{"instruction": "bus kitni der mein ayegi?", "response": "yaar, abhi traffic hai, pata nahi.", "src": "casual"}
+{"instruction": "kitne paise hai tere paas?", "response": "bas thode hi.", "src": "casual"}
+{"instruction": "cricket mein aaj kya scene hai?", "response": "match toh aaj nahin hai, kal hai.", "src": "casual"}
+{"instruction": "tumhe kya pasand hai?", "response": "mujhe biryani bahut pasand hai.", "src": "casual"}
+{"instruction": "aaj kaam thoda jyada hai,na?", "response": "haa yaar, bahut busy hoon.", "src": "casual"}
+{"instruction": "tujhe ghoomna pasand hai?", "response": "haan, travelling bohot acha lagta hai.", "src": "casual"}
+{"instruction": "kya tumne wo show dekha?", "response": "haan, bahut funny tha na.", "src": "casual"}
+{"instruction": "kya aaj party ho rahi hai?", "response": "haan, birthday party hai meri sister ka.", "src": "casual"}
+{"instruction": "kya tumne vo song suna?", "response": "haan, bohot acha song hai.", "src": "casual"}
+{"instruction": "shopping karne ja rahe ho kya?", "response": "haan yaar, thoda sa.", "src": "casual"}
+{"instruction": "kya tumne dinner kar liya?", "response": "nahi yaar, abhi toh kaam kar raha hoon.", "src": "casual"}
+{"instruction": "aaj kaise ho?", "response": "thanda thanda, kuch nahi.", "src": "casual"}
+{"instruction": "weekend ke liye kya plan bana?", "response": "kya pata, dekhte hain.", "src": "casual"}
+{"instruction": "cricket khelne ja rahe ho?", "response": "haan, aaj dhoni ki team ka match hai, jaana jaroori hai',", "src": "casual"}
+{"instruction": "abhishek toh kya karega?", "response": "woh toh shayad abroad jaane wala hai, kuch kaam hai.", "src": "casual"}
+{"instruction": "phone charge ho gaya?", "response": "haan, ab to aaram se chat kar sakte hai.", "src": "casual"}
+{"instruction": "kaise hai exams ke preparations?", "response": "theek hai, abhi kuch din aur padhna hai.", "src": "casual"}
+{"instruction": "chalo,movie dekhne chalte hai?", "response": "accha idea! kaun si movie dekhni hai?", "src": "casual"}
+{"instruction": "aaj ka khana toh majaa aaya!", "response": "haan yaar, khaane wala part toh perfect tha.", "src": "casual"}
+{"instruction": "aaj kahan jaane ka plan hai?", "response": "bas ghar par aaram karunga.", "src": "casual"}
+{"instruction": "phone charge karlo?", "response": "haan, ek second.", "src": "casual"}
+{"instruction": "office se jaldi aaya?", "response": "haan yaar, kaam khatam ho gaya tha.", "src": "casual"}
+{"instruction": "ab kya kar rahe ho?", "response": "koi kuchh nahi, bas ghum rahe hain.", "src": "casual"}
+{"instruction": "aaj ka workout kaisa raha?", "response": "thak gaya yaar, bahut mehnat ki.", "src": "casual"}
+{"instruction": "kitne rupay diye the petrol mein?", "response": "aaj to ₹800 ke diye the.", "src": "casual"}
+{"instruction": "kya bolna chahte ho?", "response": "kuch nahi, bas aap se baat karna chahta tha.", "src": "casual"}
+{"instruction": "kya tumne wo naya song suna?", "response": "haan yaar, bahut mast hai na?", "src": "casual"}
+{"instruction": "kya tumhe pizza pasand hai?", "response": "haan, mujhe pizza bahut pasand hai!", "src": "casual"}
+{"instruction": "kab exam hai?", "response": "next week hai yaar, padhai mein busy hu.", "src": "casual"}
+{"instruction": "aaj kaha ja rahe ho?", "response": "office jaana hai, aap?", "src": "casual"}
+{"instruction": "lunch kha liya?", "response": "nahi yaar, abhi time nahi mila.", "src": "casual"}
+{"instruction": "kaam khatam ho gaya?", "response": "haa, ab thoda aaram kar sakta hu.", "src": "casual"}
+{"instruction": "college mein kya chal raha hai?", "response": "boring hi hai, padhai aur exam hi.", "src": "casual"}
+{"instruction": "kis liye?", "response": "koi baat nahi, bas, just like that.", "src": "casual"}
+{"instruction": "kya kar raha hai?", "response": "kuch nahi, bas internet pe ghum raha hoon.", "src": "casual"}
+{"instruction": "tumhara favorite food kya hai?", "response": "chicken biryani, mast hota hai.", "src": "casual"}
+{"instruction": "aaj ka weather bahut aacha hai!", "response": "haan yaar, aaj to bahar jaana hi padega.", "src": "casual"}
+{"instruction": "koi problem ho toh bata dena.", "response": "ok, thanks for the heads up.", "src": "casual"}
+{"instruction": "kya plan hai aaj ke liye?", "response": "bas yaar, ghar pe chill karunga.", "src": "casual"}
+{"instruction": "kya re baba,kaise ho?", "response": "chalo, jeevan jaise tha vaise hi hai!", "src": "casual"}
+{"instruction": "tum kahaan ja rahe ho?", "response": "bas market ja raha hoon thoda shopping karne.", "src": "casual"}
+{"instruction": "kab tak aane wale ho?", "response": "bahar hi hu, abhi aa gaya.", "src": "casual"}
+{"instruction": "kya kar rahe ho aaj?", "response": "bas, ghar pe hi chilling kar raha hoon.", "src": "casual"}
+{"instruction": "yeh kaunsa song hai?", "response": "mujhe nahi pata yaar, ye toh ek alag genre ka hai.", "src": "casual"}
+{"instruction": "ye movie dekha kya?", "response": "nahin yaar, kya hai story?", "src": "casual"}
+{"instruction": "kal kya karne wala hai?", "response": "kuchh nahi yaar, bas ghar pe hi rehna hai.", "src": "casual"}
+{"instruction": "aaj ka khana kya banaya?", "response": "sabzi aur roti, usual stuff.", "src": "casual"}
+{"instruction": "movie dekhne jaenge kya?", "response": "haan, jaroor, kal.", "src": "casual"}
+{"instruction": "aaj kya khaana banaya?", "response": "bas simple khana, sabzi aur roti.", "src": "casual"}
+{"instruction": "kya aapne yeh new restaurant try kiya hai?", "response": "haan, aisa kuchh to, maza aaya.", "src": "casual"}
+{"instruction": "weekend plan kya hai?", "response": "abhi to kuch nahi socha, aap ka?", "src": "casual"}
+{"instruction": "aaj kya tumne kisi se milna hai?", "response": "haan yaar, dost se milne ja raha hu.", "src": "casual"}
+{"instruction": "kya tumhara phone kharab ho gaya hai?", "response": "haan yaar, kharab ho gaya hai.", "src": "casual"}
+{"instruction": "kal kya kar rahe ho?", "response": "kal to kuch nahin, padhai karni hai.", "src": "casual"}
+{"instruction": "bhai,shaadi ka invite nahi aaya?", "response": "haan yaar, dekhta hu mailbox me.", "src": "casual"}
+{"instruction": "aaj party karni hai?", "response": "haan, aaj party toh banni hai.", "src": "casual"}
+{"instruction": "party mein kya pehenke jaau?", "response": "kuchh casual peheno, too much dress up mat karna.", "src": "casual"}
+{"instruction": "bada maja aaya aaj?", "response": "haan yaar, kaafi maja aaya.", "src": "casual"}
+{"instruction": "babu,kya chahiye?", "response": "kuch nahi, bas aise hi puchh raha tha.", "src": "casual"}
+{"instruction": "kaise ho,bhai?", "response": "accha hoon, tu bata.", "src": "casual"}
+{"instruction": "kya aaj kuchh special plan hai?", "response": "nahin yaar, bas ghar pe relax karne ka mood hai.", "src": "casual"}
+{"instruction": "kal ka exam kaisa gaya?", "response": "bhai, aise thodi naa yaad aata hai.", "src": "casual"}
+{"instruction": "bhai,tum kya padhte ho?", "response": "mujhe to bahut kuchh padhna pasand hai, lekin time nahi milta.", "src": "casual"}
+{"instruction": "bhai,yeh movie dekhni hai kya?", "response": "haa yaar, aaj toh kuchh nahin kar raha hoon.", "src": "casual"}
+{"instruction": "kya tumhare exams start ho gaye?", "response": "haa yaar, aaj se hi start ho gaye hain.", "src": "casual"}
+{"instruction": "kal party mein aana,yaar?", "response": "aaoonga, aaoonga, definitely!", "src": "casual"}
+{"instruction": "kaha ja rahe ho?", "response": "bas ghar ja raha hoon, kaam khatam ho gaya.',", "src": "casual"}
+{"instruction": "kuchh khaana hai?", "response": "nahi yaar, bhookh nahi lagi.", "src": "casual"}
+{"instruction": "kya hua? khamosh kyun ho?", "response": "kuchh nahi yaar, bas soch raha tha.", "src": "casual"}
+{"instruction": "aaj ka mood kaisa hai?", "response": "thoda khaas nahi, thoda sad hoon.", "src": "casual"}
+{"instruction": "kaam kaise chal raha hai?", "response": "achcha chal raha hai, ek project pe kaam kar raha hoon.", "src": "casual"}
+{"instruction": "kya tumhe cricket pasand hai?", "response": "haan yaar, team india ka diwana hu.", "src": "casual"}
+{"instruction": "kya khane ko mann hai?", "response": "aaj kuchh sweet khaane ka mann hai.", "src": "casual"}
+{"instruction": "kya weekend plan hai?", "response": "kuch nahi yaar, just relax karne wala hoon.", "src": "casual"}
+{"instruction": "apna mobile dekh le?", "response": "haan, kaun call kar raha hai?", "src": "casual"}
+{"instruction": "kya kar rahe ho?", "response": "aapke message ka reply de raha hoon.", "src": "casual"}
+{"instruction": "aaj movie dekhne chalte hai na?", "response": "haan yaar, kaunsi movie dekhni hai?", "src": "casual"}
+{"instruction": "party mein aana hai?", "response": "haan, pakka.", "src": "casual"}
+{"instruction": "kya tu train se aaya?", "response": "haan yaar, flight mein seat nahi mili!", "src": "casual"}
+{"instruction": "kya aaj workout kiya?", "response": "haan yaar, kuchh to karna chahiye.", "src": "casual"}
+{"instruction": "aaj office ka kaam khatam ho gaya kya?", "response": "haan, ab toh bas free hoon.", "src": "casual"}
+{"instruction": "kya,aaj tumhare birthday party me aayega?", "response": "haan yaar, zaroor aaunga.", "src": "casual"}
+{"instruction": "party kaise thi?", "response": "bhai, maja aagaya!", "src": "casual"}
+{"instruction": "kaise hai aap?", "response": "acha hu, aap batayiye", "src": "casual"}
+{"instruction": "kaun sa movie dekhne ja rahe ho?", "response": "koi nahi yaar, bass ghar pe hi relax karna hai.", "src": "casual"}
+{"instruction": "kaisi feeling hai?", "response": "bilkul theek hun, thank you.", "src": "casual"}
+{"instruction": "aaj kaafi traffic tha yaar", "response": "haan, pata hai, mereko bhi bahut time laga", "src": "casual"}
+{"instruction": "parking ki jagah mil gayi?", "response": "nahin yaar, bheed bahut hai.", "src": "casual"}
+{"instruction": "bus ka ticket mil gaya kya?", "response": "haan yaar, abhi just book kiya.", "src": "casual"}
+{"instruction": "kal ki party mein kya pehanu?", "response": "kuch comfortable aur stylish, jeans and top chal jaayega.", "src": "casual"}
+{"instruction": "cricket match dekha?", "response": "haan yaar, bahut mazedaar tha.", "src": "casual"}
+{"instruction": "kya khaana bana rahi ho?", "response": "aaj toh simple sa, dal chawal.", "src": "casual"}
+{"instruction": "phone charge hai?", "response": "haan, 50% hai.',", "src": "casual"}
+{"instruction": "kabhi delhi gaya hai?", "response": "nahi yaar, kabhi mauka mila toh jarur jaunga.", "src": "casual"}
+{"instruction": "aaj shaam kya plan hai?", "response": "shaam toh padhai hi karni hai.", "src": "casual"}
+{"instruction": "kya tumhe chai peena hai?", "response": "haan yaar, kafi time se peene ka mann kar raha hai.", "src": "casual"}
+{"instruction": "kaise chal raha hai tere project ka?", "response": "bohot struggle hai yaar, deadline bhi bahut near hai.", "src": "casual"}
+{"instruction": "kal exam hai,kya tum prepare ho gaye?", "response": "aree yaar, abhi toh padhayi shuru ki hai!", "src": "casual"}
+{"instruction": "kya tumne kaam khatam kar diya?", "response": "haan, ab chill maaroonga.", "src": "casual"}
+{"instruction": "kaam kaise chal raha hai?", "response": "bas yaar, running smoothly.", "src": "casual"}
+{"instruction": "kal kya karna hai?", "response": "kal toh office jaana hai, boring.", "src": "casual"}
+{"instruction": "apna mobile dekh?", "response": "haan, baad mein dekhunga, abhi busy hoon.", "src": "casual"}
+{"instruction": "kya aapko koi problem hai?", "response": "nahin, bas thoda sa thka hua hoon!", "src": "casual"}
+{"instruction": "yeh phone kaise use karte ho?", "response": "are yaar, yeh toh bahut aasan hai.", "src": "casual"}
+{"instruction": "bhaiya,chai ki dukaan kaha hai?", "response": "wahan jaao, us gali me.", "src": "casual"}
+{"instruction": "kya tumhe yeh book padhni hai?", "response": "nahi yaar, mujhe to yeh genre bilkul bhi pasand nahi hai.", "src": "casual"}
+{"instruction": "kaunsi book padh rahe ho?", "response": "ek motivational book padh raha hu, life mein positivity aati hai.", "src": "casual"}
+{"instruction": "college kaisa chala aaj?", "response": "boring tha yaar, bas lecture hi lecture.", "src": "casual"}
+{"instruction": "kya aap coffee pee lete ho?", "response": "haan, ek cup chai banale mein time lagega kya?", "src": "casual"}
+{"instruction": "kya tumhe kuchh help chahiye?", "response": "nahi yaar, manage kar loonga.", "src": "casual"}
+{"instruction": "yeh naya phone kaisa hai?", "response": "bas acha hai, battery life thoda badhiya hai.", "src": "casual"}
+{"instruction": "kuch khane ko chahiye?", "response": "haan, thoda munchies hai.", "src": "casual"}
+{"instruction": "yeh naya phone le liya?", "response": "haan, yeh samsung ka hai.", "src": "casual"}
+{"instruction": "office se jaldi aana yaar", "response": "chill, sab kaam toh phir bhi nahi hoga',", "src": "casual"}
+{"instruction": "kya baat hai?", "response": "aaj mood off hai, kya pata.", "src": "casual"}
+{"instruction": "kaise hai aapka exam ka preparation?", "response": "bahut accha ja raha hai, thik-thak.", "src": "casual"}
+{"instruction": "konsi book padh rahe ho?", "response": "aap toh jaante hi ho, agatha christie ki.", "src": "casual"}
+{"instruction": "koi plan hai aaj ke liye?", "response": "nahin yaar, bas ghar pe hi rehna hai.',", "src": "casual"}
+{"instruction": "aap ka kya plan hai aaj?", "response": "bas, ghar pe relax karunga!", "src": "casual"}
+{"instruction": "kya tumne ye book padhi?", "response": "haan yaar, bohot accha book hai.", "src": "casual"}
+{"instruction": "kal kya plan hai?", "response": "kal toh bas ghar pe rehna hai, thoda aaram karna hai.", "src": "casual"}
+{"instruction": "kuchh shopping karna hai kya?", "response": "haan yaar, kuchh kapde lenge.", "src": "casual"}
+{"instruction": "mujhe thoda gussa aa raha hai.", "response": "chill maar, sab theek ho jaayega.", "src": "casual"}
+{"instruction": "kahi ja rahe ho?", "response": "haan, shopping karne ja rahe hain.',", "src": "casual"}
+{"instruction": "yeh kya ho raha hai?", "response": "bas, kuchh kar raha hoon.", "src": "casual"}
+{"instruction": "kya aapne movie dekha?", "response": "haan, bahut aacchi movie thi.", "src": "casual"}
+{"instruction": "kya tum coffee pite ho?", "response": "haan, kyun?", "src": "casual"}
+{"instruction": "kya aapko pata hai?", "response": "nahi yaar, mujhe kuchh nahin pata.", "src": "casual"}
+{"instruction": "bhai,kya planning hai weekend ke liye?", "response": "kuch nahi yaar, chill karna hai, bas", "src": "casual"}
+{"instruction": "kya tumhare pass chai hai?", "response": "haan yaar, peelo.", "src": "casual"}
+{"instruction": "kya ghar ka khana banaya?", "response": "haan yaar, aaj to bahut tasty dal chawal banaya.", "src": "casual"}
+{"instruction": "ab kya kar raha hai?", "response": "bas yaar, phone pe baat kar raha hoon.", "src": "casual"}
+{"instruction": "kya tumhe yeh music pasand hai?", "response": "haan yaar, bahut achcha hai.", "src": "casual"}
+{"instruction": "aaj kaise ho?", "response": "bas, aaj thoda bimar lag raha hoon.", "src": "casual"}
+{"instruction": "aaj ka weather kaisa hai?", "response": "bahut garmi hai yaar, ac lagaake baithna padega.", "src": "casual"}
+{"instruction": "kya khaana chahte ho?", "response": "kuch light khaana chahta hoon, bhuk nahi lag rahi hai.", "src": "casual"}
+{"instruction": "wo naya restaurant jaana hai kya?", "response": "haan, kal jaate hai, tu bhi chalna", "src": "casual"}
+{"instruction": "kaun sa dish order kare?", "response": "mujhe pizza aur pasta dono chahiye.", "src": "casual"}
+{"instruction": "kya,chai pee li?", "response": "abhi nahi yaar, office se aate hi peeyunga.", "src": "casual"}
+{"instruction": "aaj shaam ko plan kya hai?", "response": "kuch nahi yaar, ghar pe hi rehna hai.", "src": "casual"}
+{"instruction": "kya tumhari car aayi?", "response": "abhi nahi, next month aayegi.", "src": "casual"}
+{"instruction": "kal party mein kya pehnu?", "response": "koi simple sa dress pehen lo, aaram se rahega.", "src": "casual"}
+{"instruction": "arey,kal party mein kya hua?", "response": "kuchh nahi, khana khaaya, gane sunay, aur waapas aagaya.", "src": "casual"}
+{"instruction": "tumhara kya plan hai?", "response": "kya pata yaar, aage kya hoga.", "src": "casual"}
+{"instruction": "kal birthday hai tumhara,kya plan hai?", "response": "bas, ghar pe cake party hai, aana!", "src": "casual"}
+{"instruction": "kuch khaane ke liye hai?", "response": "haan, chai banayi hai.", "src": "casual"}
+{"instruction": "bhai,kaam kaisa chal raha hai?", "response": "bas, jaisa tha waisa hi chal raha hai.", "src": "casual"}
+{"instruction": "kya aaj shopping karne jaa rahe ho?", "response": "haan yaar, kuch kapde lene hain.", "src": "casual"}
+{"instruction": "kya tumhe kal office aana hai?", "response": "haan, par jaldi aaungi.", "src": "casual"}
+{"instruction": "kaise hain aap?", "response": "bhut acha, aap batao", "src": "casual"}
+{"instruction": "kitna time lagega yaar?", "response": "koi 10 minutes to lag hi jaayenge.", "src": "casual"}
+{"instruction": "parking kaha hai?", "response": "idhar, corner pe hai.", "src": "casual"}
+{"instruction": "aaj kya khaana bana rahe ho?", "response": "aaj pasta bana rahi hoon, aapko pasand aayega.", "src": "casual"}
+{"instruction": "tumhara favourite singer kaun hai?", "response": "arijit singh mere favourite hain.", "src": "casual"}
+{"instruction": "yeh bag kitne ka liya tha?", "response": "2,000 rupees mein.", "src": "casual"}
+{"instruction": "kitna padhai kar rahe ho?", "response": "abhi toh exam aane wala hai, zyada padhai karna pad raha hai.", "src": "casual"}
+{"instruction": "tumne movie dekh li kya?", "response": "haaan yaar, bahut mast thi.", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "bas, thik thaak hu, aap kaise ho?", "src": "casual"}
+{"instruction": "kal movie dekhne jaana hai?", "response": "haan yaar, kaunsi dekhni hai?", "src": "casual"}
+{"instruction": "mujhe ek problem hai", "response": "kya hua, batao.", "src": "casual"}
+{"instruction": "ye kaam jaldi kar do yaar,please?", "response": "bas abhi kar raha hoon, do minute.", "src": "casual"}
+{"instruction": "kaise ho aap?", "response": "acha hoon, aap kaise ho?", "src": "casual"}
+{"instruction": "kya aaj kaam bahut tha?", "response": "haan yaar, deadlines thi bahut.", "src": "casual"}
+{"instruction": "aaj ka dinner kya banaya hai?", "response": "bas simple sa sabzi aur dal banaya hai.", "src": "casual"}
+{"instruction": "aaj kya banana hai lunch mein?", "response": "aaj toh bas dal chawal hi banayenge.", "src": "casual"}
+{"instruction": "aaj kitna ghar ka kaam ho gaya?", "response": "kya kaam, kuchh bhi nahi hua.", "src": "casual"}
+{"instruction": "kya tumne yeh news dekhi?", "response": "haan yaar, bahut sad news hai.", "src": "casual"}
+{"instruction": "kya ho gaya yaar?", "response": "bas, thoda sad feel kar raha hoon.", "src": "casual"}
+{"instruction": "yeh website kaise use karna hai?", "response": "bas, aise hi kar lo, bahut simple hai.", "src": "casual"}
+{"instruction": "aapko koi problem to nahi hai?", "response": "nahi, bas thoda thaka hua hoon.", "src": "casual"}
+{"instruction": "tumne kal party me kya pehna tha?", "response": "kal toh ek simple kurta pajama pehna tha.", "src": "casual"}
+{"instruction": "kal kya plan hai?", "response": "kuchh nahi, just relaxing at home.", "src": "casual"}
+{"instruction": "sab kuchh thik hai na?", "response": "haan yaar, don't worry.',", "src": "casual"}
+{"instruction": "phone switch off tha?", "response": "haan, battery dead ho gayi thi.',", "src": "casual"}
+{"instruction": "kya tumne woh movie dekh li?", "response": "nahi yaar, kabhi time nikal hi nahin pa raha.", "src": "casual"}
+{"instruction": "kya padhai chal rahi hai?", "response": "bas, syllabus poora karne mein laga hu, koi aaram nahin hai.", "src": "casual"}
+{"instruction": "phone kharab ho gaya hai", "response": "kya hua, technician se check karwao.", "src": "casual"}
+{"instruction": "kya tumko phone mein kuch dikhao?", "response": "haan dikha, mujhe samajh nahi aaya.", "src": "casual"}
+{"instruction": "ye film toh bohot boring hai!", "response": "haan, nahi hai achchi, kuchh aur dekho.", "src": "casual"}
+{"instruction": "koi shaadi ki planning kar rahi ho kya?", "response": "aare, meri toh aise hi lagti hai.", "src": "casual"}
+{"instruction": "kal kya exams hai?", "response": "maths ka hai, bahut tension hai.", "src": "casual"}
+{"instruction": "kal party hai,aana?", "response": "aana hai, lekin late ho jaunga.", "src": "casual"}
+{"instruction": "oye,kal party hai?", "response": "haan yaar, tum toh aana hi hai na?", "src": "casual"}
+{"instruction": "kitni der se wait kar rahe ho?", "response": "15 minute ho gaye hain yaar.", "src": "casual"}
+{"instruction": "kaise ho?", "response": "bhai, thanda lag raha hai, khud ko blanket mein bandh kar raha hoon.", "src": "casual"}
+{"instruction": "movie dekhne jaa rahe ho kya?", "response": "haa yaar, rrr dekhne jaa raha hoon", "src": "casual"}
+{"instruction": "kya tune woh book padh li?", "response": "haan yaar, bahut interesting thi!", "src": "casual"}
+{"instruction": "coffee piyega?", "response": "haan, chai ka mood nahin hai.", "src": "casual"}
+{"instruction": "traffic bahut hai na?", "response": "haan yaar, khul ke nahin chal pa raha.',", "src": "casual"}
+{"instruction": "kya ye aapko pasand aaya?", "response": "bas, thik hai, aur kaisa hota toh aapko pata chalta.", "src": "casual"}
+{"instruction": "ye movie bahut boring hai yaar!", "response": "haa, kahi toh thodi interesting thi, lekin phir band ho gayi.", "src": "casual"}
+{"instruction": "kya aapke pass paani hai?", "response": "haan, lo le, yahan rakhi hai.", "src": "casual"}
+{"instruction": "kitne bade ho gaye tum,yaad hai school wale din?", "response": "haan yaar, kitne din ho gaye na.", "src": "casual"}
+{"instruction": "yeh kaise use karna hai?", "response": "aise, dekh lo.", "src": "casual"}
+{"instruction": "kya news dekhi aaj?", "response": "nahin, koi time nahi mila.", "src": "casual"}
+{"instruction": "kya ho gaya,itna gussa?", "response": "woh kaam chhod diya, bas.", "src": "casual"}
+{"instruction": "aap kahan se aaye ho?", "response": "maine delhi se aaya hu.", "src": "casual"}
+{"instruction": "kya plan hai aaj?", "response": "kuchh special nahi yaar, bas ghar par hi relax karna hai.", "src": "casual"}
+{"instruction": "cricket match dekhne ja raha hoon?", "response": "haan, india ka match hai, kya maja aayega!", "src": "casual"}
+{"instruction": "kal kya khaana banayega?", "response": "bhai, kuchh bhi yaar, bas pyaas lag rahi hai.", "src": "casual"}
+{"instruction": "haan,aaj ka weather bahut suhana hai na?", "response": "haan, thoda dhoop aur thoda badal.", "src": "casual"}
+{"instruction": "aaj kya plan hai?", "response": "bhai, aaj toh bass chill karna hai.',", "src": "casual"}
+{"instruction": "kal kya plans hai?", "response": "kuch nahin yaar, bas ghar pe hi rahunga.", "src": "casual"}
+{"instruction": "office se jaldi aana padega aaj", "response": "kya hua? kuchh important hai?", "src": "casual"}
+{"instruction": "chai peegi?", "response": "haan yaar, abhi chai hi chai kar rahi hoon.", "src": "casual"}
+{"instruction": "kya aapko movie pasand hai?", "response": "haan, mujhe bollywood movies bahut pasand hai.", "src": "casual"}
+{"instruction": "aaj ka weather kya hai?", "response": "bahar barish ho rahi hai!", "src": "casual"}
+{"instruction": "shopping karne chale jaate hai!", "response": "haaan, koi new clothes lete hai.", "src": "casual"}
+{"instruction": "aaj ka khaana kya banaya?", "response": "aloo gobi sabzi aur roti.", "src": "casual"}
+{"instruction": "aaj ka weather bahut badhiya hai?", "response": "haan, dhoop bahut acchi lag rahi hai.", "src": "casual"}
+{"instruction": "aaj aane wala hai?", "response": "haan yaar, aaj hi aa raha hai.',", "src": "casual"}
+{"instruction": "aaj ka weather bahut suhana hai,na?", "response": "haan yaar, bahut maza aa raha hai dhoop mein baith ke.", "src": "casual"}
+{"instruction": "kya aaj cricket match dekhne jaaoge?", "response": "haan, yaar, india ka match hai.", "src": "casual"}
+{"instruction": "bhai,mobile kharab ho gaya hai", "response": "koi baat nahi, phone kar, thik ho jaayega", "src": "casual"}
+{"instruction": "kal kaunsi movie dekhne ja rahe ho?", "response": "abhi decide nahi kiya, tumhe kya dekhna hai?", "src": "casual"}
+{"instruction": "kya tumne wo recipe try ki?", "response": "haan yaar, bahut tasty banni.", "src": "casual"}
+{"instruction": "kya tum cricket dekhte ho?", "response": "haan yaar, india ka match toh dekhta hi hu.", "src": "casual"}
+{"instruction": "kya chai pee lo?", "response": "haan, theek hai.", "src": "casual"}
+{"instruction": "kya pata hai yaar,yeh traffic toh kabhi khatam hi nahi hoga.", "response": "haan, yaar, bilkul paagalpan hai.", "src": "casual"}
+{"instruction": "kuch shopping karni thi,kya?", "response": "haan yaar, kuch clothes leke aayi hoon.", "src": "casual"}
+{"instruction": "office mein kaise chal raha hai?", "response": "okay hai, bas busy hu.", "src": "casual"}
+{"instruction": "aaj ka movie kaisa laga?", "response": "wah! super hit tha yaar, ekdum paisa vasool!", "src": "casual"}
+{"instruction": "aaj kya pakaane ka mann hai?", "response": "aaj khana bahar se manga lenge.", "src": "casual"}
+{"instruction": "maine ye jacket kharid li hai,kya?", "response": "oh, bahut khubsurat hai.", "src": "casual"}
+{"instruction": "kya tumhe books padhna pasand hai?", "response": "haan yaar, fiction padhna bahut accha lagta hai.", "src": "casual"}
+{"instruction": "ye project kaam kitna mushkil lag raha hai?", "response": "kafi tough hai yaar, but hum kar lenge.", "src": "casual"}
+{"instruction": "aaj kaun sa game hai?", "response": "football hai, arsenal vs manchester united.", "src": "casual"}
+{"instruction": "kya tumhe pani chahiye?", "response": "nahi yaar, thoda garam ho raha hai.", "src": "casual"}
+{"instruction": "kal aap kaha jaa rahe ho?", "response": "kahi nahi, ghar pe hi rehna hai.", "src": "casual"}
+{"instruction": "kya tumhe travel karna pasand hai?", "response": "haan yaar, different places explore karna bohot accha lagta hai.", "src": "casual"}
+{"instruction": "aaj kya karne ka plan hai?", "response": "kuchh nahi yaar, aaram karenge.", "src": "casual"}
+{"instruction": "kya aapke pass paisa hai?", "response": "haan, thoda sa hai, kya chahiye?", "src": "casual"}
+{"instruction": "kya chal raha hai social media pe?", "response": "kuch nahi, usual drama.", "src": "casual"}
+{"instruction": "ye ghana bhaari bag hai.", "response": "koi baat nahi, main uthata hoon.", "src": "casual"}
+{"instruction": "kon sa book padh rahe ho?", "response": "ek thriller novel padh raha hoon.", "src": "casual"}
+{"instruction": "yaar,kya bol rahe ho?", "response": "kuch nahi yaar, bas aise hi.", "src": "casual"}
+{"instruction": "yeh movie to bilkul boring hai yaar!", "response": "haan, mujhe bhi nahi pasand aayi.", "src": "casual"}
+{"instruction": "kaam toh bahut hai!", "response": "haan yaar, life is busy these days.", "src": "casual"}
+{"instruction": "train miss ho gayi,kya karein?", "response": "chinta mat karo, next train pakad lenge.", "src": "casual"}
+{"instruction": "aaj cricket match hai kya?", "response": "haan, india vs australia.", "src": "casual"}
+{"instruction": "kya chal raha hai? busy ho?", "response": "haan yaar, kuchh kaam kar raha hoon.", "src": "casual"}
+{"instruction": "kya padh raha hai?", "response": "history padh rahi hoon, exam hai.", "src": "casual"}
+{"instruction": "college kaise chala?", "response": "thik-thak, kuchh nahi special.", "src": "casual"}
+{"instruction": "kal movie dekhne chalega?", "response": "haa, mujhe bahut dekhni hai woh movie.", "src": "casual"}
+{"instruction": "football match dekh rahe ho?", "response": "haan, messi ka game hai!", "src": "casual"}
+{"instruction": "aaj ka movie kaisa laga?", "response": "bhai, boring tha, time waste ho gaya.", "src": "casual"}
+{"instruction": "kitne dinon mein jaana hai vacation pe?", "response": "agle mahine jaana hai.", "src": "casual"}
+{"instruction": "kya workout kar rahe ho?", "response": "haan yaar, gym ja raha hoon, fit rahenge toh life mein maza aayega.", "src": "casual"}
+{"instruction": "aaj khana kahan se order karna hai?", "response": "bhai, aaj ghar ka khaana hi bana do.", "src": "casual"}
+{"instruction": "netflix pe koi naya show dekh rahe ho?", "response": "haan, abhi stranger things dekh raha hoon", "src": "casual"}
+{"instruction": "coffee pi lo?", "response": "haan, bilkul.", "src": "casual"}
+{"instruction": "aaj ka weather kitna badal raha hai?", "response": "haan, jaise baarish aane wali hai.", "src": "casual"}
+{"instruction": "kya tumhe kabhi dance karna aata hai?", "response": "haan yaar, bachpan mein sikha tha.", "src": "casual"}
+{"instruction": "kya tumne ye padha?", "response": "haan yaar, kaafi interesting tha.", "src": "casual"}
+{"instruction": "aaj party hai kya?", "response": "haan, birthday party mein jaana hai.", "src": "casual"}
+{"instruction": "aaj kya plan hai?", "response": "kuchh pata nahi, mood dekhte hai.", "src": "casual"}
+{"instruction": "kitna bharti hua?", "response": "yaar, kya bataoon, kharchi bahut ho gayi.", "src": "casual"}
+{"instruction": "lunch khatam ho gaya?", "response": "haan, ab kya karein?", "src": "casual"}
+{"instruction": "kya tumne woh book padhi?", "response": "haan yaar, bohot achhi thi.", "src": "casual"}
+{"instruction": "yeh book aachi lagi kya?", "response": "haan yaar, bahut interesting hai.',", "src": "casual"}
+{"instruction": "aaj khana khane aana mere ghar?", "response": "haan yaar, khana khana to banta hai.", "src": "casual"}
+{"instruction": "kya aaj party hai?", "response": "haan yaar, bas prep kar raha hoon.", "src": "casual"}
+{"instruction": "bus aane mein kitna time lagega?", "response": "5 minutes mein aa jaegi, aaram se.", "src": "casual"}
+{"instruction": "kitna traffic hai?", "response": "bahut zyada traffic hai yaar, aaj.", "src": "casual"}
+{"instruction": "bhai,kya kuchh aaya aaj market se?", "response": "haan, kuchh groceries le aaya hoon.", "src": "casual"}
+{"instruction": "kya,tujhe kaun si gaana pasand hai?", "response": "muze toh bohot saare gane pasand hai, aap ko kaun sa pasand hai?", "src": "casual"}
+{"instruction": "kya khaane ke liye banaya hai?", "response": "aaj khichdi banayi hai, aaja kha.", "src": "casual"}
+{"instruction": "kal kya karne wala hai?", "response": "kal toh aaram karna hai, poora din.", "src": "casual"}
+{"instruction": "aaj ka traffic toh bhadda hai yaar!", "response": "haan, bahut traffic hai, kaam pe late ho jaayenge.',", "src": "casual"}
+{"instruction": "kaun sa topic padhayega aaj?", "response": "aaj history padhayega.", "src": "casual"}
+{"instruction": "aap mujhe kaun se topic pe baat karenge?", "response": "aap kya chahte hain, wo topic pe baat karenge.", "src": "casual"}
+{"instruction": "aaj kaafi jaldi uthna pada?", "response": "haan yaar, kaam pe jaana tha.", "src": "casual"}
+{"instruction": "traffic mein phans gaya?", "response": "haan yaar, kya traffic hai aaj.", "src": "casual"}
+{"instruction": "kya,aap ko koi problem hai?", "response": "nahi yaar, kuchh nahi.", "src": "casual"}
+{"instruction": "office se kab nikloge aaj?", "response": "thodi der mein niklunga, bahut kaam hai.", "src": "casual"}
+{"instruction": "kya tumne woh movie dekhi?", "response": "haan, dekha! badi boring thi yaar.", "src": "casual"}
+{"instruction": "koi party plan hai weekend ke liye?", "response": "nahi yaar, this weekend bas relax karna hai.", "src": "casual"}
+{"instruction": "weekend plan kya hai?", "response": "kuch nahi yaar, bas chill karna hai.", "src": "casual"}
+{"instruction": "kya,shaadi mein jaana hai kya?", "response": "haan yaar, rishtedar ki shaadi hai.", "src": "casual"}
+{"instruction": "kya khaane mein banaya?", "response": "aaj toh dal chawal hai, simple sa.", "src": "casual"}
+{"instruction": "kya tumne online shopping kiya?", "response": "haan yaar, aaj kuch deals thi.", "src": "casual"}
+{"instruction": "kya aapko khana banaana aata hai?", "response": "haan yaar, kuchh-kuchh banata hoon.", "src": "casual"}
+{"instruction": "kya ho raha hai yaar?", "response": "kuch nahi, bas boring lag raha hai.',", "src": "casual"}
+{"instruction": "kal ka exam kaisa gaya?", "response": "theek tha yaar, aur tu?',", "src": "casual"}
+{"instruction": "ye book padhi kya?", "response": "haan, bahut interesting book thi, main toh pakka recommend karungi.", "src": "casual"}
+{"instruction": "tumhe koi problem toh nahi?", "response": "nahi yaar, sab sahi chal raha hai.", "src": "casual"}
+{"instruction": "kitne baje office chala jaa raha hai?", "response": "nine baje, apne to?", "src": "casual"}
+{"instruction": "traffic toh aaj bahut zada hai!", "response": "haan yaar, traffic me to jaan hi nikal jaati hai.", "src": "casual"}
+{"instruction": "tujhe kaunse gaane pasand hain?", "response": "ab toh bohot purane gaane sunna pasand hai.", "src": "casual"}
+{"instruction": "aaj kya party hai?", "response": "nahi yaar, aaj toh busy day hai.", "src": "casual"}
+{"instruction": "mujhe phone nahi mila aaj,kahi tumne dekh liya kya?", "response": "nahin yaar, mujhe bhi nahi mila.", "src": "casual"}
+{"instruction": "aaj kya kar rahe ho?", "response": "aaj shopping jaane ka plan hai.", "src": "casual"}
+{"instruction": "kaam bohot hai aaj", "response": "aram se karo, time pe ho jayega.", "src": "casual"}
+{"instruction": "kya tumne book padhi?", "response": "haan, bahut achchi thi.", "src": "casual"}
+{"instruction": "yaar,bahut bhook lagi hai!", "response": "chalo, pizza order karte hain.", "src": "casual"}
+{"instruction": "kuchh snacks laane ho kya?", "response": "haan, chips le aao", "src": "casual"}
+{"instruction": "wo film kaisi thi?", "response": "super hit yaar, ekdam mindblowing.", "src": "casual"}
+{"instruction": "aaj movie dekhne jaana hai kya?", "response": "haan yaar, ek comedy movie dekhne jaa rahe hain.", "src": "casual"}
+{"instruction": "koi problem hai kya?", "response": "nahin yaar, sab thik hai.", "src": "casual"}
+{"instruction": "kya exam ka pressure aa raha hai?", "response": "bilkul yaar, brain mein dhum hai.", "src": "casual"}
+{"instruction": "aaj ka weather to bahut accha hai!", "response": "haan yaar, hum chalte hai park pe.", "src": "casual"}
+{"instruction": "shopping karne ja raha hai?", "response": "haan, kuch clothes lene hain.", "src": "casual"}
+{"instruction": "kabtak aayega?", "response": "bas, jaldi hi aayega, abhi just 5 minutes mein aa gaya.", "src": "casual"}
+{"instruction": "apna account check kiya kya?", "response": "nahin yaar, kal check karunga.", "src": "casual"}
+{"instruction": "kya,lunch kar liya?", "response": "nahi yaar, abhi karunga.", "src": "casual"}
+{"instruction": "mujhe bahut thanda lag raha hai", "response": "jaake ek cup chai pee le.", "src": "casual"}
+{"instruction": "oye,kal movie dekhne chalenge?", "response": "chalo yaar, kaun si dekhni hai?", "src": "casual"}
+{"instruction": "kitne saare kaam hain aaj?", "response": "haan yaar, time hi nahi hai.", "src": "casual"}
+{"instruction": "mobile charger de do yaar?", "response": "haan, le, table pe hai.", "src": "casual"}
+{"instruction": "exam kaise gaya?", "response": "theek tha, hope for the best.',", "src": "casual"}
+{"instruction": "mere se bhejo na?", "response": "theek hai, send karta hoon.", "src": "casual"}
+{"instruction": "kya kar rahe ho aaj?", "response": "kuchh nahi, bas ghar pe hi aaram kar rahi hoon.", "src": "casual"}
+{"instruction": "mujhe thoda sardi lag rahi hai,kya tumhare paas dawa hai?", "response": "haan yaar, le lo, ek tablet le lo.", "src": "casual"}
+{"instruction": "kya tumhe coffee pasand hai?", "response": "haan, mujhe coffee bohot pasand hai.", "src": "casual"}
+{"instruction": "saala traffic toh jaam hi hai!", "response": "abe, yeh toh daily ka scene hai.", "src": "casual"}
+{"instruction": "phone lag raha hai?", "response": "haan yaar, abhi battery low hai.", "src": "casual"}
+{"instruction": "kal kya karne wale ho?", "response": "kal to office jaana hai!", "src": "casual"}
+{"instruction": "bhai,kya kar rahe ho?", "response": "bas, coffee peete huye phone pe scroll kar raha hoon.", "src": "casual"}
+{"instruction": "kal ghar pe aana hai kya?", "response": "haan yaar, kal to jarur aaunga.", "src": "casual"}
+{"instruction": "aaj dinner pe kuchh special bana?", "response": "haan yaar, pasta banaya hai.", "src": "casual"}
+{"instruction": "kal party mein kya pehenoge?", "response": "kuchh light and comfy, baarish aa rahi hai.", "src": "casual"}
+{"instruction": "aaj kya plan hai?", "response": "kuch nahi yaar, bas aaram karunga.", "src": "casual"}
+{"instruction": "kal office mein meeting hai?", "response": "haan yaar, kya presentation rakhna hai?", "src": "casual"}
+{"instruction": "tumhara kya plan hai kal ke liye?", "response": "bas ghar pe relax karna hai, thoda kaam bhi kar lena hai.", "src": "casual"}
+{"instruction": "ye kaunsi book hai?", "response": "ye meri fav book hai, bohot interesting hai.", "src": "casual"}
+{"instruction": "coffee peene ka mood hai?", "response": "haan yaar, chai nahi chaiye.", "src": "casual"}
+{"instruction": "ye kya baat hai yaar?", "response": "kuch nahin, bas tension hai.", "src": "casual"}
+{"instruction": "kya tum college aaye the?", "response": "haan, lecture nahi tha, bas library me padhai karne gaya tha.", "src": "casual"}
+{"instruction": "chalo,chai peete hain!", "response": "haan yaar, chai to banta hai.", "src": "casual"}
+{"instruction": "koi plan hai weekend ke liye?", "response": "nahin, bas aaram karne ka mood hai.", "src": "casual"}
+{"instruction": "wo movie kaise lagi?", "response": "waise toh thik thi, lekin kuch zyada boring thi.", "src": "casual"}
+{"instruction": "kya,tu movie dekhne jaa raha hai?", "response": "haan yaar, kal toh full masti hogi.", "src": "casual"}
+{"instruction": "bhai,mobile charge kar sakta hu?", "response": "haan yaar, le lo charger.", "src": "casual"}
+{"instruction": "yeh kaise kiya?", "response": "aise hi, kar diya.", "src": "casual"}
+{"instruction": "bhai,yeh movie bahut boring hai!", "response": "haan yaar, timepass ke liye hi dekh rahe hain.", "src": "casual"}
+{"instruction": "kya tumne wo new movie dekh li?", "response": "nahi yaar, kabhi time nikal ke dekh lunga.", "src": "casual"}
+{"instruction": "kya aaj kaafi kaam hai?", "response": "nahi yaar, aaj toh free hu.", "src": "casual"}
+{"instruction": "kahan ja rahe ho?", "response": "bas ghoomne ja raha hoon.", "src": "casual"}
+{"instruction": "lunch kar liya?", "response": "haan, aab toh apna kaam kar leta hoon.", "src": "casual"}
+{"instruction": "yeh new phone kaisa hai?", "response": "badiya hai yaar, battery life toh bahut good hai.", "src": "casual"}
+{"instruction": "kabhi khana pakate ho?", "response": "haan, aaj maine noodles banaye.", "src": "casual"}
+{"instruction": "kal kya plan hai?", "response": "kuchh nahi yaar, bas aaram karunga.", "src": "casual"}
+{"instruction": "kaun sa movie dekh rahe ho?", "response": "kuch nahi, bas netflix pe timepass kar raha hoon.", "src": "casual"}
+{"instruction": "aaj kya banana hai?", "response": "bas aaj simple dal chawal banaunga.", "src": "casual"}
+{"instruction": "kaun se college mein ja rahe ho?", "response": "aaj kal it ka scope acha hai na, isliye computer science karne wala hoon.", "src": "casual"}
+{"instruction": "kya padh rahe ho?", "response": "ek naya novel, time pass kar raha hoon.", "src": "casual"}
+{"instruction": "aaj ka weather bahut garmi hai?", "response": "haan yaar, sweating toh bahut ho raha hai.", "src": "casual"}
+{"instruction": "kya tumhe movies dekhna pasand hai?", "response": "haan, bahut.", "src": "casual"}
+{"instruction": "kaha gaya tha?", "response": "mummy ke saath market gaya tha.',", "src": "casual"}
+{"instruction": "aaj ka weather kaisa hai?", "response": "bahut garmi hai yaar, pizza khaane ka mood hai.", "src": "casual"}
+{"instruction": "weekend ka plan kya hai?", "response": "kuch nahin yaar, just chilling at home.", "src": "casual"}
+{"instruction": "kya weekend plans hai?", "response": "kuch nahi yaar, bas ghar pe chill karunga.", "src": "casual"}
+{"instruction": "mobile mein kuchh interesting toh hai?", "response": "nahi yaar, bas social media pe scroll kar raha hoon.", "src": "casual"}
+{"instruction": "kaise ho?", "response": "theek hu, tu bata?',", "src": "casual"}
+{"instruction": "coffee peena hai?", "response": "haaan, garam garam chai se achcha coffee hota hai.", "src": "casual"}
+{"instruction": "chalo,aaj movie dekhne jaate hai?", "response": "haan, chal, aaj to maza aayega.", "src": "casual"}
+{"instruction": "aaj office mein kya scene raha?", "response": "kuch nahi, same old same old.", "src": "casual"}
+{"instruction": "coffee bana diya?", "response": "haan, sugar daal ke ya without?", "src": "casual"}
+{"instruction": "aaj kaise jaa rahe ho?", "response": "aaj bus se jaa raha hoon.", "src": "casual"}
+{"instruction": "kal office aana padega?", "response": "haan yaar, kal meeting hai.", "src": "casual"}
+{"instruction": "kitna time laga aane mein?", "response": "bhai, traffic toh bahut tha aaj!", "src": "casual"}
+{"instruction": "kya pakaoge dinner?", "response": "aaj toh khana bahar se mangwayenge.", "src": "casual"}
+{"instruction": "kya khana hai?", "response": "bhai, aaj kuch light sa chahiye.',", "src": "casual"}
+{"instruction": "kaise ho,dost?", "response": "bas chal raha hoon, tum batao.", "src": "casual"}
+{"instruction": "kab aa rahe ho?", "response": "kal hi aaunga, koi jaldi nahi hai.", "src": "casual"}
+{"instruction": "phone charge kiya?", "response": "haa yaar, abhi abhi kiya hai.", "src": "casual"}
+{"instruction": "mujhe film dekhne jaana hai,chalenge?", "response": "chalo yaar, kaun si film dekhne ja rahe ho?", "src": "casual"}
+{"instruction": "chai piyoge?", "response": "haan, thoda sugar kam rakhiyo.", "src": "casual"}
+{"instruction": "kya sun raha hai?", "response": "kuchh music sun raha hoon, kya baat hai?", "src": "casual"}
+{"instruction": "apna college kaisa chal raha hai?", "response": "thik hai yaar, thoda busy hoon.", "src": "casual"}
+{"instruction": "kya hua aaj tumhe?", "response": "kuchh nahi yaar, bas thka hua hu.", "src": "casual"}
+{"instruction": "ye book padh rahe ho kya?", "response": "haan, bahut interesting hai.", "src": "casual"}
+{"instruction": "kal birthday party hai!", "response": "haan yaar, congrats, kya gift leke jau?", "src": "casual"}
+{"instruction": "aaj kya sikhaya college mein?", "response": "aaj history padhaya gaya.", "src": "casual"}
+{"instruction": "kal kya special hai?", "response": "kuch nahi yaar, bas normal day hai.", "src": "casual"}
+{"instruction": "aaj ka weather kaisa hai?", "response": "garmi ki aag lagi hai.", "src": "casual"}
+{"instruction": "aaj shopping karne jaana hai?", "response": "haan, kuch clothes lene hai", "src": "casual"}
+{"instruction": "kabhi aao ghar pe?", "response": "zaroor aaunga, kal hi aata hu.", "src": "casual"}
+{"instruction": "movie dekhne chale jaayein?", "response": "accha idea hai, koi romantic movie dhundte hain.", "src": "casual"}
+{"instruction": "aaj kaise ho?", "response": "theek-thak, tu?',", "src": "casual"}
+{"instruction": "kya pata,shayad aaj rain ho jaaye!", "response": "arey yaar, aaj toh ekdum suhana mausam hai.", "src": "casual"}
+{"instruction": "yeh traffic bahut jyada hai na?", "response": "haan yaar, roz ka drama hai.", "src": "casual"}
+{"instruction": "kya mobile charger hai tumhare pass?", "response": "haan, le lo, meri bhi charging mein hai.", "src": "casual"}
+{"instruction": "kuchh khaane ko milega?", "response": "haan, fridge mein sandwich hai.", "src": "casual"}
+{"instruction": "kya raat ka khana banana hai?", "response": "pizza order kar lete hain.", "src": "casual"}
+{"instruction": "aap kaise ho?", "response": "main thik hoon, aap bataiye.", "src": "casual"}
+{"instruction": "aaj ka dinner plan kya hai?", "response": "abhi toh decide nahin kiya, tu kuchh soch raha hai?',", "src": "casual"}
+{"instruction": "tumhara kya plan hai?", "response": "kuch nahi, just relax karne ka mood hai.", "src": "casual"}
+{"instruction": "cricket khelne jaana hai kya?", "response": "nahin yaar, aaj toh aisa mood nahi hai.", "src": "casual"}
+{"instruction": "kuch khaate hain?", "response": "chalo, coffee pee lete hain", "src": "casual"}
+{"instruction": "tune job kar li kya?", "response": "nahin yaar, abhi to dekh raha hoon.", "src": "casual"}
+{"instruction": "mera phone kaput ho gaya hai", "response": "ohh, service centre pe le jao.", "src": "casual"}
+{"instruction": "kaha ja rahe ho?", "response": "office ja raha hoon.", "src": "casual"}
+{"instruction": "kal cricket match dekha?", "response": "haan dekha, india ka match tha.", "src": "casual"}
+{"instruction": "kaunsa colour pasand hai?", "response": "mujhe blue colour bahut pasand hai, aapka kya hai?", "src": "casual"}
+{"instruction": "kal exam hai,tumhari tayari kaisi chal rahi hai?", "response": "abhi tak kuchh padhai nahi hui yaar, kaafi pressure hai.", "src": "casual"}
+{"instruction": "ye movie bahut boring hai!", "response": "haaan yaar, hum toh kisi aur film mein chale jaate hain.", "src": "casual"}
+{"instruction": "kya chal raha hai,aaj ka mood kaisa hai?", "response": "aaj to bas thoda khush hoon, kuch aacha hua hai.", "src": "casual"}
+{"instruction": "kya hua tumhen?", "response": "kuch nahi yaar, thoda sa khana kharab ho gaya.", "src": "casual"}
+{"instruction": "internet kaam nahi kar raha hai?", "response": "haan yaar, recharge karna padhega.", "src": "casual"}
+{"instruction": "kitne baje office jana hai?", "response": "9 baje, late nahi ho sakta.", "src": "casual"}
+{"instruction": "mujhe ye dress pasand aayi hai,kya tumhe bhi?", "response": "haan, bohot sunder hai!", "src": "casual"}
+{"instruction": "weekend plans kya hai?", "response": "kuchh nahi yaar, ghar pe relax karna hai.", "src": "casual"}
+{"instruction": "aapka kya plan hai aaj?", "response": "aaj toh bas relax karna hai yaar.", "src": "casual"}
+{"instruction": "aaj kya khana banaya?", "response": "aaj toh simple dal chawal hi banaya.", "src": "casual"}
+{"instruction": "kaise ho,bhai?", "response": "theek hun, tu bata, kaisa hai?", "src": "casual"}
+{"instruction": "kab meeting hai aaj?", "response": "2 baje hai, yaad hai na?", "src": "casual"}
+{"instruction": "weekend ka kya plan hai?", "response": "kuch nahin, shayad ghoomne jaaunga.", "src": "casual"}
+{"instruction": "weekend plans kya hai?", "response": "kuch nahi, ghar pe relax karna hai.", "src": "casual"}
+{"instruction": "kaunsi shop pe gaye the?", "response": "wo wali, new wala jo hai.", "src": "casual"}
+{"instruction": "mujhe khana khane ka bahut mann kar raha hai.", "response": "chalo, hum pizza khaane chalte hai.", "src": "casual"}
+{"instruction": "haan,tum log kaise ho?", "response": "hum toh thik hai, tum batao.", "src": "casual"}
+{"instruction": "salary kab aayegi?", "response": "bhai, woh toh company se puchho.", "src": "casual"}
+{"instruction": "kuch kaam tha tumhare liye?", "response": "haan yaar, thodi help chahiye.", "src": "casual"}
+{"instruction": "aaj bahut kaam hai,kya?", "response": "haan yaar, abhi to shuruwat hai.", "src": "casual"}
+{"instruction": "kal milte hain,na?", "response": "haan yaar, kal meet karke kuchh planning karni hai.", "src": "casual"}
+{"instruction": "coffee banati ho?", "response": "haan, ek minute mein aati hai.", "src": "casual"}
+{"instruction": "cricket match dekhe?", "response": "haan yaar, india ka match tha, maza aa gaya.", "src": "casual"}
+{"instruction": "yaar,kaise padhai ho rahi hai?", "response": "bohot tough hai yaar, ekdam confusion ho rahi hai.", "src": "casual"}
+{"instruction": "yaar,itni garmi kaise jhelte ho?", "response": "bas, fan chala kar survive kar rahe hain.", "src": "casual"}
+{"instruction": "kaam ka pressure hai aajkal", "response": "haan yaar, mera bhi, kabhi free hota hi nahi.',", "src": "casual"}
+{"instruction": "aur batao?", "response": "kuchh nahi, bas aise hi.", "src": "casual"}
+{"instruction": "kaisi chal rahi hai studies?", "response": "abhi thodi confuse hoon, syllabus bahut heavy hai.", "src": "casual"}
+{"instruction": "kya tumhe yeh film pasand aayi?", "response": "haan yaar, bahut mast thi.", "src": "casual"}
+{"instruction": "kaise ho bhai?", "response": "achcha chal raha hu, tu?',", "src": "casual"}
+{"instruction": "bhai,aaj ka mood bahut off hai.", "response": "chillax yaar, ho jayega.", "src": "casual"}
+{"instruction": "phone number do yaar?", "response": "ok, aapko call kar dunga.", "src": "casual"}
+{"instruction": "kya tumhe yaad hai?", "response": "haan, bilkul yaad hai, kaise bhul sakta hu.", "src": "casual"}
+{"instruction": "office ka kaam khatam ho gaya?", "response": "haa, ab free hoon.", "src": "casual"}
+{"instruction": "kitna paisa lagae?", "response": "bhaiya, itna hai kya?", "src": "casual"}
+{"instruction": "kya aaj dinner pe chalenge?", "response": "haa, chalte hain, aisa plan kar lete hain.", "src": "casual"}
+{"instruction": "aaj toh bahut thak gaya!", "response": "haan yaar, kal chutti ka intezaar kar raha hoon.", "src": "casual"}
+{"instruction": "aaj ki meeting kaise rahi?", "response": "thik thik, kuchh important decisions liye.", "src": "casual"}
+{"instruction": "phone battery toh gyi,yaar!", "response": "charger laga lo, jaldi se.", "src": "casual"}
+{"instruction": "kal party hai,aayega?", "response": "haan yaar, sure.", "src": "casual"}
+{"instruction": "office me kaam kaisa chal raha hai?", "response": "ab toh abhi mazaa aa raha hai.", "src": "casual"}
+{"instruction": "yeh naya phone kaise laga?", "response": "bahut acha hai yaar, camera quality toh mast hai.", "src": "casual"}
+{"instruction": "kya tum kabhi swimming jaate ho?", "response": "nahi, swimming nahi aata mujhe, tum jaate ho?", "src": "casual"}
+{"instruction": "coffee peene jaana hai?", "response": "haan, aaj kuch alag try karna hai.", "src": "casual"}
+{"instruction": "bus ka wait kar raha hoon,bahut late hai?", "response": "haan yaar, aaj bahut bheed hai.", "src": "casual"}
+{"instruction": "kya coffee pi lo?", "response": "haan yaar, fresh coffee ka dil kar raha hai.", "src": "casual"}
+{"instruction": "office se kab aayega?", "response": "abhi to bahut time hai yaar, 6 baje ke baad hi.", "src": "casual"}
+{"instruction": "school mein kya chal raha hai?", "response": "bas yaar, exams ke stress mein sab doob gaye hai", "src": "casual"}
+{"instruction": "aree,kaafi der se phone kar raha hoon!", "response": "sorry yaar, network kamzor tha.", "src": "casual"}
+{"instruction": "kya tum shopping karne jaoge?", "response": "haan, kal market jaana hai.", "src": "casual"}
+{"instruction": "phone charger le aaya?", "response": "haan, yaar le aaya hu.", "src": "casual"}
+{"instruction": "cricket dekha?", "response": "haan yaar, india jeet gaya.',", "src": "casual"}
+{"instruction": "aaj ka match kaisa laga?", "response": "wah, kya sixer lagae hain, team fire hai!", "src": "casual"}
+{"instruction": "ye phone lag raha hai?", "response": "haan, network issue hai, network badhiya nahi aa raha.", "src": "casual"}
+{"instruction": "weekend ka plan ban gaya?", "response": "nahin yaar, kuchh bhi nahi socha abhi tak.", "src": "casual"}
+{"instruction": "bhaiya,ek chai dena!", "response": "haanji, aap chai chaiye kya?", "src": "casual"}
+{"instruction": "ye pizza kaha se mangaya?", "response": "dominos se, wahi sabse accha hai.", "src": "casual"}
+{"instruction": "chai peena hai kya?", "response": "haan yaar, garam garam.", "src": "casual"}
+{"instruction": "dinner ke liye kya banaya?", "response": "aaj dal chawal bana rahi hoon.", "src": "casual"}
+{"instruction": "kya tumhe yeh game pasand hai?", "response": "haan, mujhe bahut pasand hai.", "src": "casual"}
+{"instruction": "kaisi feeling hai?", "response": "thodi khushi, thodi tension!", "src": "casual"}
+{"instruction": "ye naya restaurant aaya hai,chalo try karte hai?", "response": "chalo, lekin mein bahut bhookha hoon!", "src": "casual"}
+{"instruction": "kya tumhe yeh dress pasand aayi?", "response": "haan, very cute, buy karlo.", "src": "casual"}
+{"instruction": "aaj kya special bana hai?", "response": "aaj toh paneer butter masala bana hai.", "src": "casual"}
+{"instruction": "yeh kaam kal tak ho jaayega?", "response": "haa, tension na le.", "src": "casual"}
+{"instruction": "kab aaoge yaar?", "response": "kal shaam aaunga yaar.", "src": "casual"}
+{"instruction": "bhai,mujhe thodi help chahiye", "response": "koi baat nahi, batao kya karna hai.", "src": "casual"}
+{"instruction": "kya tumhe kal movie dekhne jaana hai?", "response": "haan yaar, kal to sunday hai, time hai.", "src": "casual"}
+{"instruction": "kaunsa movie dekha tune?", "response": "bhai, wo new one, bollywood wala.", "src": "casual"}
+{"instruction": "phone charge karo?", "response": "nahi yaar, abhi 20% battery hai.", "src": "casual"}
+{"instruction": "tumhe yeh movie kaisi lagi?", "response": "bahut boring thi yaar, kuch samajh nahin aaya.", "src": "casual"}
+{"instruction": "coffee chai peena hai?", "response": "coffee please.", "src": "casual"}
+{"instruction": "mujhe ghar jaana hai.", "response": "thik hai, taxi book kar deta hu.',", "src": "casual"}
+{"instruction": "aaj bahut boring din hai,kya karu?", "response": "koi movie dekh le, kuchh entertainment ho jayega!", "src": "casual"}
+{"instruction": "coffee piyega?", "response": "haan yaar, time toh hai, chale jaate hai.", "src": "casual"}
+{"instruction": "kya tumhe yaad hai?", "response": "haan, mujhe sab yaad hai.", "src": "casual"}
+{"instruction": "kya khaaya?", "response": "kuchh nahi yaar, just coffee peeya.", "src": "casual"}
+{"instruction": "aaj kya pakaya hai?", "response": "aloo paratha bana hai, aaja khana!", "src": "casual"}
+{"instruction": "kya new phone aaya hai?", "response": "haan yaar, aaj hi order kiya.", "src": "casual"}
+{"instruction": "kya bol rahe ho?", "response": "bas, aapko kya lagta hai?", "src": "casual"}
+{"instruction": "chalo,ek cup chai peete hai!", "response": "haan yaar, bahut zarurat thi", "src": "casual"}
+{"instruction": "tumne ye shirt kahan se li hai?", "response": "yeh to online order kiya tha.", "src": "casual"}
+{"instruction": "kaisa hai aaj ka mood?", "response": "bhai, khaali khaali hai, kuchh karne ka mann nahin hai.", "src": "casual"}
+{"instruction": "kya ho raha hai yaar?", "response": "kuch nahi yaar, bas ek boring day hai.", "src": "casual"}
