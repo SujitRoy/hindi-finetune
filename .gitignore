@@ -1,5 +1,6 @@
-# 1.2 GB corpus - regenerate with build_cpt_1m.py, never commit it
+# large corpora - regenerate, never commit
 cpt_hindi_1m.jsonl
+cpt_hindi_clean.jsonl
 *.parquet
 *.gguf
 data_cache/
