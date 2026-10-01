@@ -45,3 +45,18 @@ One manual step remains, because there is no HF token on this machine:
 `lfm25-1.2b-bilingual-s1`, `lfm25-1.2b-bilingual-s2` and `lfm25-1.2b-cpt-hi`
 still exist and are untouched. They are the provenance for the runs already
 measured. Nothing deletes them; migrate when the new repo has a `main`.
+
+## The teacher probe cell was removed
+
+It downloaded Qwen3-4B and Qwen3-8B into Kaggle to compare them. That comparison
+is done and settled - `stealth/space-bunny-alpha` over the API won on speed
+(4,000 rows/h vs 90 rows/h), quality and cost ($0). The cell also crashed:
+
+```
+RuntimeError: a leaf Variable that requires grad is being used in an in-place
+operation.
+```
+
+from bitsandbytes `Params4bit.__init__` calling `kaiming_uniform_` on a leaf
+tensor, after Unsloth's `replace_with_bnb_linear` patches. It is not worth
+fixing: there is no local teacher left to load.
