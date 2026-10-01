@@ -62,7 +62,7 @@ check("train_on_responses_only is CALLED, not just mentioned",
       "trainer = train_on_responses_only(" in allsrc)
 
 print("=" * 78); print("  4. DATA"); print("=" * 78)
-DATA = "train_v4_teacher.jsonl"
+DATA = "train_v5_teacher.jsonl"
 local = os.path.exists(DATA)
 check(f"{DATA} on the private HF dataset repo", True, "verified separately below")
 rows = [json.loads(l) for l in open(DATA, encoding="utf-8")] if local else []
