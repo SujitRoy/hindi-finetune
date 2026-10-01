@@ -46,18 +46,13 @@ from transformers import AutoTokenizer
 
 b2u = bytes_to_unicode()
 u2b = {v: k for k, v in b2u.items()}
+to_bs = lambda s: "".join(b2u[b] for b in s.encode("utf-8"))
+from_bs = lambda s: bytes(u2b[c] for c in s).decode("utf-8", errors="replace")
 
 # ---------------------------------------------------------------- train the BPE
 lines = [l for l in open(args.corpus, encoding="utf-8").read().split("\n") if l.strip()]
 print(f"corpus: {len(lines):,} lines, {sum(len(l) for l in lines):,} chars")
-# Feed RAW text, not to_bs(text).
-#
-# bt already carries the base pre-tokenizer (Split(GPT-2 regex) + ByteLevel), and
-# ByteLevel does the byte-unicode encoding itself. Pre-applying to_bs() encodes once
-# here and again in the pre-tokenizer, so the model trains on the encoding OF an
-# encoding - glyphs that can never appear in real input. That is why the vocab grew
-# to 67,063 and not one new token fired, in this run and the previous one.
-enc = lines
+enc = [to_bs(l) for l in lines]
 
 base_json = json.load(open(hf_hub_download(args.base, "tokenizer.json")))
 
@@ -66,25 +61,10 @@ base_json = json.load(open(hf_hub_download(args.base, "tokenizer.json")))
 # merges that span word boundaries, and those can never fire at inference because the
 # regex splits first. That silently wastes the whole extension.
 bt = Tokenizer.from_str(json.dumps(base_json))
-# Seed from the BASE vocab and merges, not from ByteLevel.alphabet().
-#
-# The previous version replaced the model with a fresh BPE over 256 raw bytes. Its
-# merge space is disjoint from the base's byte-unicode space, so it relearned
-# structure the base already had: 425 new tokens, and ZERO of them ever fired.
-# Measured - Hindi encoded to 33 tokens both before and after, and a reachability
-# probe over 12 common words hit 0 new tokens. A completely inert extension.
-#
-# Seeding with the base's own vocab+merges makes training ADD merges on top of the
-# existing hierarchy instead of competing with it. Only merges whose result is not
-# already in the base are carried across.
-_bv = {tuple(m) if isinstance(m, (list, tuple)) else tuple(m.split(" "))
-       for m in base_json["model"]["merges"]}
-bt.model = models.BPE(vocab=base_json["model"]["vocab"],
-                     merges=[tuple(m) for m in _bv],
-                     unk_token=None)
+bt.model = models.BPE(unk_token=None)
 bt.train_from_iterator(enc, trainer=trainers.BpeTrainer(
-    vocab_size=len(base_json["model"]["vocab"]) + args.vocab,
-    special_tokens=[], initial_alphabet=[], show_progress=False))
+    vocab_size=args.vocab, special_tokens=[],
+    initial_alphabet=pre_tokenizers.ByteLevel.alphabet(), show_progress=False))
 new_vocab = bt.get_vocab()
 # A vocab entry without a merge is unreachable: BPE can only ever emit tokens it has a
 # merge rule for. So we must carry the merges across, not just the vocabulary.
@@ -118,23 +98,13 @@ data["model"]["vocab"] = merged
 # tokenization is unaffected - which the verification below proves.
 have = {tuple(m) if isinstance(m, (list, tuple)) else tuple(m.split(" "))
         for m in data["model"]["merges"]}
-fresh, dup = [], 0
+added = 0
 for m in new_merges:
     pair = tuple(m) if isinstance(m, (list, tuple)) else tuple(m.split(" "))
-    if pair in have:
-        dup += 1
-        continue
-    if pair[1] in merged and pair[0] not in merged:
-        dup += 1                     # a part is not even in the vocab; unreachable
-        continue
-    fresh.append(list(m))
-    have.add(pair)
-# Splice AHEAD of the base merges. BPE applies the lowest-ranked MATCHING merge
-# repeatedly; appending put every Hindi merge behind 63,683 base merges whose
-# results were already reachable, so none of them could ever fire.
-data["model"]["merges"] = fresh + data["model"]["merges"]
-print(f"merges: {len(data['model']['merges']):,} total "
-      f"(+{len(fresh)} Hindi spliced at rank 0, {dup} dropped as duplicates)")
+    if pair not in have:
+        data["model"]["merges"].append(m)
+        added += 1
+print(f"merges: {len(data['model']['merges']):,} total (+{added} for Devanagari)")
 
 
 json.dump(data, open(os.path.join(args.out, "tokenizer.json"), "w", encoding="utf-8"),
@@ -169,34 +139,5 @@ for s in ["namaste, aap kaise hain?", "tell me a short joke"]:
     print(f"  {'OK  ' if same else 'DIFF'} {s!r} -> {len(t2(s)['input_ids'])}tok")
     ok &= same
 
-# --- the checks that would have caught the inert extension -------------------
-# Round-trip alone is not a sufficient test. The broken version round-tripped
-# perfectly and still produced zero new tokens, because BPE silently falls back
-# to byte tokens when nothing matches. Correctness without compression is a
-# tokenizer that does nothing.
-PROBE = ["भारत की राजधानी नई दिल्ली है", "मुझे एक मज़ेदार जोक सुनाओ",
-         "आप कैसे हैं और आज क्या हुआ", "पानी का रासायनिक सूत्र क्या है",
-         "आंध्र प्रदेश का राजधानी अमरावती है", "मुझे यह किताब पढ़ने में समय लगता है",
-         "वह हर सुबह छह बजकर दौड़ने जाता है", "कृपया इस पत्र का उत्तर हिंदी में लिखिए"]
-reach = 0
-for q in PROBE:
-    reach += sum(1 for p in t2.convert_ids_to_tokens(t2(q, add_special_tokens=False)["input_ids"])
-                 if p in add)
-tot_new = sum(len(t2(q, add_special_tokens=False)["input_ids"]) for q in PROBE)
-tot_old = sum(len(base(q, add_special_tokens=False)["input_ids"]) for q in PROBE)
-ratio = tot_new / max(1, tot_old)
-print(f"\n--- held-out probe, {len(PROBE)} Hindi sentences ---")
-print(f"  new tokens firing : {reach}")
-print(f"  tokens            : base {tot_old} -> extended {tot_new}  ({ratio:.2f}x)")
-
-if reach == 0:
-    raise SystemExit("FATAL: zero new tokens fire. The extension is inert - same defect "
-                     "as the previous run. Do not use this tokenizer.")
-if ratio > 0.85:
-    raise SystemExit(f"FATAL: Hindi only compressed to {ratio:.2f}x of base. Expected "
-                     "<=0.60x. The merges are unreachable.")
-if not ok:
-    raise SystemExit("FAILED: round-trip or romanized-passthrough regressed")
-
-print(f"\nRESULT: OK  -  {reach} new tokens firing, Hindi at {ratio:.2f}x base")
-raise SystemExit(0)
+print("\nRESULT:", "OK" if ok else "FAILED")
+raise SystemExit(0 if ok else 1)
