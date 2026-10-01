@@ -21,7 +21,7 @@ PROMPTS = "/home/ubuntu/hindi-finetune/teach/prompts.jsonl"
 OUT     = "/home/ubuntu/hindi-finetune/teach/teacher_gen.jsonl"
 MODEL   = "stealth/space-bunny-alpha"   # openrouter, cost 0/0, reasoning false
 TARGET  = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
-CONC    = int(sys.argv[2]) if len(sys.argv) > 2 else 16
+CONC    = int(sys.argv[2]) if len(sys.argv) > 2 else 8   # 8, not 16: the Hindi/Hinglish run is already using 16
 TIMEOUT = 180           # one request. Mercury is a reasoning model; 383 tokens of
                         # reasoning was not enough and content came back null.
 RETRIES = 3
@@ -119,18 +119,40 @@ lock = threading.Lock()
 kept = Counter(); drop = Counter(); fh = open(OUT, "a", encoding="utf-8")
 t0 = time.time(); ntok = 0
 
+EN_SYS = ("You are a helpful assistant. Answer the user's question directly, "
+          "completely and in plain English. Use natural, well-formed English prose. "
+          "Do NOT translate the question into another language and do not answer in "
+          "Hindi unless the user explicitly asks for Hindi. Use markdown or bullets "
+          "only if they genuinely help. Write 30 to 50 words.")
+
 def work(job):
     instr, plang = job
-    want_dev = plang in ("en", "hi")            # en prompts -> Devanagari answer
-    sys_p = DEV_SYS if want_dev else HING_SYS
+    # Language MIRRORING, not unconditional Devanagari. The first dataset was
+    # 100% non-English output - 810 Hindi + 369 Hinglish + 0 English - with
+    # English prompts answered in Hindi. The model learned "always output
+    # Devanagari" and now answers English questions in Hindi. `en` prompts must
+    # produce English, or there is no signal at all for that mapping.
+    if plang == "en_en":                       # English prompt, English answer
+        want_dev, sys_p = False, EN_SYS
+    elif plang in ("en", "hi"):                # Hindi prompt -> Hindi answer
+        want_dev, sys_p = True, DEV_SYS
+    else:
+        want_dev, sys_p = False, HING_SYS
     try:
         a = call(sys_p, instr)
     except Exception as e:
         return ("error", f"{type(e).__name__}")
     ok, why = accept(a, want_dev, instr)
+    if ok and plang == "en_en":
+        # An English prompt answered in Devanagari is the exact failure this run
+        # is fixing, so it must never reach the training file.
+        dv = sum("\u0900" <= c <= "\u097F" for c in a) / max(1, len(a))
+        if dv > 0.10:
+            ok, why = False, "answer_in_hindi"
     if not ok: return ("drop", why)
+    lang = "english" if plang == "en_en" else ("hindi" if want_dev else "hinglish")
     return ("keep", {"instruction": instr, "response": a, "src": "teacher",
-                     "plang": plang, "lang": "hindi" if want_dev else "hinglish"})
+                     "plang": plang, "lang": lang})
 
 def consume(r):
     global ntok
