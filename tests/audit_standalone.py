@@ -44,7 +44,7 @@ SHARED = {
     "HfApi", "create_repo", "upload_file", "upload_folder", "login", "whoami",
     "TrainerCallback", "tokens_decoded_metric", "per_device_train_batch_size",
     # produced by the wandb cell inserted before the trainer
-    "WANDB_ON", "WANDB_PROJECT",
+    "WANDB_ON", "WANDB_PROJECT", "DATA_REPO",
     "gradient_accumulation_steps", "eval_dataset", "text", "_ratio", "_hist",
 }
 
