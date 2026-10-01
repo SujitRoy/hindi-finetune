@@ -52,7 +52,7 @@ REFU_HI = re.compile(r"(क्रृपया (संदर्भ|पाठ|स�
 WORD = re.compile(r"[\u0900-\u097F]{3,}|[a-zA-Z]{4,}")
 ENDS = re.compile(r"[।.?!\"'”’)\]]\s*$")   # the ASCII period matters: Hinglish ends in '.'
 
-def accept(r, want_dev, instr=None):
+def accept(r, want_dev, instr=None, tgt=None):
     w = len(r.split())
     if w < 30:                           return False, "short"
     if w > 160:                          return False, "ramble"
@@ -75,8 +75,18 @@ def accept(r, want_dev, instr=None):
     t = r.split()
     tri = [tuple(t[i:i+3]) for i in range(len(t)-2)]
     if tri and len(set(tri))/len(tri) < 0.92: return False, "repetitive"
-    if want_dev and d < 0.55:            return False, "not_devanagari"
-    if not want_dev and d > 0.35:        return False, "went_devanagari"
+    # One ceiling per target language. English is 0.10, not the Hinglish 0.35:
+    # at 0.35 a genuinely Hindi answer passes an English target.
+    # Mirror the prompt's script too. A Devanagari question answered in romanized
+    # Hinglish teaches the model that Devanagari input does not guarantee a
+    # Devanagari answer - the same class of bug as English->Hindi, in reverse.
+    if instr and tgt in ("hindi", "hinglish"):
+        pi = sum(1 for c in instr if "\u0900" <= c <= "\u097F") / max(1, len(instr))
+        if pi > 0.35 and d < 0.35:
+            return False, "romanized_answer_to_devanagari"
+    if tgt == "english"  and d > 0.10:   return False, "answer_in_hindi"
+    if tgt == "hinglish" and d > 0.35:   return False, "went_devanagari"
+    if tgt == "hindi"    and d < 0.55:   return False, "not_devanagari"
     return True, ""
 
 def call(sys_p, user):
@@ -132,27 +142,30 @@ def work(job):
     # English prompts answered in Hindi. The model learned "always output
     # Devanagari" and now answers English questions in Hindi. `en` prompts must
     # produce English, or there is no signal at all for that mapping.
-    if plang == "en_en":                       # English prompt, English answer
-        want_dev, sys_p = False, EN_SYS
-    elif plang in ("en", "hi"):                # Hindi prompt -> Hindi answer
-        want_dev, sys_p = True, DEV_SYS
+    # Language MIRRORING. Strictly one target language per prompt language:
+    #   en / en_en  -> English answer
+    #   hi          -> Devanagari answer
+    #   hinglish    -> romanized Hinglish answer
+    #
+    # `en` used to be grouped with `hi`, so every English prompt was answered in
+    # Devanagari. That produced 2,153 English-question -> Hindi-answer rows and
+    # zero English -> English, and the model learned "always output Devanagari":
+    # it answered English questions in Hindi. The routing has to be taught
+    # explicitly or not at all.
+    if plang in ("en", "en_en"):
+        want_dev, sys_p, tgt = False, EN_SYS, "english"
+    elif plang == "hi":
+        want_dev, sys_p, tgt = True, DEV_SYS, "hindi"
     else:
-        want_dev, sys_p = False, HING_SYS
+        want_dev, sys_p, tgt = False, HING_SYS, "hinglish"
     try:
         a = call(sys_p, instr)
     except Exception as e:
         return ("error", f"{type(e).__name__}")
-    ok, why = accept(a, want_dev, instr)
-    if ok and plang == "en_en":
-        # An English prompt answered in Devanagari is the exact failure this run
-        # is fixing, so it must never reach the training file.
-        dv = sum("\u0900" <= c <= "\u097F" for c in a) / max(1, len(a))
-        if dv > 0.10:
-            ok, why = False, "answer_in_hindi"
+    ok, why = accept(a, want_dev, instr, tgt)
     if not ok: return ("drop", why)
-    lang = "english" if plang == "en_en" else ("hindi" if want_dev else "hinglish")
     return ("keep", {"instruction": instr, "response": a, "src": "teacher",
-                     "plang": plang, "lang": lang})
+                     "plang": plang, "lang": tgt})
 
 def consume(r):
     global ntok
