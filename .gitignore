@@ -20,3 +20,5 @@ train_v4_teacher.jsonl
 train_v5_teacher.jsonl
 train_v6_teacher.jsonl
 teach/DATASET_CARD.md
+cpt_sample.jsonl
+cpt_hindi_clean.jsonl
