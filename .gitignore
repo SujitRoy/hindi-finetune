@@ -9,3 +9,11 @@ data_cache/
 # not in this public repo
 train_v3_teacher.jsonl
 prompts_en.json
+
+# python bytecode
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# generated corpora - private dataset repo
+train_v4_teacher.jsonl
