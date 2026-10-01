@@ -4,3 +4,8 @@ cpt_hindi_clean.jsonl
 *.parquet
 *.gguf
 data_cache/
+
+# generated corpora live in the PRIVATE dataset repo kumarsujitroy/lfm25-teacher-data,
+# not in this public repo
+train_v3_teacher.jsonl
+prompts_en.json
