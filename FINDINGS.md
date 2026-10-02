@@ -340,3 +340,85 @@ own kernel.
   Candidates go on 8081.
 - Judge output quality, not validation loss. Loss measures how well the model
   predicts *our* data, and for five sessions the data was worse than the goal.
+
+---
+
+## 13. The grammar root cause — Marathi in the Hindi labels (session 7)
+
+`train_v6_teacher.jsonl` is 4.8% Marathi. Not "Hindi with a few odd words" — Marathi
+morphology: आहे/आणि/नाही/झाले/याचा/दिला where Hindi needs है/और/नहीं/हुआ/इसका/दिया,
+and object-agreeing verbs instead of subject-agreeing ones.
+
+**100% attributable to one source.** Every Marathi-dominated row, shipped and in-flight,
+came from a prompt in the `adaption` set:
+
+| | shipped v6 | in-flight teacher |
+|---|---|---|
+| Marathi-dominated responses | 429 | 1,245 |
+| from `adaption` prompts | 429 | 1,245 |
+| attribution | **100%** | **100%** |
+
+`adaption` is 1,309 hi-bucket prompts of which **32.7% are Marathi or Maithili** — a
+machine-translated pool. The other 37,131 `teacher_pool_v2` prompts: 0.0%.
+
+So the fix is a **source blacklist, not a text pattern.** Drop `adaption` and the corpus
+is clean by construction: 62,530 → 56,385 rows, Marathi-dominated 1,245 → **0**.
+
+### 13.1 Why a regex is the wrong instrument (and where it is still right)
+
+A Marathi/Hindi regex is a dialect classifier asked to work on 30-word snippets where one
+coincidental match flips the label. Calibrating the marker list against
+`ds_hindi_devanagari.jsonl` (6,000 known-Hindi texts) showed **करते and सकते hit 479 and
+660 of them** — ordinary Hindi (करते हैं, बता सकते हैं), not Marathi. Unanchored forms were
+worse: मला inside दिल्ली, काय inside कार्य, छे inside अच्छे. `build_cpt_clean.py` had already
+documented exactly this and fixed it with word anchoring + context printing.
+
+So `teach/langgate.py` is an **assertion, not the filter**. It runs on every row and the
+build hard-fails if any Marathi-dominated row survives the blacklist — that is how the
+blacklist gets audited, not how the corpus gets cleaned. It does one filtering job alone:
+**foreign script**, 97 rows of genuine garbage that no source rule predicts — CJK inside a
+Hinglish prompt (`basics kahan se shuru karun` → `maps dekhkar疆域 samajhiye`), Gujarati
+leaking into Devanagari answers. Real corruption, cheap to prove, zero false positives on
+known-Hindi.
+
+The CPT corpus was already gated for this (`build_cpt_clean.py`, 1M rows → 0 Marathi). The
+**SFT path never had the gate.** That asymmetry is the bug: script came from clean CPT,
+grammar from dirty SFT.
+
+### 13.2 Also dropped for a Hindi/Hinglish product
+
+`lang == "english"` (239 rows) and the English→Hindi switch rows. Same class of bug that
+killed the earlier run: a Latin question followed by a Devanagari answer teaches "script of
+the answer is independent of the script of the question". Product scope is Hindi + Hinglish
+only, so English output is not a behaviour to preserve and the switch rows are not needed.
+
+### 13.3 Answer: train the Base or the Instruct
+
+Checked Liquid's own artifacts rather than guessing:
+
+| model | `base_model:finetune` tag | languages |
+|---|---|---|
+| LFM2.5-1.2B-JP | **LFM2.5-1.2B-Base** | en, ja |
+| LFM2.5-1.2B-JP-202606 | **LFM2.5-1.2B-Base** | ja, en |
+
+Both JP models fine-tuned from **Base**. Their CPT notebooks (`cpt_translation_with_unsloth`,
+`cpt_text_completion_with_unsloth`) load `LiquidAI/LFM2.5-1.2B-Base`. The Korean example in
+the cookbook went further: 280K SFT pairs **plus an RL stage**.
+
+**But we keep the abliterated Instruct, deliberately, and the reason is stronger than the
+analogy.** Base has no chat formatting at all, so a Base run must relearn chat + language +
+refusal policy; our refusal requirement (gate 9.3) is exactly what Base cannot give us. And
+CPT-on-Instruct is already *measured working here*: 1.301 → 0.544, Devanagari 0/5 → 5/5.
+
+### 13.4 The tokenizer question, settled — do not extend it
+
+Same tokenizer file in ours and in both JP models: **64,400 vocab, 63,683 merges, 5
+Devanagari entries, 918 kanji, 0 hiragana, 0 katakana.**
+
+Liquid shipped a Japanese model that scores 54.19 JMMLU with **zero kana tokens** and only
+918 kanji, and never touched the tokenizer. So Devanagari at 1.31 tok/char is not the
+grammar blocker. And the earlier `tokenizer-hi3` "6,256 Devanagari tokens" were not tokens:
+**4,801 of them are degenerate repeats** (`।।।।।…`, `़़़़़…`), the rest consonant soup
+(`मसफ`, `नलप`, `रफल`). The extension never produced usable Hindi pieces — which is why
+tokenization came out unchanged and why that path is closed, now with a reason instead of a
+retry.

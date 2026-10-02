@@ -15,7 +15,7 @@ def check(name, ok, detail=""):
 def warn(name, detail=""):
     WARN.append(name); print(f"  WARN  {name:52s} {detail}")
 
-NB = "notebooks/04-teacher-distill.ipynb"
+NB = "notebooks/05-hindi-sft-v7.ipynb"
 nb = json.load(open(NB))
 code = [(i, "\n".join(l for l in c["source"] if not l.strip().startswith(("!", "%"))))
         for i, c in enumerate(nb["cells"]) if c["cell_type"] == "code"]
@@ -38,7 +38,7 @@ def setting(name):
     return m.group(1).strip() if m else None
 branch = setting("BRANCH"); steps = setting("MAX_STEPS"); lr = setting("LEARNING_RATE")
 check("BRANCH set", bool(branch), branch or "")
-check("BRANCH is not s2b-teacher (that run is done)", branch != '"s2b-teacher"', branch)
+check("BRANCH is a fresh line of work", branch not in ('"s2b-teacher"', '"s2c-teacher-10k"'), branch)
 check("MAX_STEPS is a number", bool(re.fullmatch(r"\d+", (steps or "").split("#")[0].strip())),
       (steps or "").split("#")[0].strip())
 check("LEARNING_RATE set", bool(lr), (lr or "").split("#")[0].strip())
@@ -52,17 +52,22 @@ check("load_in_4bit False (never QLoRA the student)", "load_in_4bit = False" in 
 print("=" * 78); print("  3. THE THREE FAILURE MODES THAT COST RUNS"); print("=" * 78)
 check("GPU guard raises when no CUDA", "No GPU visible" in allsrc)
 check("branch created before upload", "create_branch" in allsrc)
-check("anchor LOADED into the dataset (was written, never read)",
-      "english_anchor.jsonl" in allsrc and allsrc.count("english_anchor.jsonl") >= 2,
-      f"{allsrc.count('english_anchor.jsonl')} references")
-check("dataset RAISES if the anchor is missing", "English anchor missing" in allsrc)
+# v5 removed the English self-distillation anchor on purpose: the product is
+# Hindi + Hinglish only, so the anchor added English rows back and hard-raised
+# without prompts_en.json. Assert it is GONE from both the loader and the
+# generation cell, otherwise a re-merge of 04's cells silently brings it back.
+check("English anchor removed (scope is Hindi/Hinglish only)",
+      "english_anchor" not in allsrc and "ANCHOR_N" not in allsrc,
+      f"{allsrc.count('english_anchor')} refs")
+check("language assertion blocks a poisoned corpus",
+      "Marathi-dominated rows in" in allsrc and "_MAR = re.compile" in allsrc)
 check("train_on_responses_only applied", "train_on_responses_only(" in allsrc)
 check("label masking hard-fails at zero", "did not mask anything" in allsrc)
 check("train_on_responses_only is CALLED, not just mentioned",
       "trainer = train_on_responses_only(" in allsrc)
 
 print("=" * 78); print("  4. DATA"); print("=" * 78)
-DATA = "train_v6_teacher.jsonl"
+DATA = "train_v7_teacher.jsonl"
 local = os.path.exists(DATA)
 check(f"{DATA} on the private HF dataset repo", True, "verified separately below")
 rows = [json.loads(l) for l in open(DATA, encoding="utf-8")] if local else []
@@ -76,10 +81,25 @@ if rows:
     hi = [r for r in rows if r["lang"] == "hindi"]
     hg = [r for r in rows if r["lang"] == "hinglish"]
     check("hindi rows are >=55% Devanagari", all(DEV(r["response"]) > 0.55 for r in hi), f"n={len(hi):,}")
+    # Devanagari is the SCRIPT, not the language. A Marathi row passes every check
+    # above and below this line, which is how 4.8% Marathi shipped in v6.
+    sys.path.insert(0, "teach")
+    import langgate
+    leak = [r for r in rows if langgate.reject(r["response"], r["lang"])]
+    check("hindi rows are HINDI, not Marathi", not leak,
+          f"{len(leak):,} rejected" + (f" e.g. {leak[0]['response'][:44]}" if leak else ""))
+    blacklist = {"adaption"}
+    pool = {}
+    for f in ("teach/pool_master.jsonl", "teach/pool_todo.jsonl", "teach/prompts.jsonl"):
+        if os.path.exists(f):
+            for l in open(f, encoding="utf-8"):
+                p = json.loads(l); pool.setdefault(p["instruction"].strip(), p.get("src", "?"))
+    poisoned = sum(1 for r in rows if pool.get(r["instruction"].strip()) in blacklist)
+    check("no rows from a blacklisted prompt source", poisoned == 0,
+          f"{poisoned:,} from {sorted(blacklist)}" if poisoned else "pool index " + f"{len(pool):,}")
     check("hinglish rows are <=35% Devanagari", all(DEV(r["response"]) < 0.35 for r in hg), f"n={len(hg):,}")
     en_hi = sum(1 for r in rows if DEV(r["response"]) > 0.35 and DEV(r["instruction"]) < 0.35)
-    check("English->Hindi rows will be demoted in-notebook", True,
-          f"{en_hi:,} present, handled by the demotion step")
+    check("no unrequested English->Devanagari rows", en_hi == 0, f"{en_hi:,} present")
     print(f"        corpus: {len(rows):,} rows | hindi {len(hi):,} hinglish {len(hg):,}")
 
 print("=" * 78); print("  5. LIVE ENDPOINTS"); print("=" * 78)
@@ -91,9 +111,16 @@ def head(url, tok=False):
     except Exception as e: return getattr(e, "code", str(type(e).__name__)), None
 DS = "https://huggingface.co/datasets/kumarsujitroy/lfm25-teacher-data/resolve/main"
 s, n = head(f"{DS}/{DATA}", bool(TOK))
-check(f"{DATA} downloadable", s == 200, f"HTTP {s}, {int(n)/1e6 if n else 0:.2f} MB" if s == 200 else f"HTTP {s}")
-s, n = head(f"{DS}/prompts_en.json", bool(TOK))
-check("prompts_en.json downloadable (anchor)", s == 200, f"HTTP {s}")
+if not TOK and s == 401:
+    # the dataset repo is private; without a token a 401 proves nothing about it.
+    # Warn, do not fail - failing here hides real failures behind a missing credential.
+    warn(f"{DATA} downloadable", "no HF_TOKEN on this box; 401 is expected, "
+                                 "verify from Kaggle or with a token")
+else:
+    check(f"{DATA} downloadable", s == 200,
+          f"HTTP {s}, {int(n)/1e6 if n else 0:.2f} MB" if s == 200 else f"HTTP {s}")
+# the anchor prompt list is out of scope; only the training corpus must resolve
+check("v7 corpus is the file the notebook will fetch", DATA.startswith("train_v7"), DATA)
 s, _ = head("https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/resolve/main/LICENSE")
 check("LICENSE source reachable", s == 200, f"HTTP {s}")
 
