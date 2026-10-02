@@ -50,8 +50,18 @@ def setsrc(i, text):
 # ---------------------------------------------------------------- 1. run config
 c = src(1)
 c = c.replace('BRANCH = "s2c-teacher-10k"', 'BRANCH = "s3-hinglish-v7"')
-c = c.replace('MAX_STEPS     = 1500   # ~1.0 epoch on ~11.9k rows',
-              'MAX_STEPS     = 1500   # 16 rows/step -> 24k rows = ~0.42 epoch of the 56k v7 corpus')
+# FINDINGS 5.1 is this exact trap: "matching their flag without matching their
+# budget under-trains". v6 ran 1500 steps on 19,775 rows = 1.21 epochs. v7 has
+# 57,687 rows, so 1500 would be 0.42 epochs - less exposure than the run being
+# replaced. One epoch is 57,687/16 = 3,606 steps. Run 3,600 and let the eval
+# curve decide the real stop: cell 23 prints "next run should stop near step N".
+c = re.sub(r"MAX_STEPS\s+= 1500   # ~1\.0 epoch on ~11\.9k rows",
+           "MAX_STEPS     = 3600   # ~1.0 epoch of v7: 57,687 rows / 16 per step.\n"
+           "#                  # v6 ran 1500 on 19,775 = 1.21 epochs; 1500 here = 0.42.\n"
+           "#                  # Stop at the eval-loss minimum the run prints.",
+           c, count=1)
+assert "MAX_STEPS     = 3600" in c, "MAX_STEPS not rewritten - 04 changed shape, re-slice it"
+
 c = c.replace('DATA_FILE = "train_v6_teacher.jsonl"',
               'DATA_FILE = "train_v7_teacher.jsonl"')
 for need in ('BRANCH = "s3-hinglish-v7"', 'train_v7_teacher.jsonl',
@@ -230,6 +240,7 @@ checks = {
     "v7 data file":                          "train_v7_teacher.jsonl" in allsrc
                                              and "train_v6_teacher" not in allsrc,
     "chains from cpt-hindi":                 'BASE_BRANCH = "cpt-hindi"' in allsrc,
+    "~1 epoch of v7":                        "MAX_STEPS     = 3600" in allsrc,
     "GPU guard present":                     "No GPU visible" in allsrc,
     "masking applied and CALLED":            "trainer = train_on_responses_only(" in allsrc,
     "masking hard-fails at zero":            "did not mask anything" in allsrc,
