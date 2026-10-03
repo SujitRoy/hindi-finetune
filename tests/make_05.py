@@ -50,6 +50,21 @@ def setsrc(i, text):
 # ---------------------------------------------------------------- 1. run config
 c = src(1)
 c = c.replace('BRANCH = "s2c-teacher-10k"', 'BRANCH = "s3-hinglish-v7"')
+
+# unsloth_zoo 2026.9.9 added a head-aware device planner, ON BY DEFAULT
+# (unsloth/models/loader_utils.py:233 - gated on UNSLOTH_AUTO_DEVICE_MAP == "1").
+# It splits the 1.2B across both T4s and pins embed_tokens with the lm_head on
+# cuda:1 while the decoder layers sit on cuda:0. Inference tolerates that; the
+# fused LFM2 backward does not - it faults mid-step and surfaces three calls
+# away as "CUDA error: unspecified launch failure" inside empty_cache().
+# Setting the var to "0" makes from_pretrained fall back to `sequential`, the
+# behaviour the 300-step CPT ran under (1.301 -> 0.544, 48 min, measured).
+# Has to be set before ANY from_pretrained, so it goes here, not in the CPT cell.
+c = ('import os\n'
+     '# Must precede every FastLanguageModel.from_pretrained call, CPT and SFT alike.\n'
+     'os.environ["UNSLOTH_AUTO_DEVICE_MAP"] = "0"   # 0 = no cross-card split\n\n'
+     + c)
+assert c.startswith('import os\n') and 'UNSLOTH_AUTO_DEVICE_MAP' in c, "env var not at top of cell 1"
 # FINDINGS 5.1 is this exact trap: "matching their flag without matching their
 # budget under-trains". v6 ran 1500 steps on 19,775 rows = 1.21 epochs. v7 has
 # 57,687 rows, so 1500 would be 0.42 epochs - less exposure than the run being
@@ -241,6 +256,7 @@ checks = {
                                              and "train_v6_teacher" not in allsrc,
     "chains from cpt-hindi":                 'BASE_BRANCH = "cpt-hindi"' in allsrc,
     "~1 epoch of v7":                        "MAX_STEPS     = 3600" in allsrc,
+    "no cross-card split (CUDA launch failure)": 'os.environ["UNSLOTH_AUTO_DEVICE_MAP"] = "0"' in c,
     "GPU guard present":                     "No GPU visible" in allsrc,
     "masking applied and CALLED":            "trainer = train_on_responses_only(" in allsrc,
     "masking hard-fails at zero":            "did not mask anything" in allsrc,
