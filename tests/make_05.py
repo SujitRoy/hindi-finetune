@@ -79,8 +79,31 @@ assert "MAX_STEPS     = 3600" in c, "MAX_STEPS not rewritten - 04 changed shape,
 
 c = c.replace('DATA_FILE = "train_v6_teacher.jsonl"',
               'DATA_FILE = "train_v7_teacher.jsonl"')
+
+# CHAINING BUG, s3 run 2026-10-03. Cell 1 resolved BASE_REPO to the branch, but the
+# model load cell calls from_pretrained(model_name = BASE_REPO) and NEVER passes a
+# revision - so SFT loaded the plain upstream Instruct and the 3h02m of CPT on
+# cpt-hindi was never read. Proven from the artifact:
+#   s3-hinglish-v7/adapter_config.json -> base_model_name_or_path: zaakirio/..., r=16
+#   cpt-hindi/adapter_config.json      -> r=128, modules_to_save: [embed_tokens]
+# Fix: resolve the branch to a LOCAL DIRECTORY at session start. A directory path is
+# unambiguous to from_pretrained; `repo@rev` sugar and a `revision=` kwarg are both
+# things this unsloth build may or may not accept, and a silent miss costs 5 hours.
+c = c.replace("""_base_ok = _has_safetensors(REPO, BASE_BRANCH)
+if _base_ok:
+    BASE_REPO, BASE_REV = REPO, BASE_BRANCH""",
+"""_base_ok = _has_safetensors(REPO, BASE_BRANCH)
+if _base_ok:
+    # snapshot_download returns a local dir that holds BOTH model.safetensors and
+    # adapter_config.json; the load cell merges that adapter instead of double-adding.
+    from huggingface_hub import snapshot_download
+    BASE_REPO = snapshot_download(REPO, revision=BASE_BRANCH)
+    BASE_REV  = BASE_BRANCH""")
+c = c.replace('CHECKPOINT_EVERY_S = 300', 'CHECKPOINT_EVERY_S = 900')
 for need in ('BRANCH = "s3-hinglish-v7"', 'train_v7_teacher.jsonl',
-             'BASE_BRANCH = "cpt-hindi"', 'No GPU visible'):
+             'BASE_BRANCH = "cpt-hindi"', 'No GPU visible',
+             'snapshot_download(REPO, revision=BASE_BRANCH)',
+             'CHECKPOINT_EVERY_S = 900'):
     assert need in c, f"cell 1 lost {need!r}"
 setsrc(1, c)
 
@@ -169,6 +192,37 @@ assert _keep_imports in c19[i0:i1], "anchor imports moved, re-check the slice"
 setsrc(19, c19[:i0] + _keep_imports + "\n" + c19[i1:])
 assert "english_anchor" not in src(19) and "get_peft_model" in src(19)
 
+# ---------------------------------------------------------------- 3c. same-session chaining
+# RUN_CPT=True already merges the CPT weights to /tmp/cpt-merged in this kernel. If SFT
+# then re-reads the Hub branch it re-downloads 2.3 GB and re-enters the same revision
+# trap; pointing at the directory that cell 17 just wrote is both cheaper and certain.
+# RUN_CPT=True already merges the CPT weights to /tmp/cpt-merged inside this kernel, so
+# hand that DIRECTORY to the SFT cell. Re-resolving a Hub revision is what silently
+# produced an SFT run on the un-CPT'd base (see the cell 1 note); a local dir is not
+# resolvable to the wrong thing. Must stay indented inside `if RUN_CPT:`.
+c17 = src(17).replace(
+    '    cpt_model.save_pretrained_merged(_cpt_dir, tokenizer=cpt_tok, save_method="merged_16bit")',
+    '    cpt_model.save_pretrained_merged(_cpt_dir, tokenizer=cpt_tok, save_method="merged_16bit")\n'
+    '    BASE_REPO = _cpt_dir   # SFT must load the merged CPT weights, not upstream')
+setsrc(17, c17)
+assert "BASE_REPO = _cpt_dir" in src(17), "CPT cell does not hand its merged dir to SFT"
+
+# ---------------------------------------------------------------- 3d. SFT batch budget
+# The comment claimed "2 x 4 x 2 GPUs = 16 effective". Unsloth printed the truth:
+#   Data Parallel GPUs = 1 | Total batch size (2 x 4 x 1) = 8
+# sequential device mapping (which the CUDA crash forced) is data-parallel 1, so 3600
+# steps covered 28,800 of 56,533 rows = 0.51 epoch, not the 1.0 MAX_STEPS was sized for.
+# grad_accum 8 restores 16 rows/step at the same step count. Measured cost: none, it
+# was already the CPT setting and the collator pads to batch-max, not max_seq_length.
+c22 = src(22)
+c22 = c22.replace('gradient_accumulation_steps = 4,     # 2 x 4 x 2 GPUs = 16 effective, as before',
+                  'gradient_accumulation_steps = 8,     # DP=1 under sequential: 2 x 8 x 1 = 16 rows/step')
+assert "gradient_accumulation_steps = 8" in c22, "SFT batch not fixed - MAX_STEPS is still 0.5 epoch"
+c22 = c22.replace('save_strategy = "no",          # TimeCheckpoint owns saving',
+                  'save_strategy = "no",          # TimeCheckpoint owns saving\n'
+                  '        group_by_length = True,   # measured 24.3% fewer padded tokens, same rows')
+setsrc(22, c22)
+
 # ---------------------------------------------------------------- 3b. title
 setsrc(0, "# Experiment 5 - Hindi + Hinglish SFT on the v7 clean corpus\n\n"
     "Chained: CPT on Hindi (`cpt-hindi`) -> SFT on `train_v7_teacher.jsonl`. Single\n"
@@ -235,6 +289,21 @@ def _regex_probe(book):
                "सेबीच्या नियमनामुळे रचना आता स्पष्ट आणि सुरक्षित झाली आहे."]
     return not any(mar(t) for t in hindi) and all(mar(t) for t in marathi)
 
+# ---------------------------------------------------------------- normalize cell source
+# 04 stores some cell `source` entries as lines with NO trailing newline. Jupyter and
+# nbconvert reassemble with "".join, so those cells execute as one glued line - the CPT
+# cell becomes a single COMMENT and runs silently as a no-op. This is latent in 04 (and
+# was in 05 until here): the s3 session only survived because Kaggle normalises on
+# import. Any other executor would skip CPT and print nothing wrong.
+_fixed = 0
+for cc in cells:
+    s = cc["source"]
+    if not isinstance(s, list) or not s: continue
+    if any(not l.endswith("\n") for l in s[:-1]):
+        cc["source"] = split_lines("".join(l if l.endswith("\n") else l + "\n" for l in s))
+        _fixed += 1
+print(f"normalised {len(cells)} cells, repaired line endings in {_fixed}")
+
 json.dump(nb, open(DST, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"wrote {DST}: {len(cells)} cells")
 
@@ -246,6 +315,26 @@ for i, cc in enumerate(nb2["cells"]):
     try: compile(cell_src(cc), f"cell{i}", "exec")
     except SyntaxError as e: bad.append(f"cell {i} line {e.lineno}: {e.msg} | {cell_src(cc).splitlines()[max(0,e.lineno-1)][:70]}")
 assert not bad, "\n  ".join([""] + bad)
+
+# The gate that was missing while s3 ran a no-CPT SFT. Jupyter, nbconvert and papermill
+# all reassemble `source` with "".join, so a stored line without its own trailing newline
+# GLUES to the next one. Glued code can still compile - a cell that collapses into one
+# long COMMENT compiles as a silent no-op, which is exactly what cell 17 looked like in
+# the run log. So the invariant is structural, not a line-count comparison: every element
+# but the last must carry its newline, and the glued text must compile after magic lines
+# are removed. (Do NOT compare against cell_src(): that joins with "\n" over elements that
+# already end in "\n", doubling the count and reporting false collapse for healthy cells.)
+for i, cc in enumerate(nb2["cells"]):
+    if cc["cell_type"] != "code": continue
+    s = cc["source"]
+    loose = [n for n, l in enumerate(s[:-1]) if not l.endswith("\n")]
+    assert not loose, (f"cell {i} elements {loose[:6]} have no trailing newline - they glue "
+                       "into one line when Jupyter runs them")
+    glued = "\n".join(l for l in "".join(s).splitlines() if not l.strip().startswith(CODE_STARTS))
+    try: compile(glued, f"cell{i}-glued", "exec")
+    except SyntaxError as e:
+        raise AssertionError(f"cell {i} fails to compile as Jupyter assembles it: "
+                             f"line {e.lineno}: {e.msg} | {(glued.splitlines()[max(0,e.lineno-1)] or '')[:70]}")
 allsrc = "\n".join(cell_src(c) for c in nb2["cells"] if c["cell_type"] == "code")
 checks = {
     "every code cell compiles":              True,
@@ -255,6 +344,14 @@ checks = {
     "v7 data file":                          "train_v7_teacher.jsonl" in allsrc
                                              and "train_v6_teacher" not in allsrc,
     "chains from cpt-hindi":                 'BASE_BRANCH = "cpt-hindi"' in allsrc,
+    # the s3 bug: model_name=BASE_REPO with no revision resolved to upstream, so CPT was
+    # never loaded. Both halves must hold or the next session wastes 5 h the same way.
+    "SFT loads CPT weights (local dir, not a bare repo name)":
+                                             'BASE_REPO = snapshot_download(REPO, revision=BASE_BRANCH)' in allsrc
+                                             and 'BASE_REPO = _cpt_dir' in allsrc,
+    "SFT effective batch is 16 rows (DP=1 under sequential)":
+                                             'gradient_accumulation_steps = 8' in allsrc,
+    "checkpoint cadence 900s":                'CHECKPOINT_EVERY_S = 900' in allsrc,
     "~1 epoch of v7":                        "MAX_STEPS     = 3600" in allsrc,
     "no cross-card split (CUDA launch failure)": 'os.environ["UNSLOTH_AUTO_DEVICE_MAP"] = "0"' in c,
     "GPU guard present":                     "No GPU visible" in allsrc,
