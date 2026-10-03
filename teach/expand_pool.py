@@ -2,12 +2,13 @@
 """Grow the prompt pool. 20 questions per call for the price of one answer, so
 this is the cheapest way to add volume: ~600 calls is a couple of minutes."""
 import json, re, os, time, random, threading, urllib.request
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from teacher_cfg import TEACHER   # baseUrl/apiKey/model from gitignored config
 import concurrent.futures as cf
 random.seed(41)
 
-CFG = "/home/ubuntu/.pi/agent/models.json"
-_p = json.load(open(CFG))["providers"]["openrouter"]
-BASE, KEY, MODEL = _p["baseUrl"], _p["apiKey"], "stealth/space-bunny-alpha"
+BASE, KEY, MODEL = TEACHER["baseUrl"], TEACHER["apiKey"], TEACHER["model"]
 OUT = "/home/ubuntu/hindi-finetune/teach/extra_prompts.jsonl"
 DEV = lambda s: sum(1 for c in s if "ऀ" <= c <= "ॿ") / max(1, len(s))
 

@@ -23,3 +23,7 @@ train_v7_teacher.jsonl
 teach/DATASET_CARD.md
 cpt_sample.jsonl
 cpt_hindi_clean.jsonl
+
+# teacher API config: key + private preview model id. Never commit, never log.
+teach/teacher.local.json
+teach/*local.json

@@ -6,16 +6,16 @@ bound, so no GPU and no 12-hour session wall is involved.
 
 ## Teacher
 
-`stealth/space-bunny-alpha` via OpenRouter. Measured against
+`<teacher model: ~/.pi/agent/models.json>` via OpenRouter. Measured against
 `Qwen/Qwen3-8B` (local, 27-40 s/answer) and `mercury-2.5` (InceptionLabs):
 
 | | Hindi words | Devanagari | s/answer | tok/row | cost |
 |---|---|---|---|---|---|
 | Qwen3-8B 4-bit local | 47 | 0.79 | 27-40 | - | 12 h session |
 | mercury-2.5 | 39-64 | 0.79-0.81 | 2.7-9.4 | ~2100 | $0.15/M out |
-| space-bunny-alpha | 45-48 | 0.79-0.83 | 5.8-23.9 | ~1000 | **0** |
+| <teacher model> | 45-48 | 0.79-0.83 | 5.8-23.9 | ~1000 | **0** |
 
-space-bunny-alpha has `reasoning: false`, so it does not spend 90% of its tokens
+<teacher model> has `reasoning: false`, so it does not spend 90% of its tokens
 thinking. Measured 2,539-3,662 rows/h at concurrency 16.
 
 ## Files

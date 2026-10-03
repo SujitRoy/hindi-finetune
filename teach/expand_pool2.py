@@ -6,10 +6,12 @@ first pass never touched: science, medicine, law, engineering, finance, geograph
 Those are also where the existing corpus is worst - 2.1% of technical vocabulary.
 """
 import json, random, re, threading, urllib.request, queue, os
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from teacher_cfg import TEACHER   # baseUrl/apiKey/model from gitignored config
 
-CFG = "/home/ubuntu/.pi/agent/models.json"
 OUT = "/home/ubuntu/hindi-finetune/teach/extra_prompts2.jsonl"
-MODEL = "stealth/space-bunny-alpha"
+MODEL = TEACHER["model"]
 LIMIT = int(os.environ.get("LIMIT", "5000"))
 
 SYS = ("You write realistic user questions that a Hindi or Hinglish speaker would "
@@ -18,8 +20,8 @@ SYS = ("You write realistic user questions that a Hindi or Hinglish speaker woul
 
 # The apiKey lives at PROVIDER level in models.json, not on the model entry -
 # reading it off the model dict is why the first launch died with KeyError.
-_p = json.load(open(CFG))["providers"]["openrouter"]
-BASE, K = _p["baseUrl"], _p["apiKey"]
+BASE, K = TEACHER["baseUrl"], TEACHER["apiKey"]
+MODEL = TEACHER["model"]
 LOCK = threading.Lock(); Q = queue.Queue(); DONE = [0]; KEPT = []
 STOP = threading.Event()
 

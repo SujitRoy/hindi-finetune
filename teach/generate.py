@@ -16,19 +16,46 @@ import json, os, re, sys, time, random, threading, urllib.request, urllib.error
 import concurrent.futures as cf
 from collections import Counter
 
-CFG     = "/home/ubuntu/.pi/agent/models.json"
-PROMPTS = "/home/ubuntu/hindi-finetune/teach/prompts.jsonl"
-OUT     = "/home/ubuntu/hindi-finetune/teach/teacher_gen.jsonl"
-MODEL   = "stealth/space-bunny-alpha"   # openrouter, cost 0/0, reasoning false
-TARGET  = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
-CONC    = int(sys.argv[2]) if len(sys.argv) > 2 else 8   # 8, not 16: the Hindi/Hinglish run is already using 16
+# baseUrl/apiKey/model come from teach/teacher.local.json (gitignored, mode 600).
+# This repo is public and the teacher is a private preview on someone else's plan.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from teacher_cfg import TEACHER
+PROMPTS = "/home/ubuntu/hindi-finetune/teach/prompts_v8.jsonl"
+OUT     = "/home/ubuntu/hindi-finetune/teach/teacher_gen_v8.jsonl"
+TARGET  = int(sys.argv[1]) if len(sys.argv) > 1 else 40000
+CONC    = int(sys.argv[2]) if len(sys.argv) > 2 else 16   # measured 11k rows/h at 16
 TIMEOUT = 180           # one request. Mercury is a reasoning model; 383 tokens of
                         # reasoning was not enough and content came back null.
 RETRIES = 3
 
-_pr = "openrouter"
-_p = json.load(open(CFG))["providers"][_pr]
-BASE, KEY = _p["baseUrl"], _p["apiKey"]
+BASE, KEY, MODEL = TEACHER["baseUrl"], TEACHER["apiKey"], TEACHER["model"]
+
+# ---------------------------------------------------------------- length budgets
+# v7 had ZERO rows under 15 words because the system prompt said "30 se 50 shabd" AND
+# accept() demanded >=30. Median 47, every answer the same shape: the model has no 8-word
+# greeting in 57,687 rows, so "kaise ho bhai" gets a 47-word topical dodge. Budgets are
+# sampled per row and accept() bounds FOLLOW the sample, so the corpus gets a distribution.
+# (ask_lo, ask_hi, keep_min, keep_max)
+BUDGETS = {"short":  (8,  22,  4,  45),
+           "medium": (28, 55, 20,  90),
+           "long":   (60, 110, 45, 170)}
+BUDGET_W = {"topical": (0.30, 0.45, 0.25), "chat": (0.85, 0.15, 0.00)}
+
+def sys_for(tgt, lo, hi):
+    if tgt == "hindi":
+        return ("Aap ek helpful assistant ho. User ke sawaal ka jawab POORI tarah se, saaf aur "
+                "natural Devanagari Hindi mein likho. English se seedha translation mat karo - "
+                "waise likho jaise ek native Hindi speaker likhta hai. Markdown ya bullet points "
+                f"use mat karo, plain paragraph likho. Jawab {lo} se {hi} shabd ka likho; na usse "
+                "chhota, na usse bada.")
+    if tgt == "hinglish":
+        return ("Aap ek helpful assistant ho. User Hinglish mein likhta hai (romanized Hindi + "
+                "English mix). Aap bhi isi tarah romanized Hinglish mein jawab do. Poora aur sahi "
+                "jawab do. Varanak ke liye 'hai' aur 'hain' ka sahi prayog karo, 'h' ya 'kr' jaise "
+                f"shortcut mat likho. Markdown ya bullets use mat karo. Jawab {lo} se {hi} word ka "
+                "likho; na usse chhota, na usse bada.")
+    return ("You are a helpful assistant. Answer directly in natural, well-formed English prose. "
+            f"Write {lo} to {hi} words - no more and no less. No markdown unless asked.")
 
 DEV_SYS = ("Aap ek helpful assistant ho. User ke sawaal ka jawab POORI tarah se, saaf aur natural "
            "Devanagari Hindi mein likho. English se seedha translation mat karo - waise likho jaise "
@@ -52,10 +79,11 @@ REFU_HI = re.compile(r"(क्रृपया (संदर्भ|पाठ|स�
 WORD = re.compile(r"[\u0900-\u097F]{3,}|[a-zA-Z]{4,}")
 ENDS = re.compile(r"[।.?!\"'”’)\]]\s*$")   # the ASCII period matters: Hinglish ends in '.'
 
-def accept(r, want_dev, instr=None, tgt=None):
+def accept(r, want_dev, instr=None, tgt=None, budget="medium"):
+    _a, _b, minw, maxw = BUDGETS[budget]
     w = len(r.split())
-    if w < 30:                           return False, "short"
-    if w > 160:                          return False, "ramble"
+    if w < minw:                           return False, "below-budget"
+    if w > maxw:                           return False, "above-budget"
     if not ENDS.search(r):               return False, "truncated"
     if BAD.search(r):                    return False, "shorthand"
     if REFU.search(r) or REFU_HI.search(r):  return False, "refusal"
@@ -89,11 +117,11 @@ def accept(r, want_dev, instr=None, tgt=None):
     if tgt == "hindi"    and d < 0.55:   return False, "not_devanagari"
     return True, ""
 
-def call(sys_p, user):
+def call(sys_p, user, max_tokens=1500, temp=0.7):
     body = json.dumps({"model": MODEL, "messages": [
         {"role": "system", "content": sys_p},
         {"role": "user",   "content": user}],
-        "temperature": 0.7, "max_tokens": 1500}).encode()
+        "temperature": temp, "max_tokens": max_tokens}).encode()
     req = urllib.request.Request(BASE + "/chat/completions", data=body, headers={
         "Authorization": f"Bearer {KEY}", "Content-Type": "application/json"})
     last = None
@@ -119,53 +147,67 @@ if os.path.exists(OUT):
 print(f"pool {len(pool):,}   already have {len(done):,}   target {TARGET:,}   conc {CONC}", flush=True)
 
 todo = [p for p in pool if p["key"] not in done]
-# interleave targets so Hindi and Hinglish both fill up even if we stop early
+# interleave targets so Hindi and Hinglish both fill up even if we stop early. The length
+# budget is drawn here, seeded by key, so a resume reproduces the same assignment.
 jobs = []
 for p in todo:
-    jobs.append((p["instruction"], p["plang"]))
+    reg = p.get("reg", "topical")
+    budget = random.Random(p["key"]).choices(list(BUDGETS), weights=BUDGET_W[reg], k=1)[0]
+    jobs.append((p["instruction"], p["plang"], budget, p["key"], reg, p.get("topic", "")))
 random.shuffle(jobs)
 
 lock = threading.Lock()
 kept = Counter(); drop = Counter(); fh = open(OUT, "a", encoding="utf-8")
 t0 = time.time(); ntok = 0
 
-EN_SYS = ("You are a helpful assistant. Answer the user's question directly, "
-          "completely and in plain English. Use natural, well-formed English prose. "
-          "Do NOT translate the question into another language and do not answer in "
-          "Hindi unless the user explicitly asks for Hindi. Use markdown or bullets "
-          "only if they genuinely help. Write 30 to 50 words.")
+# ---------------------------------------------------------------- self-judge pass
+# The teacher is free, so use it twice: generate, then grade. v7 trained 57,687 rows whose
+# grammaticality was never scored and later shipped 2,482 rows that teach evasive boilerplate.
+# Same-model grading is biased, but a zero-cost gate that drops broken or dodging answers
+# beats no gate; audit_v8.py tracks the pass rate so drift is visible.
+J_SYS = ("You are a strict evaluator of Hindi and Hinglish assistant answers. Judge the ANSWER "
+         "against the QUESTION on two things only: (1) grammar, spelling and natural word "
+         "choice; (2) whether it answers directly instead of dodging, stalling or padding. "
+         "5 = native-quality and answers the question. 4 = good with minor stiffness. "
+         "3 = understandable but awkward or partly dodging. 1 = broken grammar or non-answer. "
+         "Reply with exactly one digit 1-5 and nothing else.")
+
+def judge(instr, ans):
+    try:
+        out = call(J_SYS, f"Question:\n{instr}\n\nAnswer:\n{ans}", max_tokens=300, temp=0.0)
+    except Exception:
+        return 0
+    m = re.search(r"[1-5]", out)
+    return int(m.group()) if m else 0
+
+BUDGET_TOK = {"short": 300, "medium": 900, "long": 1500}
 
 def work(job):
-    instr, plang = job
-    # Language MIRRORING, not unconditional Devanagari. The first dataset was
-    # 100% non-English output - 810 Hindi + 369 Hinglish + 0 English - with
-    # English prompts answered in Hindi. The model learned "always output
-    # Devanagari" and now answers English questions in Hindi. `en` prompts must
-    # produce English, or there is no signal at all for that mapping.
-    # Language MIRRORING. Strictly one target language per prompt language:
-    #   en / en_en  -> English answer
-    #   hi          -> Devanagari answer
-    #   hinglish    -> romanized Hinglish answer
-    #
-    # `en` used to be grouped with `hi`, so every English prompt was answered in
-    # Devanagari. That produced 2,153 English-question -> Hindi-answer rows and
-    # zero English -> English, and the model learned "always output Devanagari":
-    # it answered English questions in Hindi. The routing has to be taught
-    # explicitly or not at all.
+    instr, plang, budget, key, reg, topic = job
+    # Language MIRRORING, strictly one target per prompt language:
+    #   en / en_en -> English,  hi -> Devanagari,  else -> romanized Hinglish.
+    # (An earlier revision grouped `en` with `hi`, which taught "always output Devanagari"
+    # and made the model answer English questions in Hindi.)
     if plang in ("en", "en_en"):
-        want_dev, sys_p, tgt = False, EN_SYS, "english"
+        want_dev, tgt = False, "english"
     elif plang == "hi":
-        want_dev, sys_p, tgt = True, DEV_SYS, "hindi"
+        want_dev, tgt = True, "hindi"
     else:
-        want_dev, sys_p, tgt = False, HING_SYS, "hinglish"
+        want_dev, tgt = False, "hinglish"
+    lo, hi = BUDGETS[budget][0], BUDGETS[budget][1]
     try:
-        a = call(sys_p, instr)
+        a = call(sys_for(tgt, lo, hi), instr, max_tokens=BUDGET_TOK[budget])
     except Exception as e:
         return ("error", f"{type(e).__name__}")
-    ok, why = accept(a, want_dev, instr, tgt)
+    # instr=None skips the non-sequitur guard: a chat reply legitimately shares almost no
+    # content words with "kaise ho bhai", and the guard would delete every short row.
+    ok, why = accept(a, want_dev, None if reg == "chat" else instr, tgt, budget)
     if not ok: return ("drop", why)
-    return ("keep", {"instruction": instr, "response": a, "src": "teacher",
-                     "plang": plang, "lang": tgt})
+    sc = judge(instr, a)
+    if sc < 4: return ("drop", f"judge{sc}")
+    return ("keep", {"key": key, "instruction": instr, "response": a, "src": "teacher",
+                     "plang": plang, "lang": tgt, "reg": reg, "topic": topic,
+                     "budget": budget, "judge": sc})
 
 def consume(r):
     global ntok

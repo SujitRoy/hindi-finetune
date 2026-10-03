@@ -49,7 +49,7 @@ measured. Nothing deletes them; migrate when the new repo has a `main`.
 ## The teacher probe cell was removed
 
 It downloaded Qwen3-4B and Qwen3-8B into Kaggle to compare them. That comparison
-is done and settled - `stealth/space-bunny-alpha` over the API won on speed
+is done and settled - `<teacher model: ~/.pi/agent/models.json>` over the API won on speed
 (4,000 rows/h vs 90 rows/h), quality and cost ($0). The cell also crashed:
 
 ```

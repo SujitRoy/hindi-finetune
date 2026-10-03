@@ -25,7 +25,11 @@ sys.path.insert(0, __file__.rsplit("/", 1)[0])
 import langgate
 
 SRC_BAD = {"adaption"}   # machine-translated Marathi/Maithili; 32.7% Marathi prompts
-MIN_WORDS = 20           # same floor as the notebook build
+# Was a flat MIN_WORDS = 20, which deleted every short row at release time and rebuilt the
+# single-spike length distribution that made v7 answer "kaise ho bhai" with a 47-word dodge.
+# Each row keeps its own floor, from the budget generate.py sampled for it.
+BUDGET_MIN = {"short": 4, "medium": 20, "long": 45}
+MIN_WORDS = 20           # fallback for legacy rows with no budget field
 ENDS = re.compile(r"[।.?!”\"’)\]]\s*$")
 
 def prompt_sources(*pools):
@@ -41,8 +45,8 @@ def prompt_sources(*pools):
             pass
     return idx
 
-def structural(resp):
-    if len(resp.split()) < MIN_WORDS:                     return "short"
+def structural(resp, min_words=MIN_WORDS):
+    if len(resp.split()) < min_words:                     return "short"
     if not ENDS.search(resp):                             return "truncated"
     t = resp.split()
     tri = [tuple(t[i:i+3]) for i in range(len(t)-2)]
@@ -67,7 +71,7 @@ def build(inp, outp):
             drop["src_blacklisted"] += 1; continue
         if (lang, instr.strip().lower()) in seen:
             drop["duplicate"] += 1; continue
-        why = structural(resp)
+        why = structural(resp, BUDGET_MIN.get(r.get("budget"), MIN_WORDS))
         if why:
             drop[why] += 1; continue
         # The blacklist handles the systemic Marathi source. The gate catches the
@@ -77,7 +81,9 @@ def build(inp, outp):
             drop["gate:" + why.split("(")[0]] += 1; continue
         seen.add((lang, instr.strip().lower()))
         kept.append({"instruction": instr, "response": resp, "src": "teacher",
-                     "plang": r.get("plang", lang), "lang": lang})
+                     "plang": r.get("plang", lang), "lang": lang,
+                     "reg": r.get("reg", "topical"), "budget": r.get("budget", "medium"),
+                     "judge": r.get("judge", 0), "topic": r.get("topic", "")})
     with open(outp, "w", encoding="utf-8") as f:
         for r in kept:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
@@ -85,6 +91,15 @@ def build(inp, outp):
     print(f"{len(rows):,} in -> {len(kept):,} out  ({len(rows)-len(kept):,} dropped)")
     print("  by lang:", dict(collections.Counter(r["lang"] for r in kept)))
     print(f"  distinct Devanagari forms: {len(forms):,}")
+    # The invariant v7 could not show: a real length spread, and any chat register at all.
+    wl = sorted(len(r["response"].split()) for r in kept)
+    p = lambda q: wl[int(len(wl) * q)] if wl else 0
+    short = sum(1 for x in wl if x <= 15)
+    print(f"  response words p10/median/p90 = {p(.1)}/{p(.5)}/{p(.9)}"
+          f"  | <=15w: {short:,} ({100 * short / max(1, len(wl)):.1f}%)")
+    print(f"  register: chat {sum(1 for r in kept if r['reg'] == 'chat'):,}"
+          f" topical {sum(1 for r in kept if r['reg'] == 'topical'):,}"
+          f"  | topics {len({r['topic'] for r in kept}):,}")
     for k, v in drop.most_common(12):
         print(f"  drop {k:30s} {v:,}")
     # marathi_dominated after the blacklist means the blacklist is wrong. Find the
