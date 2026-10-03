@@ -180,8 +180,39 @@ setsrc(9, "import os, glob, json, re\n" + c9[i_repo:i_eng] + GATE)
 # prompts_en.json is not attached. Delete the generation block, keep its imports and
 # everything from the LoRA attach onwards.
 c21 = src(21)
-setsrc(21, c21[:c21.index("# The English anchor is self-distilled")]
-           + c21[c21.index("ds = Dataset.from_list(rows)"):])
+c21 = (c21[:c21.index("# The English anchor is self-distilled")]
+       + c21[c21.index("ds = Dataset.from_list(rows)"):])
+
+# MULTI-TURN RENDERING. The vendor cell builds exactly one user/assistant pair from
+# instruction/response. v8 adds rows from teach/oasst_to_v8.py (6,349 conversations,
+# median 2 turns, human-labelled) that carry a `messages` list; rendering them through
+# the pair-only code silently flattens each conversation to its LAST exchange and throws
+# away the context turns - a silent data loss, since the row count and the loss curve
+# both look fine. Verified against the real unsloth_zoo masker and the real LFM2
+# tokenizer (teach/oasst_to_v8.py --selfcheck, 5,335/5,335 PASS): with 2+ pairs, every
+# assistant turn is unmasked and no user turn leaks into the loss.
+_old_render = """def to_text(batch):
+    convs = [[{"role": "user", "content": i}, {"role": "assistant", "content": r}]
+             for i, r in zip(batch["instruction"], batch["response"])]"""
+_new_render = """# Normalise columns BEFORE building the Dataset, then render whatever is in `messages`.
+# Measured on datasets 4.x: a key missing from the FIRST row of from_list() is never
+# inferred, so a batched map does not receive that column at all. A release file whose
+# first row happens to be single-turn would therefore hand every conversation to the
+# pair-only renderer and silently keep only its last exchange - row counts and the loss
+# curve both look normal when that happens. Forcing the key to exist makes the behaviour
+# independent of file order.
+def _pair(r):
+    return [{"role": "user", "content": r["instruction"]},
+            {"role": "assistant", "content": r["response"]}]
+
+rows = [{**r, "messages": r.get("messages") or _pair(r)} for r in rows]
+
+def to_text(batch):
+    convs = batch["messages"]"""
+assert _old_render in c21, "vendor to_text changed shape - re-slice it"
+c21 = c21.replace(_old_render, _new_render)
+assert 'r.get("messages") or _pair(r)' in c21, "multi-turn normalisation did not apply"
+setsrc(21, c21)
 
 c19 = src(19)
 i0 = c19.index("# English anchor by SELF-DISTILLATION")
@@ -356,6 +387,10 @@ checks = {
     "no cross-card split (CUDA launch failure)": 'os.environ["UNSLOTH_AUTO_DEVICE_MAP"] = "0"' in c,
     "GPU guard present":                     "No GPU visible" in allsrc,
     "masking applied and CALLED":            "trainer = train_on_responses_only(" in allsrc,
+    # cell 21 must render the messages list, not rebuild a single pair. Without this,
+    # multi-turn rows from teach/oasst_to_v8.py lose their context turns in silence.
+    "multi-turn rows are rendered":          'convs = batch["messages"]' in allsrc
+                                             and 'r.get("messages") or _pair(r)' in allsrc,
     "masking hard-fails at zero":            "did not mask anything" in allsrc,
     # word-boundary, not substring: cpt_trainer.train() contains trainer.train()
     "exactly one SFT trainer.train()":       len(re.findall(r"(?<!\w)trainer\.train\(\)", allsrc)) == 1,

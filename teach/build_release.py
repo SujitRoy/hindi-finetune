@@ -64,6 +64,17 @@ def build(inp, outp):
     rows = [json.loads(l) for l in open(inp, encoding="utf-8")]
     seen, kept, drop = set(), [], collections.Counter()
     for r in rows:
+        # Multi-turn rows (teach/oasst_to_v8.py) carry `messages` and already pass the
+        # same gates upstream, so they are copied through rather than re-filtered. The
+        # single-turn path below is unchanged.
+        if r.get("messages"):
+            # Whole conversation as the key. Slicing [:2] deduped on the opening
+            # exchange, which threw away rows that shared an opener but continued
+            # differently - 27 of 400 measured - and that continuation IS the data.
+            k = tuple(m["content"].strip().lower() for m in r["messages"])
+            if k in seen:
+                drop["duplicate"] += 1; continue
+            seen.add(k); kept.append(r); continue
         instr, resp, lang = r["instruction"], r["response"], r.get("lang", "")
         if lang not in ("hindi", "hinglish"):
             drop[f"not_hindi_hinglish({lang})"] += 1; continue
@@ -97,9 +108,12 @@ def build(inp, outp):
     short = sum(1 for x in wl if x <= 15)
     print(f"  response words p10/median/p90 = {p(.1)}/{p(.5)}/{p(.9)}"
           f"  | <=15w: {short:,} ({100 * short / max(1, len(wl)):.1f}%)")
-    print(f"  register: chat {sum(1 for r in kept if r['reg'] == 'chat'):,}"
-          f" topical {sum(1 for r in kept if r['reg'] == 'topical'):,}"
-          f"  | topics {len({r['topic'] for r in kept}):,}")
+    # .get, not []: multi-turn rows from oasst_to_v8.py have no topic field, and a
+    # KeyError here threw away a corpus that was already written to disk.
+    _reg = collections.Counter(r.get("reg") for r in kept)
+    print(f"  register: chat {_reg.get('chat',0):,} topical {_reg.get('topical',0):,}"
+          f" multiturn {_reg.get('multiturn',0):,} fact {_reg.get('fact',0):,}"
+          f"  | topics {len({r.get('topic','') for r in kept}):,}")
     for k, v in drop.most_common(12):
         print(f"  drop {k:30s} {v:,}")
     # marathi_dominated after the blacklist means the blacklist is wrong. Find the
