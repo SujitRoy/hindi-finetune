@@ -20,8 +20,8 @@ from collections import Counter
 # This repo is public and the teacher is a private preview on someone else's plan.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from teacher_cfg import TEACHER
-PROMPTS = "/home/ubuntu/hindi-finetune/teach/prompts_v8.jsonl"
-OUT     = "/home/ubuntu/hindi-finetune/teach/teacher_gen_v8.jsonl"
+PROMPTS = os.environ.get("PROMPTS", "/home/ubuntu/hindi-finetune/teach/prompts_v8.jsonl")
+OUT     = os.environ.get("GEN_OUT", "/home/ubuntu/hindi-finetune/teach/teacher_gen_v8.jsonl")
 TARGET  = int(sys.argv[1]) if len(sys.argv) > 1 else 40000
 CONC    = int(sys.argv[2]) if len(sys.argv) > 2 else 16   # measured 11k rows/h at 16
 TIMEOUT = 180           # one request. Mercury is a reasoning model; 383 tokens of
@@ -42,29 +42,45 @@ BUDGETS = {"short":  (8,  22,  4,  45),
 BUDGET_W = {"topical": (0.30, 0.45, 0.25), "chat": (0.85, 0.15, 0.00)}
 
 def sys_for(tgt, lo, hi):
+    # "do not come back only asking for more information" - the teacher's most common
+    # failure under a short budget, and the exact behaviour that made v7 unusable for chat.
+    # One anti-dodge instruction per target, in that target's own script.
+    NO_DODGE = {
+      "hindi": (" अगर प्रश्न थोड़ा अधूरा हो तब भी जो सबसे संभावित और उपयोगी उत्तर है वही दो; "
+                "केवल और जानकारी माँगने भर में उत्तर खत्म मत करो।"),
+      "hinglish": (" Agar sawaal thoda adhoora ho tab bhi jo sabse sambhavit aur useful jawab "
+                   "hai wahi do; sirf aur information maangne mein jawab khatam mat karo."),
+      "english": (" If the question is slightly incomplete, still give the most likely useful "
+                  "answer; do not reply only by asking for more information."),
+    }[tgt]
     if tgt == "hindi":
         return ("Aap ek helpful assistant ho. User ke sawaal ka jawab POORI tarah se, saaf aur "
                 "natural Devanagari Hindi mein likho. English se seedha translation mat karo - "
                 "waise likho jaise ek native Hindi speaker likhta hai. Markdown ya bullet points "
                 f"use mat karo, plain paragraph likho. Jawab {lo} se {hi} shabd ka likho; na usse "
-                "chhota, na usse bada.")
+                "chhota, na usse bada." + NO_DODGE)
     if tgt == "hinglish":
         return ("Aap ek helpful assistant ho. User Hinglish mein likhta hai (romanized Hindi + "
                 "English mix). Aap bhi isi tarah romanized Hinglish mein jawab do. Poora aur sahi "
                 "jawab do. Varanak ke liye 'hai' aur 'hain' ka sahi prayog karo, 'h' ya 'kr' jaise "
                 f"shortcut mat likho. Markdown ya bullets use mat karo. Jawab {lo} se {hi} word ka "
-                "likho; na usse chhota, na usse bada.")
+                "likho; na usse chhota, na usse bada." + NO_DODGE)
     return ("You are a helpful assistant. Answer directly in natural, well-formed English prose. "
-            f"Write {lo} to {hi} words - no more and no less. No markdown unless asked.")
+            f"Write {lo} to {hi} words - no more and no less. No markdown unless asked."
+            + NO_DODGE)
 
-DEV_SYS = ("Aap ek helpful assistant ho. User ke sawaal ka jawab POORI tarah se, saaf aur natural "
-           "Devanagari Hindi mein likho. English se seedha translation mat karo - waise likho jaise "
-           "ek native Hindi speaker likhta hai. Markdown ya bullet points use mat karo, plain "
-           "paragraph likho. Jawab 30 se 50 shabd ka likho. Isse zyada lamba mat likho.")
-HING_SYS = ("Aap ek helpful assistant ho. User Hinglish mein likhta hai (romanized Hindi + English "
-            "mix). Aap bhi isi tarah romanized Hinglish mein jawab do. Poora aur sahi jawab do. "
-            "Varanak ke liye 'hai' aur 'hain' ka sahi prayog karo, 'h' ya 'kr' jaise shortcut mat "
-            "likho. Markdown ya bullets use mat karo. Jawab 30 se 50 shabd ka likho.")
+# The judge is the same model as the generator, so it grades its own evasive style leniently:
+# in the first smoke run "Apni society ka naam, city, locality aur pin code batayein..."
+# scored 4/5 and was kept. Directness is therefore enforced mechanically as well as judged.
+DODGE = re.compile(r"(ka naam[^.]{0,40}batayein|pin ?code[^.]{0,30}batayein|"
+                   r"locality[^.]{0,30}batayein|sandarb[^.]{0,30}batayein|"
+                   r"context[^.]{0,40}(batayein|bata de|share karein)|"
+                   r"apni baat[^.]{0,40}share karein|krpaya[^.]{0,30}(bata|doher)[^.]{0,20}batayein)", re.I)
+
+def dodges(text):
+    """True when the answer opens by demanding more input instead of answering."""
+    return bool(DODGE.search(" ".join(text.split()[:18])))
+
 BAD  = re.compile(r"(ai assistant|ai model|as an ai|मैं एक एआई|\bh\b(?!\w)|\bkr\b|\bkro\b)", re.I)
 REFU = re.compile(r"(i am sorry|i cannot|i can't|maine pucha|mujhe nahi pata|"
                    r"i'm not able|as an ai)", re.I)
@@ -81,12 +97,19 @@ ENDS = re.compile(r"[।.?!\"'”’)\]]\s*$")   # the ASCII period matters: Hin
 
 def accept(r, want_dev, instr=None, tgt=None, budget="medium"):
     _a, _b, minw, maxw = BUDGETS[budget]
+    # dodge FIRST: a 16-word evasive answer would otherwise be reported as "below-budget",
+    # which hides the real defect in the drop counters that audit the corpus.
+    if dodges(r):                            return False, "dodge"
+    if not ENDS.search(r):               return False, "truncated"
+    if BAD.search(r):                    return False, "shorthand"
+    if REFU.search(r) or REFU_HI.search(r):  return False, "refusal"
     w = len(r.split())
     if w < minw:                           return False, "below-budget"
     if w > maxw:                           return False, "above-budget"
     if not ENDS.search(r):               return False, "truncated"
     if BAD.search(r):                    return False, "shorthand"
     if REFU.search(r) or REFU_HI.search(r):  return False, "refusal"
+    if dodges(r):                            return False, "dodge"
     d = sum("ऀ" <= c <= "ॿ" for c in r)/max(1, len(r))
     # Non-sequitur guard, same shape as the smangrul failure (83% of its Hindi
     # bucket). Only meaningful when both sides are in the SAME script - an English
