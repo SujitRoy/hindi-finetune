@@ -39,7 +39,8 @@ BASE, KEY, MODEL = TEACHER["baseUrl"], TEACHER["apiKey"], TEACHER["model"]
 BUDGETS = {"short":  (8,  22,  4,  45),
            "medium": (28, 55, 20,  90),
            "long":   (60, 110, 45, 170)}
-BUDGET_W = {"topical": (0.30, 0.45, 0.25), "chat": (0.85, 0.15, 0.00)}
+BUDGET_W = {"topical": (0.30, 0.45, 0.25), "chat": (0.85, 0.15, 0.00),
+            "fact":   (0.70, 0.30, 0.00)}   # facts are one-line answers
 
 def sys_for(tgt, lo, hi):
     # "do not come back only asking for more information" - the teacher's most common
@@ -175,8 +176,12 @@ todo = [p for p in pool if p["key"] not in done]
 jobs = []
 for p in todo:
     reg = p.get("reg", "topical")
-    budget = random.Random(p["key"]).choices(list(BUDGETS), weights=BUDGET_W[reg], k=1)[0]
-    jobs.append((p["instruction"], p["plang"], budget, p["key"], reg, p.get("topic", "")))
+    if p.get("budget_force") in BUDGETS:
+        budget = p["budget_force"]          # fact prompts are short-answer by design
+    else:
+        budget = random.Random(p["key"]).choices(list(BUDGETS), weights=BUDGET_W[reg], k=1)[0]
+    jobs.append((p["instruction"], p["plang"], budget, p["key"], reg, p.get("topic", ""),
+                 p.get("gold") or []))
 random.shuffle(jobs)
 
 lock = threading.Lock()
@@ -197,16 +202,19 @@ J_SYS = ("You are a strict evaluator of Hindi and Hinglish assistant answers. Ju
 
 def judge(instr, ans):
     try:
-        out = call(J_SYS, f"Question:\n{instr}\n\nAnswer:\n{ans}", max_tokens=300, temp=0.0)
+        out = call(J_SYS, f"Question:\n{instr}\n\nAnswer:\n{ans}", max_tokens=600, temp=0.0)
     except Exception:
         return 0
     m = re.search(r"[1-5]", out)
     return int(m.group()) if m else 0
 
-BUDGET_TOK = {"short": 300, "medium": 900, "long": 1500}
+# The teacher is a reasoning model: measured 232-284 completion tokens for a 14-word
+# answer. Budgets under ~500 come back content=null and read as API failures (18 of 128
+# calls in the first run), so every budget carries headroom for the hidden chain of thought.
+BUDGET_TOK = {"short": 700, "medium": 1400, "long": 1800}
 
 def work(job):
-    instr, plang, budget, key, reg, topic = job
+    instr, plang, budget, key, reg, topic, gold = job
     # Language MIRRORING, strictly one target per prompt language:
     #   en / en_en -> English,  hi -> Devanagari,  else -> romanized Hinglish.
     # (An earlier revision grouped `en` with `hi`, which taught "always output Devanagari"
@@ -224,12 +232,17 @@ def work(job):
         return ("error", f"{type(e).__name__}")
     # instr=None skips the non-sequitur guard: a chat reply legitimately shares almost no
     # content words with "kaise ho bhai", and the guard would delete every short row.
-    ok, why = accept(a, want_dev, None if reg == "chat" else instr, tgt, budget)
+    ok, why = accept(a, want_dev, None if reg != "topical" else instr, tgt, budget)
     if not ok: return ("drop", why)
+    # Verifiable facts: the answer must CONTAIN the fact. This is the quality gate that
+    # replaced the teacher-as-judge for these rows - a substring check cannot be charmed
+    # into a 4/5 the way the judge gave evasive rows (calibrated: dodge 3-4, clean 3-5).
+    if gold and not any(g.lower() in a.lower() for g in gold):
+        return ("drop", "fact-miss")
     sc = judge(instr, a)
     if sc < 4: return ("drop", f"judge{sc}")
     return ("keep", {"key": key, "instruction": instr, "response": a, "src": "teacher",
-                     "plang": plang, "lang": tgt, "reg": reg, "topic": topic,
+                     "plang": plang, "lang": tgt, "reg": reg, "topic": topic, "gold": gold,
                      "budget": budget, "judge": sc})
 
 def consume(r):

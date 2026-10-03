@@ -1,0 +1,180 @@
+{"key": "3cc512cd62c7b513", "instruction": "भारत की राजधानी कौन सी है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["नई दिल्ली"], "budget_force": "short"}
+{"key": "82cbebff0f90fe3c", "instruction": "India ki rajdhani kaun si hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["नई दिल्ली"], "budget_force": "short"}
+{"key": "fd09c86ffb8fa61d", "instruction": "भारत में कुल कितने राज्य हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["28"], "budget_force": "short"}
+{"key": "ad9393ec6d6e48d9", "instruction": "India mein kitne state hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["28"], "budget_force": "short"}
+{"key": "d4bbfa7e54e2bbfa", "instruction": "भारत में कितने केंद्र शासित प्रदेश हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["8"], "budget_force": "short"}
+{"key": "021429daf7cdfd99", "instruction": "India mein kitne UT hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["8"], "budget_force": "short"}
+{"key": "5af2072389e7d535", "instruction": "सौर मंडल में कितने ग्रह हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["8"], "budget_force": "short"}
+{"key": "933a1c9b95ea889f", "instruction": "Solar system mein kitne planet hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["8"], "budget_force": "short"}
+{"key": "aa5f5f1e30274d00", "instruction": "पानी का रासायनिक सूत्र क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["H2O", "H₂O"], "budget_force": "short"}
+{"key": "056f14122e90df5b", "instruction": "Water ka chemical formula kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["H2O", "H₂O"], "budget_force": "short"}
+{"key": "224933376fdd4901", "instruction": "लवण का रासायनिक नाम क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["सोडियम क्लोराइड"], "budget_force": "short"}
+{"key": "7380f4c7ab4a17b1", "instruction": "Namak ka chemical naam kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["सोडियम क्लोराइड"], "budget_force": "short"}
+{"key": "bf01c1c5d0be3893", "instruction": "ताजमहल कहाँ स्थित है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["आगरा"], "budget_force": "short"}
+{"key": "5ae6830d687ca4aa", "instruction": "Taj Mahal kahan hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["आगरा"], "budget_force": "short"}
+{"key": "bc657fca2ab5f970", "instruction": "ताजमहल किसने बनवाया?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["शाहजहाँ"], "budget_force": "short"}
+{"key": "e8ddc6d46431f4dc", "instruction": "Taj Mahal kisne banwaya?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["शाहजहाँ"], "budget_force": "short"}
+{"key": "f98de6e4f2624894", "instruction": "भारत के पहले प्रधानमंत्री कौन थे?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["जवाहरलाल नेहरू"], "budget_force": "short"}
+{"key": "4549c727771de3a0", "instruction": "India ke pehle PM kaun the?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["जवाहरलाल नेहरू"], "budget_force": "short"}
+{"key": "ae21ede48a55e98f", "instruction": "भारत की पहली महिला प्रधानमंत्री कौन थीं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["इंदिरा गांधी"], "budget_force": "short"}
+{"key": "55644406bfa291e7", "instruction": "India ki pehli mahila PM kaun thi?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["इंदिरा गांधी"], "budget_force": "short"}
+{"key": "9b623c289f48883f", "instruction": "भारत को आज़ादी कब मिली?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["1947"], "budget_force": "short"}
+{"key": "45cd9d6318c8bc24", "instruction": "India ko aazadi kab mili?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["1947"], "budget_force": "short"}
+{"key": "d34812180e0221f0", "instruction": "महात्मा गांधी का पूरा नाम क्या था?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मोहनदास"], "budget_force": "short"}
+{"key": "0568d27d9931236f", "instruction": "Gandhi ji ka pura naam kya tha?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मोहनदास"], "budget_force": "short"}
+{"key": "35e4c1f8acdf538d", "instruction": "महात्मा गांधी का जन्म कब हुआ?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["1869"], "budget_force": "short"}
+{"key": "acefff25d5122e2e", "instruction": "Gandhi ji ka janm kab hua?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["1869"], "budget_force": "short"}
+{"key": "674384521b6d5476", "instruction": "सूर्य के सबसे नज़दीक कौन सा ग्रह है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बुध"], "budget_force": "short"}
+{"key": "f70d22ff5fabfb5b", "instruction": "Sun ke sabse paas kaunsa planet hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बुध"], "budget_force": "short"}
+{"key": "6766647917c2a440", "instruction": "सबसे बड़ा ग्रह कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बृहस्पति", "वृहस्पति", "Jupiter"], "budget_force": "short"}
+{"key": "fe865dc74f1a66d6", "instruction": "Sabse bada planet kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बृहस्पति", "वृहस्पति", "Jupiter"], "budget_force": "short"}
+{"key": "7a75999895ca9060", "instruction": "मानव शरीर में कितनी हड्डियाँ होती हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["206"], "budget_force": "short"}
+{"key": "d421fb08b1749cfe", "instruction": "Human body mein kitni haddiyan hoti hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["206"], "budget_force": "short"}
+{"key": "9d9ffd8bd4d63844", "instruction": "मानव शरीर का सबसे बड़ा अंग कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["त्वचा"], "budget_force": "short"}
+{"key": "602f458deec691be", "instruction": "Body ka sabse bada organ kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["त्वचा"], "budget_force": "short"}
+{"key": "f3c15dab51ab264a", "instruction": "खून का रंग लाल क्यों होता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हीमोग्लोबिन"], "budget_force": "short"}
+{"key": "cd047ee79e1ad821", "instruction": "Khoon laal kyun hota hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हीमोग्लोबिन"], "budget_force": "short"}
+{"key": "9a3db2cbf66968b3", "instruction": "दिल में कितने कक्ष होते हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["4"], "budget_force": "short"}
+{"key": "8cec10d48d5c2982", "instruction": "Heart mein kitne chambers hote hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["4"], "budget_force": "short"}
+{"key": "107d9d3825491dcb", "instruction": "प्रकाश की गति लगभग कितनी होती है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["3 लाख", "3,00,000", "300000"], "budget_force": "short"}
+{"key": "b11c2e963418a49a", "instruction": "Light ki speed kitni hoti hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["3 लाख", "3,00,000", "300000"], "budget_force": "short"}
+{"key": "eed03a05719705b9", "instruction": "भारत की मुद्रा क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["रुपया", "रुपये"], "budget_force": "short"}
+{"key": "957f402411eca0f8", "instruction": "India ki currency kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["रुपया", "रुपये"], "budget_force": "short"}
+{"key": "f8e91591b32450f3", "instruction": "भारतीय रिज़र्व बैंक की स्थापना कब हुई?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["1935"], "budget_force": "short"}
+{"key": "1b998e3959b4fbd9", "instruction": "RBI ki sthapna kab hui?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["1935"], "budget_force": "short"}
+{"key": "7444dc8810a52f54", "instruction": "गणतंत्र दिवस कब मनाया जाता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["26 जनवरी"], "budget_force": "short"}
+{"key": "98f999a7524d098f", "instruction": "Republic Day kab manate hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["26 जनवरी"], "budget_force": "short"}
+{"key": "daeb0da2b6b3605c", "instruction": "स्वतंत्रता दिवस कब मनाया जाता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["15 अगस्त"], "budget_force": "short"}
+{"key": "8bdf487fe5ff1693", "instruction": "Independence Day kab manate hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["15 अगस्त"], "budget_force": "short"}
+{"key": "58f52306c92519d4", "instruction": "भारत का राष्ट्रीय पशु कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बाघ", "व्याघ्र"], "budget_force": "short"}
+{"key": "b893bdad48d03541", "instruction": "India ka national animal kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बाघ", "व्याघ्र"], "budget_force": "short"}
+{"key": "fe32b79f727fee46", "instruction": "भारत का राष्ट्रीय पक्षी कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मोर"], "budget_force": "short"}
+{"key": "37f20b2fad16513c", "instruction": "India ka national bird kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मोर"], "budget_force": "short"}
+{"key": "86c8e62b722bddb7", "instruction": "भारत का राष्ट्रीय फूल कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["कमल"], "budget_force": "short"}
+{"key": "3dfe4a969007ffc5", "instruction": "India ka national flower kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["कमल"], "budget_force": "short"}
+{"key": "118b336c8b4251f2", "instruction": "भारत का राष्ट्रीय गान कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["जन गण मन"], "budget_force": "short"}
+{"key": "5188176d4a3ad856", "instruction": "India ka national anthem kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["जन गण मन"], "budget_force": "short"}
+{"key": "7b9fd51cc79aab0f", "instruction": "भारत की राजभाषा क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हिन्दी", "हिंदी"], "budget_force": "short"}
+{"key": "795636273de2e15c", "instruction": "India ki rajbhasha kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हिन्दी", "हिंदी"], "budget_force": "short"}
+{"key": "81d23bf62055abf5", "instruction": "क्रिकेट विश्व कप 2023 किसने जीता?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["भारत"], "budget_force": "short"}
+{"key": "5313551c5db1db93", "instruction": "Cricket World Cup 2023 kisne jeeta?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["भारत"], "budget_force": "short"}
+{"key": "e7b50434c3fc32f0", "instruction": "भारत की सबसे लंबी नदी कौन सी है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["गंगा"], "budget_force": "short"}
+{"key": "89916f63c56f829b", "instruction": "India ki sabse lambi river kaunsi hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["गंगा"], "budget_force": "short"}
+{"key": "fd5637d0d295aab4", "instruction": "सबसे ऊँचा पर्वत शिखर कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["एवरेस्ट", "सगरमाथा"], "budget_force": "short"}
+{"key": "ba3a2a151c52345f", "instruction": "Sabse uncha pahad kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["एवरेस्ट", "सगरमाथा"], "budget_force": "short"}
+{"key": "7c74fad96801ab5c", "instruction": "थर्मोमीटर किसे मापने के लिए उपयोग होता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["तापमान", "ताप"], "budget_force": "short"}
+{"key": "e8eb25d8026b0c4e", "instruction": "Thermometer kise mapne ke liye use hota hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["तापमान", "ताप"], "budget_force": "short"}
+{"key": "09d2e1671740b53e", "instruction": "टेलीफोन का आविष्कार किसने किया?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["ग्राहम बेल"], "budget_force": "short"}
+{"key": "a235a03ab7826593", "instruction": "Telephone kisne invent kiya?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["ग्राहम बेल"], "budget_force": "short"}
+{"key": "0b7c120dc3e5f4d3", "instruction": "बल्ब का आविष्कार किसने किया?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["एडिसन"], "budget_force": "short"}
+{"key": "6df29b0b30d07045", "instruction": "Bulb kisne invent kiya?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["एडिसन"], "budget_force": "short"}
+{"key": "64f86fec479dcec6", "instruction": "कंप्यूटर के जनक कौन कहे जाते हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["चार्ल्स बैबेज", "बैबेज"], "budget_force": "short"}
+{"key": "305dbd924f2b5729", "instruction": "Computer ka father kise kehte hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["चार्ल्स बैबेज", "बैबेज"], "budget_force": "short"}
+{"key": "b71c20165a44b2bc", "instruction": "भारतीय संविधान कब लागू हुआ?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["1950"], "budget_force": "short"}
+{"key": "c38e0c13f46db4ac", "instruction": "Indian Constitution kab lagu hua?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["1950"], "budget_force": "short"}
+{"key": "42e586c727b1dad8", "instruction": "संसद के दोनों सदन क्या हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["लोक सभा", "राज्य सभा"], "budget_force": "short"}
+{"key": "d36fd47be2e9d2a4", "instruction": "Parliament ke dono house kya hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["लोक सभा", "राज्य सभा"], "budget_force": "short"}
+{"key": "9e13aeca9f826466", "instruction": "सूर्य ग्रहण किस पक्ष में लगता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["अमावस्या"], "budget_force": "short"}
+{"key": "41ef591e439ea71c", "instruction": "Solar eclipse kab lagta hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["अमावस्या"], "budget_force": "short"}
+{"key": "dd237e6306f7b3fd", "instruction": "चंद्र ग्रहण किस पक्ष में लगता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["पूर्णिमा"], "budget_force": "short"}
+{"key": "cbfea15e18096c59", "instruction": "Lunar eclipse kab lagta hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["पूर्णिमा"], "budget_force": "short"}
+{"key": "c8f71b30c3646ce5", "instruction": "पृथ्वी सूर्य का एक चक्कर कितने दिन में लगाती है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["365"], "budget_force": "short"}
+{"key": "a6cee254a6bdd758", "instruction": "Earth ka ek chakkar kitne din mein lagta hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["365"], "budget_force": "short"}
+{"key": "2a781aee30688ea3", "instruction": "विश्व का सबसे बड़ा महासागर कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["प्रशान्त", "पैसिफिक"], "budget_force": "short"}
+{"key": "3919cf705ef82d71", "instruction": "Sabse bada ocean kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["प्रशान्त", "पैसिफिक"], "budget_force": "short"}
+{"key": "15c13f9acd79d4b4", "instruction": "क्षेत्रफल में भारत का सबसे बड़ा राज्य कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["राजस्थान"], "budget_force": "short"}
+{"key": "2f2892b00b3c7f53", "instruction": "Area mein India ka sabse bada state kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["राजस्थान"], "budget_force": "short"}
+{"key": "2b31521ba3f5d051", "instruction": "भारत का सबसे छोटा राज्य कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["गोवा"], "budget_force": "short"}
+{"key": "453243648ba717c4", "instruction": "India ka sabse chhota state kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["गोवा"], "budget_force": "short"}
+{"key": "a50cba3b6983b7ce", "instruction": "मध्य प्रदेश की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["भोपाल"], "budget_force": "short"}
+{"key": "5bc0e03e28a9727c", "instruction": "MP ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["भोपाल"], "budget_force": "short"}
+{"key": "0b48672357b0d25a", "instruction": "महाराष्ट्र की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मुंबई"], "budget_force": "short"}
+{"key": "908d6d2dece7b687", "instruction": "Maharashtra ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मुंबई"], "budget_force": "short"}
+{"key": "d04940b7ae39ddce", "instruction": "तमिलनाडु की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["चेन्नई"], "budget_force": "short"}
+{"key": "9f2373d29d9da5f3", "instruction": "Tamil Nadu ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["चेन्नई"], "budget_force": "short"}
+{"key": "6b3922697276bc9b", "instruction": "पंजाब की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["चंडीगढ़"], "budget_force": "short"}
+{"key": "81b28ac8ffd95943", "instruction": "Punjab ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["चंडीगढ़"], "budget_force": "short"}
+{"key": "210330118d6a7848", "instruction": "कर्नाटक की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बेंगलुरु", "बेंगलोर"], "budget_force": "short"}
+{"key": "9f19276ea932f005", "instruction": "Karnataka ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बेंगलुरु", "बेंगलोर"], "budget_force": "short"}
+{"key": "da548f2f5149c4d2", "instruction": "गुजरात की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["गांधीनगर"], "budget_force": "short"}
+{"key": "05be3e9366a3f827", "instruction": "Gujarat ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["गांधीनगर"], "budget_force": "short"}
+{"key": "17b64764838ba6dd", "instruction": "उत्तर प्रदेश की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["लखनऊ"], "budget_force": "short"}
+{"key": "99c13ea3ad490d73", "instruction": "UP ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["लखनऊ"], "budget_force": "short"}
+{"key": "1189cb0db639b6bb", "instruction": "बिहार की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["पटना"], "budget_force": "short"}
+{"key": "c76ef4423af2c3f2", "instruction": "Bihar ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["पटना"], "budget_force": "short"}
+{"key": "ecf825f9732ecf1b", "instruction": "पश्चिम बंगाल की राजधानी क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["कोलकाता"], "budget_force": "short"}
+{"key": "1630062b431abc0c", "instruction": "West Bengal ki rajdhani kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["कोलकाता"], "budget_force": "short"}
+{"key": "2b268f648e99dc32", "instruction": "जल का हिमांक कितना होता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["0"], "budget_force": "short"}
+{"key": "6bfcd024b94b4c12", "instruction": "Paani ka freezing point kitna hota hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["0"], "budget_force": "short"}
+{"key": "ac19402b2f5172db", "instruction": "जल का क्वथनांक कितना होता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["100"], "budget_force": "short"}
+{"key": "97b13b26ece1ca08", "instruction": "Paani ka boiling point kitna hota hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["100"], "budget_force": "short"}
+{"key": "39f694eacd4c0c4b", "instruction": "वायु में सबसे अधिक पाई जाने वाली गैस कौन सी है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["नाइट्रोजन"], "budget_force": "short"}
+{"key": "80450ebc6bd7a962", "instruction": "Hawa mein sabse jyada kaunsi gas hoti hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["नाइट्रोजन"], "budget_force": "short"}
+{"key": "00a9a34b6c86a486", "instruction": "सबसे हल्की गैस कौन सी है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हाइड्रोजन"], "budget_force": "short"}
+{"key": "f3fad8a65f1b3577", "instruction": "Sabse halki gas kaunsi hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हाइड्रोजन"], "budget_force": "short"}
+{"key": "aab8d79779b58704", "instruction": "पौधे भोजन बनाने की किस प्रक्रिया का उपयोग करते हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["प्रकाश संश्लेषण", "photosynthesis"], "budget_force": "short"}
+{"key": "f0e2e3ee5659a6ba", "instruction": "Plants food banane ke liye kaunsi process use karte hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["प्रकाश संश्लेषण", "photosynthesis"], "budget_force": "short"}
+{"key": "9237ba858498e474", "instruction": "विटामिन डी हमें मुख्यतः किससे मिलता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["सूर्य"], "budget_force": "short"}
+{"key": "350607144013f7ad", "instruction": "Vitamin D kahan se milta hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["सूर्य"], "budget_force": "short"}
+{"key": "82c6182a8a699a95", "instruction": "रक्तहीनता किस तत्व की कमी से होती है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["लोहा", "आयरन"], "budget_force": "short"}
+{"key": "75ee0a7b3c0f8c3e", "instruction": "Anemia kis kami se hota hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["लोहा", "आयरन"], "budget_force": "short"}
+{"key": "5980d05885292825", "instruction": "क्षय रोग किस अंग पर आक्रमण करता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["फेफड़", "फेफड़ा"], "budget_force": "short"}
+{"key": "8334959821dc6947", "instruction": "TB kis organ par attack karta hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["फेफड़", "फेफड़ा"], "budget_force": "short"}
+{"key": "274ab90ccf77de14", "instruction": "डायबिटीज़ किस अंग से संबंधित रोग है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["अग्न्याशय", "पैन्क्रियाज"], "budget_force": "short"}
+{"key": "f9581bbb2188e148", "instruction": "Diabetes kis organ se juda hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["अग्न्याशय", "पैन्क्रियाज"], "budget_force": "short"}
+{"key": "7bb3dd411cab9aa4", "instruction": "HIV किस रोग का कारण बनता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["एड्स"], "budget_force": "short"}
+{"key": "d3dbe82201b1a44f", "instruction": "HIV kis rog ka karan banta hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["एड्स"], "budget_force": "short"}
+{"key": "481d626e74db6301", "instruction": "श्वसन के लिए मनुष्य किस अंग का उपयोग करता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["फेफड़", "फेफड़ा"], "budget_force": "short"}
+{"key": "c75479019951dce9", "instruction": "Saans lene ke liye kaunsa organ use hota hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["फेफड़", "फेफड़ा"], "budget_force": "short"}
+{"key": "bb719aa9dce4da1b", "instruction": "आमाशय में कौन सा अम्ल स्रावित होता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हाइड्रोक्लोरिक", "HCl"], "budget_force": "short"}
+{"key": "8edb95720670056b", "instruction": "Stomach mein kaunsa acid hota hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हाइड्रोक्लोरिक", "HCl"], "budget_force": "short"}
+{"key": "383d5a2c7a3db491", "instruction": "भारत का पहला उपग्रह कौन सा था?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["आर्यभट्ट"], "budget_force": "short"}
+{"key": "458cc439fad22ddd", "instruction": "India ka pehla satellite kaunsa tha?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["आर्यभट्ट"], "budget_force": "short"}
+{"key": "fc9bf0686d11095e", "instruction": "चंद्रमा पर उतरने वाले पहले व्यक्ति कौन थे?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["नील आर्मस्ट्रांग"], "budget_force": "short"}
+{"key": "cff6fcffc8e48c3b", "instruction": "Chand par pehle utarne wale kaun the?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["नील आर्मस्ट्रांग"], "budget_force": "short"}
+{"key": "4f87868e7a6f7bbd", "instruction": "इसरो का मुख्यालय कहाँ है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बेंगलुरु", "बेंगलोर"], "budget_force": "short"}
+{"key": "6dac600b57dc93bb", "instruction": "ISRO ka headquarters kahan hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बेंगलुरु", "बेंगलोर"], "budget_force": "short"}
+{"key": "e072246452f62438", "instruction": "भारत का पहला प्रक्षेपण केंद्र कहाँ है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["श्रीहरिकोटा"], "budget_force": "short"}
+{"key": "a239cf8b74a7afae", "instruction": "India ka pehla launch station kahan hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["श्रीहरिकोटा"], "budget_force": "short"}
+{"key": "e6750e44a710a921", "instruction": "GST भारत में कब लागू हुआ?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["2017"], "budget_force": "short"}
+{"key": "629b6b470b61fb51", "instruction": "GST India mein kab lagu hua?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["2017"], "budget_force": "short"}
+{"key": "96fd5fd96931d482", "instruction": "आधार कार्ड किस संस्था द्वारा जारी किया जाता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["यूआईडीएआई", "UIDAI"], "budget_force": "short"}
+{"key": "209b42ebe901c4db", "instruction": "Aadhaar card kaunsi agency jari karti hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["यूआईडीएआई", "UIDAI"], "budget_force": "short"}
+{"key": "5cee96684cd56b9c", "instruction": "अंतर्राष्ट्रीय योग दिवस कब मनाया जाता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["21 जून"], "budget_force": "short"}
+{"key": "2143072b575560a1", "instruction": "Yoga Day kab manate hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["21 जून"], "budget_force": "short"}
+{"key": "2d9f101e5de57927", "instruction": "विश्व पर्यावरण दिवस कब मनाया जाता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["5 जून"], "budget_force": "short"}
+{"key": "11a49b95ef8a5967", "instruction": "Environment Day kab manate hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["5 जून"], "budget_force": "short"}
+{"key": "6a1ed2a76d6f5c03", "instruction": "सबसे कठोर प्राकृतिक पदार्थ कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हीरा"], "budget_force": "short"}
+{"key": "0542a82ca40e59dc", "instruction": "Sabse sakht natural cheez kaunsi hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["हीरा"], "budget_force": "short"}
+{"key": "7f1bc71db2e2ab85", "instruction": "कमरे के ताप पर द्रव अवस्था में रहने वाला धातु कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["पारा", "मरकरी"], "budget_force": "short"}
+{"key": "54b1a39743a7169a", "instruction": "Room temperature mein liquid metal kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["पारा", "मरकरी"], "budget_force": "short"}
+{"key": "20b4c54ec703fb54", "instruction": "न्यूटन का गति का तीसरा नियम क्या कहता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["क्रिया", "प्रतिक्रिया"], "budget_force": "short"}
+{"key": "9cec4bb5efdfa264", "instruction": "Newton ka third law kya kehta hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["क्रिया", "प्रतिक्रिया"], "budget_force": "short"}
+{"key": "208dec929fbe16f5", "instruction": "गुरुत्वाकर्षण का सार्वत्रिक नियम किसने दिया?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["न्यूटन"], "budget_force": "short"}
+{"key": "2d1481f1738cb4c5", "instruction": "Gravity ka niyam kisne diya?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["न्यूटन"], "budget_force": "short"}
+{"key": "943905ca7fee8ab5", "instruction": "बंगलौर का नया नाम क्या है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बेंगलुरु"], "budget_force": "short"}
+{"key": "69428168d1781db5", "instruction": "Bangalore ka naya naam kya hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["बेंगलुरु"], "budget_force": "short"}
+{"key": "a039809cf3f5202b", "instruction": "स्वर्ण मंदिर कहाँ स्थित है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["अमृतसर"], "budget_force": "short"}
+{"key": "9f75b3e88cda82f4", "instruction": "Golden temple kahan hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["अमृतसर"], "budget_force": "short"}
+{"key": "d7811b966b15555f", "instruction": "लाल किला कहाँ स्थित है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["दिल्ली"], "budget_force": "short"}
+{"key": "64638242441cb671", "instruction": "Red fort kahan hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["दिल्ली"], "budget_force": "short"}
+{"key": "436494ca5cb1f7af", "instruction": "हवामहल कहाँ स्थित है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["जयपुर"], "budget_force": "short"}
+{"key": "cdf68be982f40c3d", "instruction": "Hawa mahal kahan hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["जयपुर"], "budget_force": "short"}
+{"key": "c2e8b5c67bb645e4", "instruction": "काशी विश्वनाथ मंदिर कहाँ है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["वाराणसी"], "budget_force": "short"}
+{"key": "4a3c3efa26be11dd", "instruction": "Kashi vishwanath temple kahan hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["वाराणसी"], "budget_force": "short"}
+{"key": "8f16c87aedb367d7", "instruction": "भारत का सबसे व्यस्त रेलवे स्टेशन कौन सा है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["छत्रपति शिवाजी", "सीएसटी", "CST"], "budget_force": "short"}
+{"key": "770f3f74b93839d7", "instruction": "India ka busiest railway station kaunsa hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["छत्रपति शिवाजी", "सीएसटी", "CST"], "budget_force": "short"}
+{"key": "f99d08c51515c768", "instruction": "भारत में पहली मेट्रो कहाँ चली?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["दिल्ली"], "budget_force": "short"}
+{"key": "5193d103b2397b06", "instruction": "Metro India mein pehli baar kahan chala?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["दिल्ली"], "budget_force": "short"}
+{"key": "fc9f009fbb0e77fa", "instruction": "भारत का पहला IIT कहाँ स्थापित हुआ?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["खड़गपुर"], "budget_force": "short"}
+{"key": "89738220079214cc", "instruction": "Pehla IIT kahan bana?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["खड़गपुर"], "budget_force": "short"}
+{"key": "d891a364dd0bd2a8", "instruction": "नोबेल पुरस्कार पाने वाले पहले भारतीय कौन हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["रवींद्रनाथ टागोर", "टागोर"], "budget_force": "short"}
+{"key": "35d92ec4355220f5", "instruction": "Pehle Indian Nobel winner kaun the?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["रवींद्रनाथ टागोर", "टागोर"], "budget_force": "short"}
+{"key": "bac39261d01e1946", "instruction": "भारत से नोबेल पाने वाली पहली महिला कौन थीं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मदर टेरेसा"], "budget_force": "short"}
+{"key": "1354028e90cdfab3", "instruction": "Indian woman Nobel prize pehli baar kisne jeeta?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मदर टेरेसा"], "budget_force": "short"}
+{"key": "af075c909d36827d", "instruction": "व्हाट्सएप किस कंपनी का स्वामित्व है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मेटा", "फेसबुक"], "budget_force": "short"}
+{"key": "90564e5a8c8eabe2", "instruction": "WhatsApp kis company ka hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["मेटा", "फेसबुक"], "budget_force": "short"}
+{"key": "6075b0f3abf4ec31", "instruction": "गूगल के सह-संस्थापक कौन हैं?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["पेज", "ब्रिन"], "budget_force": "short"}
+{"key": "dff97eb4f11e78a4", "instruction": "Google ke co-founder kaun hain?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["पेज", "ब्रिन"], "budget_force": "short"}
+{"key": "bc35178e6207c1c2", "instruction": "मानव में सामान्य रक्तचाप लगभग कितना होता है?", "plang": "hi", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["120", "12"], "budget_force": "short"}
+{"key": "a6cae07d88556d73", "instruction": "Normal blood pressure kitna hota hai?", "plang": "hinglish", "src": "facts_v8", "reg": "fact", "topic": "fact", "gold": ["120", "12"], "budget_force": "short"}
