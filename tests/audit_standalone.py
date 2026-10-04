@@ -45,6 +45,8 @@ SHARED = {
     "TrainerCallback", "tokens_decoded_metric", "per_device_train_batch_size",
     # produced by the wandb cell inserted before the trainer
     "WANDB_ON", "WANDB_PROJECT", "DATA_REPO",
+    # produced by the v8 config cell and read by the DDP launch cell
+    "RUN_CPT", "CFG",
     "gradient_accumulation_steps", "eval_dataset", "text", "_ratio", "_hist",
 }
 
