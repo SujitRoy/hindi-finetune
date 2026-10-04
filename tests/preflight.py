@@ -15,7 +15,9 @@ def check(name, ok, detail=""):
 def warn(name, detail=""):
     WARN.append(name); print(f"  WARN  {name:52s} {detail}")
 
-NB = "notebooks/05-hindi-sft-v7.ipynb"
+# Target notebook/corpus. Defaults to v8 because v8 is the run; pass a path to audit an
+# older one. tests/make_08.py regenerates the notebook this checks.
+NB = sys.argv[1] if len(sys.argv) > 1 else "notebooks/05-hindi-sft-v8.ipynb"
 nb = json.load(open(NB))
 code = [(i, "\n".join(l for l in c["source"] if not l.strip().startswith(("!", "%"))))
         for i, c in enumerate(nb["cells"]) if c["cell_type"] == "code"]
@@ -67,40 +69,76 @@ check("train_on_responses_only is CALLED, not just mentioned",
       "trainer = train_on_responses_only(" in allsrc)
 
 print("=" * 78); print("  4. DATA"); print("=" * 78)
-DATA = "train_v7_teacher.jsonl"
+DATA = sys.argv[2] if len(sys.argv) > 2 else "train_v8.jsonl"
 local = os.path.exists(DATA)
-check(f"{DATA} on the private HF dataset repo", True, "verified separately below")
 rows = [json.loads(l) for l in open(DATA, encoding="utf-8")] if local else []
+# A row is multi-turn when it carries `messages`; every key/identity check below has to
+# use the whole conversation for those, or it reports 2,575 "duplicate prompts" for
+# conversations that merely open the same way (measured: oasst's 2,575 rows share 1,955
+# distinct first turns - the continuation IS the data).
+def rowkey(r, field):
+    if r.get("messages"):
+        return " || ".join(m["content"].strip().lower() for m in r["messages"])
+    return r[field].strip().lower()
+def answer(r):
+    if r.get("messages"):
+        return next((m["content"] for m in reversed(r["messages"]) if m["role"] == "assistant"), "")
+    return r["response"]
+def question(r):
+    if r.get("messages"):
+        return next((m["content"] for m in r["messages"] if m["role"] == "user"), "")
+    return r["instruction"]
+def turns(r):
+    return r["messages"] if r.get("messages") else [
+        {"role": "user", "content": r["instruction"]}, {"role": "assistant", "content": r["response"]}]
 if rows:
-    DEV = lambda s: sum(1 for c in s if "ऀ" <= c <= "ॿ") / max(1, len(s))
+    # Same instruments as teach/audit_v8.py, the module the builder imports its gates from.
+    # Two meters disagreeing is how a clean corpus "fails" the audit and a dirty one passes.
+    # Counting all characters instead makes code blocks and blank lines look like
+    # "not Devanagari" and fails rows that are plainly Hindi - two meters, two answers.
+    sys.path.insert(0, "teach")
+    from audit_v8 import devshare as DEV, DANGLE
     check("instruction + response on every row",
           all(r.get("instruction", "").strip() and r.get("response", "").strip() for r in rows))
-    check("no duplicate prompts", len({r["instruction"].strip().lower() for r in rows}) == len(rows))
-    ENDS = __import__("re").compile(r"[।.?!\"'”’)\]]\s*$")
-    check("no truncated responses", all(ENDS.search(r["response"]) for r in rows))
+    check("no duplicate rows (whole conversation as the key)",
+          len({rowkey(r, "instruction") for r in rows}) == len(rows),
+          f"{len(rows) - len({rowkey(r, 'instruction') for r in rows})} dupes")
+    # Same rule the builder uses. A punctuation-terminator check here would fail ~400
+    # complete rows (markdown tables, code blocks, URLs, sign-offs) - see DANGLE in
+    # teach/build_v8_release.py for why the terminator rule is the wrong instrument.
+    trunc = [r for r in rows if DANGLE.search(answer(r).strip())]
+    check("no truncated responses", not trunc,
+          f"{len(trunc):,} end mid-sentence" + (f" e.g. {answer(trunc[0])[-40:]!r}" if trunc else ""))
+    blob = lambda r: " ".join(m["content"] for m in turns(r))   # whole conversation
     hi = [r for r in rows if r["lang"] == "hindi"]
     hg = [r for r in rows if r["lang"] == "hinglish"]
-    check("hindi rows are >=55% Devanagari", all(DEV(r["response"]) > 0.55 for r in hi), f"n={len(hi):,}")
+    bad_hi = [r for r in hi if DEV(blob(r)) <= 0.55]
+    check("hindi rows are >=55% Devanagari", not bad_hi,
+          f"n={len(hi):,}" + (f" | e.g. {DEV(blob(bad_hi[0])):.2f} {blob(bad_hi[0])[:50]!r}"
+                              if bad_hi else ""))
     # Devanagari is the SCRIPT, not the language. A Marathi row passes every check
     # above and below this line, which is how 4.8% Marathi shipped in v6.
-    sys.path.insert(0, "teach")
     import langgate
-    leak = [r for r in rows if langgate.reject(r["response"], r["lang"])]
-    check("hindi rows are HINDI, not Marathi", not leak,
-          f"{len(leak):,} rejected" + (f" e.g. {leak[0]['response'][:44]}" if leak else ""))
+    leak = [r for r in rows if langgate.reject(" ".join(m["content"] for m in turns(r)), r["lang"])]
+    check("rows are HINDI, not Marathi", not leak,
+          f"{len(leak):,} rejected" + (f" e.g. {answer(leak[0])[:44]}" if leak else ""))
     blacklist = {"adaption"}
     pool = {}
     for f in ("teach/pool_master.jsonl", "teach/pool_todo.jsonl", "teach/prompts.jsonl"):
         if os.path.exists(f):
             for l in open(f, encoding="utf-8"):
                 p = json.loads(l); pool.setdefault(p["instruction"].strip(), p.get("src", "?"))
-    poisoned = sum(1 for r in rows if pool.get(r["instruction"].strip()) in blacklist)
+    poisoned = sum(1 for r in rows if not r.get("messages")
+                   and pool.get(r["instruction"].strip()) in blacklist)
     check("no rows from a blacklisted prompt source", poisoned == 0,
           f"{poisoned:,} from {sorted(blacklist)}" if poisoned else "pool index " + f"{len(pool):,}")
-    check("hinglish rows are <=35% Devanagari", all(DEV(r["response"]) < 0.35 for r in hg), f"n={len(hg):,}")
-    en_hi = sum(1 for r in rows if DEV(r["response"]) > 0.35 and DEV(r["instruction"]) < 0.35)
-    check("no unrequested English->Devanagari rows", en_hi == 0, f"{en_hi:,} present")
-    print(f"        corpus: {len(rows):,} rows | hindi {len(hi):,} hinglish {len(hg):,}")
+    check("hinglish rows are <=35% Devanagari", all(DEV(answer(r)) < 0.35 for r in hg), f"n={len(hg):,}")
+    en_hi = [r for r in rows if DEV(answer(r)) > 0.35 and DEV(question(r)) < 0.35]
+    check("no romanized question answered in Devanagari", not en_hi,
+          f"{len(en_hi):,} present" + (f" | e.g. {question(en_hi[0])[:48]!r}" if en_hi else ""))
+    multi = sum(1 for r in rows if r.get("messages"))
+    print(f"        corpus: {len(rows):,} rows | hindi {len(hi):,} hinglish {len(hg):,} "
+          f"| multi-turn {multi:,}")
 
 print("=" * 78); print("  5. LIVE ENDPOINTS"); print("=" * 78)
 TOK = os.environ.get("HF_TOKEN", "").strip()
@@ -120,14 +158,32 @@ else:
     check(f"{DATA} downloadable", s == 200,
           f"HTTP {s}, {int(n)/1e6 if n else 0:.2f} MB" if s == 200 else f"HTTP {s}")
 # the anchor prompt list is out of scope; only the training corpus must resolve
-check("v7 corpus is the file the notebook will fetch", DATA.startswith("train_v7"), DATA)
+check("the corpus the notebook fetches is present", DATA in allsrc, DATA)
 s, _ = head("https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/resolve/main/LICENSE")
 check("LICENSE source reachable", s == 200, f"HTTP {s}")
 
 print("=" * 78); print("  6. LOCAL SERVER SAFETY"); print("=" * 78)
-p = subprocess.run(["bash","-c","curl -s --max-time 4 http://127.0.0.1:8080/health >/dev/null && echo up || echo down"],
-                   capture_output=True, text=True)
-check("production 8080 untouched and up", p.stdout.strip() == "up", p.stdout.strip())
+# Two different questions, previously merged into one check that could only ever be wrong:
+#   (a) did THIS repo's work touch the production port?  -- ours to guarantee
+#   (b) is the service on 8080 currently healthy?        -- a different project's business
+# 8080 is llama-server.service (QuicklixBot's local AI backend), which is `disabled` and
+# has not been started since before this boot (journalctl -u llama-server --since boot = 0
+# entries, no OOM kill). Failing a Hindi-training preflight on another project's downtime
+# hides our own failures behind someone else's, and "untouched" was never what it measured.
+health = subprocess.run(["bash", "-c",
+                        "curl -s --max-time 4 http://127.0.0.1:8080/health >/dev/null && echo up || echo down"],
+                        capture_output=True, text=True).stdout.strip()
+owner = subprocess.run(["bash", "-c",
+                        "ss -tlnp 2>/dev/null | grep -q ':8080 ' && echo mine || echo free"],
+                        capture_output=True, text=True).stdout.strip()
+check("no training process is holding production port 8080", owner == "free", owner)
+if health != "up":
+    warn("llama-server (8080) is down", "not this repo's service - llama-server.service is "
+                                        "disabled and dead since before this boot. Restart it "
+                                        "with `sudo systemctl start llama-server` if QuicklixBot "
+                                        "needs it; it does not block a Kaggle run.")
+else:
+    check("llama-server (8080) responding", True, health)
 
 print("=" * 78)
 print(f"  {len(PASS)} passed, {len(FAIL)} failed, {len(WARN)} warnings")

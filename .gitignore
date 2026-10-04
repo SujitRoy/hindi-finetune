@@ -27,3 +27,6 @@ cpt_hindi_clean.jsonl
 # teacher API config: key + private preview model id. Never commit, never log.
 teach/teacher.local.json
 teach/*local.json
+# v8 corpus: 79 MB, lives on the Hub dataset repo (byte-identical, sha256 4a2ae54e76ce5b30).
+# Cell 9 fetches it from there. Same rule as train_v3..v7 above.
+train_v8.jsonl
